@@ -1,0 +1,1 @@
+{id="3717072443", screenName="墙中智者", name="墙中智者", province="100", city="1000", location="其他", description="", url="", gender="m", followersCount="4", friendsCount="151", statusesCount="2", favouritesCount="1", createdAt="Sun Aug 18 01:26:02 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="4", lang="zh-cn"}

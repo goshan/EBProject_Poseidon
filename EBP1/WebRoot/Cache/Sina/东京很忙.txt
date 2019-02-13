@@ -1,0 +1,1 @@
+{id="2706548533", screenName="东京很忙", name="东京很忙", province="11", city="8", location="北京 海淀区", description="风中赏雪，雾里看花", url="", gender="m", followersCount="63", friendsCount="123", statusesCount="55", favouritesCount="0", createdAt="Thu Apr 12 18:12:30 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="60", lang="zh-cn"}

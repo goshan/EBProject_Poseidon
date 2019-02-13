@@ -1,0 +1,1 @@
+{id="3547361050", screenName="粉01", name="粉01", province="11", city="1", location="北京 东城区", description="", url="", gender="m", followersCount="23", friendsCount="68", statusesCount="4", favouritesCount="0", createdAt="Thu Jun 20 08:55:58 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

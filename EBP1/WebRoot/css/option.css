@@ -1,0 +1,61 @@
+#option_panel{
+	padding: 18px 0 0 19px;
+}
+.option_select_tag{
+	display: inline-block;
+	width: 320px;
+	height: 75px;
+	position: relative;
+}
+#option_config{
+	background-color: #9b59b6;
+	margin-left: 15px;
+	
+}
+#option_tools{
+	background-color: #dbdbdb;
+	margin-left: -5px;
+	
+}
+.option_select_icon{
+	position: absolute;
+}
+#option_config_icon{
+	top: 0;
+	left: 0;
+	opacity: 1;
+}
+#option_tools_icon{
+	top: 0;
+	left: 79px;
+	opacity: 0.5;
+}
+.option_select_title{
+	position: absolute;
+	top: 16px;
+	font-size: 36px;
+}
+#option_config_title{
+	right: 30px;
+	color: #fff;
+}
+#option_tools_title{
+	right: 25px;
+	color: #a09c97;
+}
+.option_select_arrow{
+	position: absolute;
+	top: 75px;
+	left: 150px;
+}
+#option_config_arrow{
+	opacity: 1;
+}
+#option_tools_arrow{
+	opacity: 0;
+}
+#option_content{
+	width: 1131px;
+	height: 400px;
+	margin-top: 7px;
+}

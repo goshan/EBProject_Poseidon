@@ -1,0 +1,3 @@
+ch
+3573 replacing the chassis（外框）
+ 3573 replacing the chassis（外框） （TS 3100 &amp; TS 3200） 原设备下架； 新设备拆箱； 新设备安装垫脚； 新设备顶盖上，将有"Remove before operation！"字样的纸条撕掉，拔起铁片，并用纸条把铁片粘贴在新设备后方右上角； 卸下原设备的Library Enclosure（原设备后方中间），并按照顺序将其安装到新设备上； 新设备接上电源，并开机； 在新设备自检完成后，进行Library Verify（Service -）Library Verify），此步骤需要Data Cartridge，在进行到一半时，新设备前方Cartridge Magazine将会弹出，此时放入Data Cartridge，将Cartridge Magazine推入插槽，完成检测； 新设备关机（长按电源键5秒），新旧设备更换LLC（Library Control Card）； 开机，执行自检，完成后无故障可关机； 更换Cartridge Magazines； 同步骤9； 更换电源； 同步骤9； 更换导轨等外部配件，新设备上架； 完成内部元件更换操作，执行步骤7； 在新设备正面粘贴设备标贴（MT &amp; SN）； 收拾旧设备装箱。 PS: 操作前请注意参照随箱附带的指导手册，在参考前也请注意指导手册版本与设备是否相符。 

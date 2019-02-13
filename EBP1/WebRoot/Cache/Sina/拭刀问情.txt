@@ -1,0 +1,1 @@
+{id="1813652832", screenName="拭刀问情", name="拭刀问情", province="44", city="1", location="广东 广州", description="", url="", gender="m", followersCount="33", friendsCount="149", statusesCount="169", favouritesCount="63", createdAt="Mon Sep 13 21:13:47 CST 2010", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="11", lang="zh-cn"}

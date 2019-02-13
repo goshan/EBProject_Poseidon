@@ -1,0 +1,1 @@
+{id="1687671822", screenName="rlex最近很蛋疼", name="rlex最近很蛋疼", province="12", city="4", location="天津 南开区", description="最近莫名蛋疼中", url="", gender="m", followersCount="142", friendsCount="127", statusesCount="68", favouritesCount="1", createdAt="Thu Feb 24 15:50:12 CST 2011", following="true", verified="false", verifiedType="-1", followMe="true", biFollowersCount="67", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="3498484252", screenName="愚不可及黄冰竹", name="愚不可及黄冰竹", province="64", city="1", location="宁夏 银川", description="", url="", gender="f", followersCount="43", friendsCount="272", statusesCount="147", favouritesCount="0", createdAt="Thu May 30 05:16:43 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1", lang="zh-cn"}

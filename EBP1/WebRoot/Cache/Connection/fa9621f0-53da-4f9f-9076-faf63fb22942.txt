@@ -1,0 +1,3 @@
+ch
+VIP Customer Weekly PM Service log
+ 以Serivice log为蓝本，删除一些不常用检查项目，添加一些实用检查项目 -----Designed by COMM sector 

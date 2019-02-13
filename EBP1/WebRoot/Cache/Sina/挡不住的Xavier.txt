@@ -1,0 +1,1 @@
+{id="2412980842", screenName="挡不住的Xavier", name="挡不住的Xavier", province="23", city="1", location="黑龙江 哈尔滨", description="", url="", gender="m", followersCount="72", friendsCount="1380", statusesCount="0", favouritesCount="0", createdAt="Tue Sep 20 23:50:32 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="8", lang="zh-cn"}

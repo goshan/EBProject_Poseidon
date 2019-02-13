@@ -1,0 +1,1 @@
+{id="1822941862", screenName="心随情动1822941862", name="心随情动1822941862", province="44", city="1000", location="广东", description="", url="", gender="m", followersCount="22", friendsCount="16", statusesCount="4", favouritesCount="0", createdAt="Tue Mar 20 00:17:24 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

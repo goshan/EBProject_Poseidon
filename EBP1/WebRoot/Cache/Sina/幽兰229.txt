@@ -1,0 +1,1 @@
+{id="2236691755", screenName="сдю╪229", name="сдю╪229", province="32", city="1", location="╫╜ку до╬╘", description="", url="", gender="f", followersCount="47", friendsCount="698", statusesCount="180", favouritesCount="0", createdAt="Sat Jul 09 14:27:41 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="2", lang="zh-cn"}

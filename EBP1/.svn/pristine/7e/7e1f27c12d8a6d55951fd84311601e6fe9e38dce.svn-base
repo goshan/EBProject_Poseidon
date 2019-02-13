@@ -1,0 +1,3 @@
+ch
+有没有增删改 community members的例子？
+ 我在 找到了Working with community members的 API 现在想通过客户端编程的方式调用此API来增删改Community members，但不知道怎么调用,我尝试着用rest的方式发送请求来增加成员，此成员的email: somebody@xxx.com，具体如下： URL: Parameter: email=somebody@xxx.com method:post 但不能增加此成员，请问谁有这方面的经验给个例子？ 

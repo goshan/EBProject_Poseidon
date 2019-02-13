@@ -1,0 +1,3 @@
+ch
+[问题] 什么是SOA，SOA和EI是什么关系，SOA都会用到什么技术,SOA和Java技术。。。
+什么是SOA；SOA和EI是什么关系；SOA都会用到什么技术；对于做Java技术的人而言，Java技术的基础会给SOA带来什么？ 谢谢！ 

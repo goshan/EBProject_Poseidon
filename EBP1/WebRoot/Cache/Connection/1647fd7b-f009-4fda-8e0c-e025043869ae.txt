@@ -1,0 +1,3 @@
+ch
+Google 將以法律途徑禁止 Android 2.x 平板升級到 3.X 系統？
+Google遲遲尚未release HoneyComb的 source code, 應該是跟各廠商間還沒協議好。??Android 2.X 是手機版本，而 Android 3.X 就專為平板電腦設計，這個關係相信大家都十分清楚，原來兩者除了功能及定位不同之外，就連 License 也各異，在法律上是分開看待的，最嚴重的是引生了 Android 2.X 版本裝置因協議問題，廠商不能夠提供官方 Android 3.0 的升級。對於這則消息，大家不其然會聯想到 Android 平板界的貴公子 Galaxy Tab，已經有傳聞指因為 License 問題 Samsung 不會提供 Honeycomb?的升級。而另一部有可能受到影響的 HTC Flyer，雖然 HTC 一直表示此機先搭載 Android 2.3 系統推出市場，於稍後時間才會大規模升級到 Honeycomb 系統，但若真的存在 License 問題，那麼首批推出的 HTC Flyer 是否不能夠獲得升級？HTC 的發言人表示公司暫時未有更改計劃的打算，一切會按照原先計劃進行。各位有興趣入手的朋友，又重視系統的升級，就要多點留意這方面的發展。? 

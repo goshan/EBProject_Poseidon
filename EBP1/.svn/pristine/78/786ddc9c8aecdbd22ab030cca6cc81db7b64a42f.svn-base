@@ -1,0 +1,341 @@
+function chart_page(){
+	chart_scroll();
+	dynamic_chart_create();
+	zombie_chart_create();
+	line_chart_create();
+	column_chart_create();
+}
+
+function chart_scroll(){
+	console.log($("#chart_scroll"));
+	$("#chart_scroll").goshanScroll();
+}
+function zombie_chart_create(){
+	$.ajax({
+		method: "get", 
+		url: "/EBP1/dataManageAjaxAction_zombieChart.action",
+		data: {
+		}, 
+		success: function(json){
+			var nums = new Array();
+			nums[0] = json["NumOfNormal"];
+			nums[1] = json["NumOfZombie"];
+			chart_create(nums);
+		}
+	});
+}
+
+/*
+ 一些注释掉的方法
+
+ */
+function dynamic_chart_create(){
+	//create dynamic chart
+	Highcharts.setOptions({ 
+		colors: ['#F9E073','#999999','#CCCCCC','#A3F279','#FFD833','#FF9C39'],
+		global: {
+            useUTC: false
+        }
+	}); 
+    $('#container1').highcharts({
+            chart: {
+                type: 'spline',
+                animation: Highcharts.svg, // don't animate in old IE
+                marginRight: 10,
+                events: {
+                    load: function() {
+    
+                        // set up the updating of the chart each second
+                        var series = this.series[0];
+                        setInterval(function() {
+                        	$.ajax({
+                        		method: "get", 
+                        		url: "/EBP1/dataManageAjaxAction_dynamicChart.action",
+                        		data: {
+                        		}, 
+                        		success: function(json){
+                        			var nums = json["newSource"];
+                        			var x = (new Date()).getTime(), // current time
+                                    y = nums;                  
+                        			series.addPoint([x, y], true, true);
+                        			
+                        		}
+                        	});
+                         }, 5000);
+                    }
+                },
+                backgroundColor: 'rgba(255, 255, 255, 0)',  
+            	plotBorderColor : null,  
+            	plotBackgroundColor: null,  
+            	plotBackgroundImage:null,  
+            	plotBorderWidth: null,  
+            	plotShadow: false
+            },
+            title: {
+                text: '实时素材库内容添加'
+            },
+            xAxis: {
+                type: 'datetime',
+                tickPixelInterval: 150
+            },
+            yAxis: {
+           		min:0,
+                title: {
+                    text: 'Num Of New Source'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                formatter: function() {
+                        return '<b>'+ this.series.name +'</b><br/>'+
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+                        Highcharts.numberFormat(this.y, 0);
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            exporting: {
+                enabled: false
+            },
+            series: [{
+                name: 'New source',
+                data: (function() {
+                    // generate an array of random data
+                    var data = [],
+                        time = (new Date()).getTime(),
+                        i;
+    
+                    for (i = -19; i <= 0; i++) {
+                        data.push({
+                            x: time + i * 1000,
+                            y: Math.random()
+                        });
+                    }
+                    return data;
+                })()
+            }]
+     });
+}
+function line_chart_create(){
+	// Create the line chart
+    $('#container3').highcharts({
+        chart: {	
+        	backgroundColor: 'rgba(255, 255, 255, 0)',  
+            plotBorderColor : null,  
+            plotBackgroundColor: null,  
+            plotBackgroundImage:null,  
+            plotBorderWidth: null,  
+            plotShadow: false
+    	},
+        title: {
+            text: '微博平均回复留言时间',
+            x: -20
+        },
+        subtitle: {
+            text: '数据来自: IBM软件技术支持微博数据',   
+            x: -20
+        },
+        xAxis: {
+            categories: ['1-5', '6-10', '11-15', '16-20', '21-25', '25-31']
+        },
+        yAxis: {
+            title: {
+                text: 'Average Reply Time(min)'
+            },
+            plotLines: [{
+                value: 0,
+                width: 0,
+                color: '#F9E073'
+            }]
+        },
+        tooltip: {
+            valueSuffix: 'min'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'TimeLag',
+            data: [5.0, 4.9, 3.5, 6.5, 7.2, 4.5]
+        }]
+    });
+}
+function column_chart_create(){
+	Highcharts.setOptions({ 
+		colors: ['#F9E073','#999999','#CCCCCC','#A3F279','#FFD833','#FF9C39'],
+		global: {
+            useUTC: false
+        }
+	}); 
+	var colors = Highcharts.getOptions().colors;
+	
+	var monitorData = [{
+        name: '微博分析',
+        data: [5, 3, 4, 7, 8, 3, 8],
+        color:colors[3]
+    }, {
+        name: '知识库分析',
+        data: [2, 2, 3, 3, 7, 9, 8],
+        color:colors[4]
+    }, {
+        name: '负面信息监控',
+        data: [0, 2, 0, 1, 1, 0, 1],
+        color:colors[5]
+    }]
+	//create the column chart
+	 $('#container4').highcharts({
+	        chart: {
+	            type: 'column',
+	            backgroundColor: 'rgba(255, 255, 255, 0)',  
+	            plotBorderColor : null,  
+	            plotBackgroundColor: null,  
+	            plotBackgroundImage:null,  
+	            plotBorderWidth: null,  
+	            plotShadow: false
+	        },
+	        title: {
+	            text: '系统工具监控'
+	        },
+	        xAxis: {
+	        	min: 1,
+	            title: {
+	                text: 'Day of Month'
+
+	            },
+	            categories: [ '1-5','1-5', '6-10', '11-15', '16-20', '21-25', '25-31']
+	        },
+	        yAxis: {
+	            min: 0,
+	            title: {
+	                text: 'Number of Dispatch'
+
+	            },
+	            stackLabels: {
+	                enabled: true,
+	                style: {
+	                    fontWeight: 'bold',
+	                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+	                }
+	            }
+	        },
+	        legend: {
+	            align: 'right',
+	            x: -70,
+	            verticalAlign: 'top',
+	            y: 20,
+	            floating: true,
+	            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColorSolid) || 'white',
+	            borderColor: '#CCC',
+	            borderWidth: 1,
+	            shadow: false
+	        },
+	        tooltip: {
+	            formatter: function() {
+	                return '<b>'+ this.x +'</b><br/>'+
+	                    this.series.name +': '+ this.y +'<br/>'+
+	                    'Total: '+ this.point.stackTotal;
+	            }
+	        },
+	        plotOptions: {
+	            column: {
+	                stacking: 'normal',
+	                dataLabels: {
+	                    enabled: true,
+	                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+	                }
+	            }
+	        },
+	        series: monitorData
+	    });
+}
+function chart_create(nums){
+	Highcharts.setOptions({ 
+		colors: ['#F9E073','#999999','#CCCCCC','#A3F279','#FFD833','#FF9C39'],
+		global: {
+            useUTC: false
+        }
+	}); 
+	var colors = Highcharts.getOptions().colors,
+	// Build the data arrays	
+	categories = ['正常粉丝', '僵尸粉'],
+	data = [{
+            y: nums[0],
+            color:colors[0],
+			sliced: true,
+            selected: true
+        }, {
+            y: nums[1],
+            color:colors[1]
+        }];
+	var zombieData = [];
+    for (var i = 0; i < data.length; i++) {
+
+        // add zombie data
+        zombieData.push({
+            name: categories[i],
+            y: data[i].y,
+            color: data[i].color,
+			sliced: data[i].sliced,
+			selected: data[i].selected
+        });
+     }
+    
+    // create the pie chart
+    $('#container2').highcharts({
+        chart: {  
+            x: 400 ,
+            backgroundColor: 'rgba(255, 255, 255, 0)',  
+            plotBorderColor : null,  
+            plotBackgroundColor: null,  
+            plotBackgroundImage:null,  
+            plotBorderWidth: null,  
+            plotShadow: false
+        },
+        title: {
+            text: '僵尸粉分析',
+            x: -20
+        },
+        tooltip: {
+        	 valueSuffix: '个'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    color: '#494949',
+                    connectorColor: '#494949',
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                },
+				showInLegend: true
+
+            }
+        }, 
+		legend: {  
+            layout: 'vertical', 
+            backgroundColor: '#FFFFFF', 
+            align: 'right', 
+            verticalAlign: 'top', 
+            x: -160, 
+            y: 60, 
+            floating: true, 
+            shadow: true
+        },
+        series: [{
+			type: 'pie',
+			name: '数量',
+            data: zombieData,
+			size: '80%',
+			innerSize: '60%'
+        }]
+	});
+}

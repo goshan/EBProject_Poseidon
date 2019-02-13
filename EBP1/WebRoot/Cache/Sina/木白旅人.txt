@@ -1,0 +1,1 @@
+{id="1999525164", screenName="木白旅人", name="木白旅人", province="32", city="4", location="江苏 常州", description="", url="", gender="f", followersCount="27", friendsCount="927", statusesCount="241", favouritesCount="0", createdAt="Sun Mar 13 01:45:05 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

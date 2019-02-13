@@ -1,0 +1,1 @@
+{id="1932965613", screenName="梦里也很萌", name="梦里也很萌", province="11", city="1000", location="北京", description="不爱他了。", url="", gender="f", followersCount="990", friendsCount="2002", statusesCount="265", favouritesCount="0", createdAt="Fri Feb 04 23:57:46 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="159", lang="zh-cn"}

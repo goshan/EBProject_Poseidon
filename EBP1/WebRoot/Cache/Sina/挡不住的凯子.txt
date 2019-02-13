@@ -1,0 +1,1 @@
+{id="2531029445", screenName="挡不住的凯子", name="挡不住的凯子", province="23", city="10", location="黑龙江 牡丹江", description="", url="", gender="m", followersCount="1", friendsCount="87", statusesCount="1", favouritesCount="0", createdAt="Thu Dec 15 11:36:28 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1", lang="zh-cn"}

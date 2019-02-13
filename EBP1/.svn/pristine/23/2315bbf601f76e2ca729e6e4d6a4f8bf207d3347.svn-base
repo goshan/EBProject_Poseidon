@@ -1,0 +1,122 @@
+package com.ibm.p1.action;
+
+import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.io.StringBufferInputStream;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import net.sf.json.JSONObject;
+
+import org.apache.struts2.ServletActionContext;
+
+import com.googlecode.jsonplugin.annotations.JSON;
+import com.ibm.p1.dao.impl.AnalysisDaoImpl;
+import com.ibm.p1.entity.Connection;
+import com.ibm.p1.entity.Parameter;
+import com.ibm.p1.entity.User;
+import com.ibm.p1.service.AnalysisService;
+import com.ibm.p1.service.ManageService;
+import com.ibm.p1.tools.HibernateUtil;
+import com.ibm.p1.tools.Utils;
+import com.opensymphony.xwork2.ActionContext;
+
+public class AnalysisAction {
+	private AnalysisService analysisService;
+	private ManageService manageService;
+	
+	public AnalysisService getAnalysisService() {
+		return analysisService;
+	}
+
+	public void setAnalysisService(AnalysisService analysisService) {
+		this.analysisService = analysisService;
+	}
+	
+	public ManageService getManageService() {
+		return manageService;
+	}
+
+	public void setManageService(ManageService manageService) {
+		this.manageService = manageService;
+	}
+
+	public String executeAnalysis() throws IOException{
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest)context.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw  = response.getWriter();
+		JSONObject json = new JSONObject(); 
+		String flag = "";
+		
+		if (!Utils.isLogin()){
+			flag = "not_login";
+			json.put("flag", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "401_error_json";
+		}
+		if (!Utils.currentUserType().equals("admin")){
+			flag = "not_admin";
+			json.put("flag", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "403_error_json";
+		}
+		
+		User currentUser = Utils.currentUser();
+		String mession = request.getParameter("mession");
+		boolean result = false;
+		if (mession.equals(manageService.FansAnalyse)){
+			if (!manageService.checkToolsConflict(manageService.FansAnalyse)){
+				manageService.insertToolsRecord(manageService.FansAnalyse, currentUser);
+				result = analysisService.FansPOI();
+				manageService.fredToolsRecord(manageService.FansAnalyse, currentUser);
+			}
+		}
+		else if (mession.equals(manageService.TopicsAnalyse)){
+			if (!manageService.checkToolsConflict(manageService.TopicsAnalyse)){
+				manageService.insertToolsRecord(manageService.TopicsAnalyse, currentUser);
+				result = analysisService.connectionKeyWords() && analysisService.keyWordsMatch();
+				manageService.fredToolsRecord(manageService.TopicsAnalyse, currentUser);
+			}
+		}
+		 
+		if(result){
+			flag = "tools_success";
+			json.put("flag", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "200_success_json";
+		}
+		flag = "analyse_failed";
+		json.put("flag", flag);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "500_error_json";
+		
+	}
+	
+}

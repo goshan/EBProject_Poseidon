@@ -1,0 +1,1 @@
+{id="3498477003", screenName="健美五只喵太保", name="健美五只喵太保", province="65", city="44", location="新疆 石河子", description="", url="", gender="m", followersCount="44", friendsCount="282", statusesCount="157", favouritesCount="0", createdAt="Thu May 30 04:58:29 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

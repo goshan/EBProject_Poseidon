@@ -1,0 +1,550 @@
+package com.ibm.p1.action;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.*;
+import com.opensymphony.xwork2.ActionContext;
+import com.ibm.p1.entity.User;
+import com.ibm.p1.service.UserService;
+import com.ibm.p1.tools.Mail;
+import com.ibm.p1.tools.Utils;
+
+import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+import net.sf.json.JsonConfig;
+import net.sf.json.util.PropertyFilter;
+
+import org.apache.struts2.ServletActionContext;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.springframework.context.annotation.Scope;  
+import org.springframework.stereotype.Controller; 
+
+public class UserAction {
+	private User user;
+	private UserService userService;
+	private List<User> allUsers;
+	
+	public List<User> getAllUsers() {
+		return allUsers;
+	}
+
+	public void setAllUsers(List<User> allUsers) {
+		this.allUsers = allUsers;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public UserService getUserService() {
+		return userService;
+	}
+
+	public void setUserService(UserService userService) {
+		this.userService = userService;
+	}
+	
+	public String login() throws IOException{
+		//select the user by the username in the HTML
+		User userInfo = userService.getUserByUsername(user.getUsername());
+		JSONObject json = new JSONObject(); 
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw  = response.getWriter();
+		String flag = null;
+		if(userInfo == null)
+		{
+			flag ="not_exist";
+			json.put("flag", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "500_error_json";
+		}
+		else if(userInfo.getPassword().equals(user.getPassword())){
+			Utils.createUserSession(userInfo);
+			flag ="login_success";
+			json.put("flag", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "200_success_json"; 
+		}
+		else{
+			flag ="password_wrong";
+			json.put("flag", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "500_error_json";
+		}
+	}
+	
+	public String signup() throws IOException{
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest)context.get(ServletActionContext.HTTP_REQUEST);
+		JSONObject json = new JSONObject(); 
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw  = response.getWriter();
+		String flag = null;
+		
+		String username = request.getParameter("user.username");
+		String password = request.getParameter("user.password");
+		String confirmPassword = request.getParameter("user.confirmPassword");
+		
+		User existUser = userService.getUserByUsername(username);
+		boolean candidateExist = userService.existsUserCandidateByUserName(username);
+		if (existUser != null || candidateExist){
+			flag ="username_conflict";
+			json.put("flag", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "500_error_json";
+		}
+		
+		if(!password.equals(confirmPassword)){
+			flag ="password_not_match";
+			json.put("flag", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "500_error_json";
+		}
+		
+		String type = "candidate";
+		String user_info = "";
+		if(request.getParameter("user.user_info") != null && !request.getParameter("user.user_info").equals("")){
+			user_info= request.getParameter("user.user_info");
+		}
+		String email = request.getParameter("user.email");
+		String realname = request.getParameter("user.realname");
+		
+		user.setUsername(username);
+		user.setPassword(password);
+		user.setType(type);
+		user.setUser_info(user_info);
+		user.setEmail(email);
+		user.setRealname(realname);
+		
+		userService.createUserCandidate(user);
+		Utils.createUserSession(user);
+		
+		flag ="signup_success";
+		json.put("flag", flag);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "200_success_json";
+	}
+	public String logout(){
+		Utils.deleteUserSession();
+		return "logout_success";
+	}
+	
+	public String setting(){
+		if (!Utils.isLogin()){
+			return "401_page";
+		}
+		user = Utils.currentUser();
+		
+		return "success_setting";
+	}
+	
+	public String showMembershipPage(){
+		if (!Utils.isLogin()){
+			return "401_page";
+		}
+		else if (!Utils.currentUserType().equals("admin")){
+			return "403_page";
+		}
+		return "success_showMembershipPage";
+	}
+	
+	public String showUsers() throws IOException {
+		ActionContext context = ActionContext.getContext();
+	    HttpServletRequest request = (HttpServletRequest)context.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw  = response.getWriter();
+		JSONObject json = new JSONObject(); 
+		String flag = "";
+		JsonConfig cfg = new JsonConfig();
+		cfg.setJsonPropertyFilter(new PropertyFilter(){
+			public boolean apply(Object source, String name, Object value) {
+				if(name.equals("releaseHistory") || name.equals("source") || name.equals("password") || name.equals("certCode") || name.equals("currentToolsStatus")) {
+					return true;
+				}
+				else {
+					return false;
+				}
+			}
+		});
+		if (!Utils.isLogin()){
+			flag = "not_login";
+			json.put("error", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "401_error_json";
+		}
+		Integer user_num = userService.getAllUsers().size();
+		Integer candidate_num = userService.getAllUserCandidates().size();
+		String user_type = request.getParameter("user_type");
+		if (user_type.equals("users")){
+			allUsers = userService.getAllUsers();
+			json.put("user_num", user_num);
+			json.put("candidate_num", candidate_num);
+			json.put("users", JSONArray.fromObject(allUsers, cfg));
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "200_success_json";
+		}
+		else if (user_type.equals("candidates")){
+			json.put("user_num", user_num);
+			json.put("candidate_num", candidate_num);
+			allUsers = userService.getAllUserCandidates();
+			json.put("candidates", JSONArray.fromObject(allUsers, cfg));
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "200_success_json";
+		}
+		else {
+			flag = "unknow_request";
+			json.put("error", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "500_error_json";
+		}
+	}
+	
+	public String verifyUser() throws IOException{
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest)context.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw  = response.getWriter();
+		JSONObject json = new JSONObject(); 
+		String flag = "";
+		
+		if (!Utils.isLogin()){
+			flag = "not_login";
+			json.put("flag", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "401_error_json";
+		}
+		
+		User current_user = Utils.currentUser();
+		if (!current_user.getType().equals("admin")){
+			flag = "not_admin";
+			json.put("flag", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "403_error_json";
+		}
+		
+		String user_idStr = request.getParameter("user_id");
+		int user_id = Integer.parseInt(user_idStr);		
+		user = userService.getUserCandidateByUserId(user_id);
+		if (user == null){
+			flag = "user_not_exist";
+			json.put("flag", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "500_error_json";
+		}
+		if (!user.getType().equals("candidate")){
+			flag = "not_candidate";
+			json.put("flag", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "500_error_json";
+		}
+		
+		user.setType("user");
+		userService.updateUser(user);
+		
+		flag = "verify_success";
+		json.put("flag", flag);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "200_success_json";
+	}
+	
+	public String deleteUser() throws IOException{
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest)context.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw  = response.getWriter();
+		JSONObject json = new JSONObject(); 
+		String flag = "";
+		
+		if (!Utils.isLogin()){
+			flag = "not_login";
+			json.put("flag", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "401_error_json";
+		}
+
+		String user_idStr = request.getParameter("user_id");
+		int user_id = Integer.parseInt(user_idStr);
+		User current_user = Utils.currentUser();
+		if (!current_user.getType().equals("admin")){
+			flag = "not_admin";
+			json.put("flag", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "403_error_json";
+		}
+		
+		if(user_id == current_user.getUser_id()){
+			flag = "delete_self_error";
+			json.put("flag", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "500_error_json";
+		}
+		
+		User deleteUser = userService.getUserByUserId(user_id);
+		if (deleteUser == null){
+			flag = "user_not_exist";
+			json.put("flag", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "500_error_json";
+		}
+		
+		userService.deleteUser(deleteUser);
+		flag = "delete_success";
+		json.put("flag", flag);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "200_success_json";
+	}
+	
+	public String updateUser() throws IOException{
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest)context.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw  = response.getWriter();
+		JSONObject json = new JSONObject(); 
+		String flag = "";
+		
+		if (!Utils.isLogin()){
+			flag = "not_login";
+			json.put("flag", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "401_error_json";
+		}
+		
+		boolean hasPermission = false;
+		User current_user = Utils.currentUser();
+		String user_id = request.getParameter("user_id");
+		user = userService.getUserByUserId(Integer.parseInt(user_id));
+		if (user == null){
+			flag = "user_not_exist";
+			json.put("flag", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "500_error_json";
+		}
+		if (current_user.getType().equals("admin")){
+			hasPermission = true;
+		}
+		else if (current_user.getUser_id() == user.getUser_id()){
+			hasPermission = true;
+		}
+		
+		if (!hasPermission){
+			flag = "permission_deny";
+			json.put("flag", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "403_error_json";
+		}
+		
+		String realname = new String(request.getParameter("realname").getBytes("ISO8859-1"),"UTF8"); 
+		String oldpassword = request.getParameter("oldpassword");
+		String newpassword = request.getParameter("newpassword");
+		String confirmpassword = request.getParameter("confirmpassword");
+		String email = request.getParameter("email");
+		String user_info = new String(request.getParameter("remarks").getBytes("ISO8859-1"), "UTF8");
+		
+		if (realname != null && !realname.equals("")){
+			user.setRealname(realname);
+		}
+		if (email != null && !email.equals("")){
+			user.setEmail(email);
+		}
+		if (user_info != null && !user_info.equals("")){
+			user.setUser_info(user_info);
+		}
+		if (newpassword != null && !newpassword.equals("")){
+			if (oldpassword == null || oldpassword.equals("")){
+				flag = "need_oldpassword";
+				json.put("flag", flag);
+				pw.write(json.toString());
+				pw.flush();
+				pw.close();
+				return "500_error_json";
+			}
+			else if (!oldpassword.equals(user.getPassword())){
+				flag = "oldpassword_wrong";
+				json.put("flag", flag);
+				pw.write(json.toString());
+				pw.flush();
+				pw.close();
+				return "500_error_json";
+			}
+			else if (!newpassword.equals(confirmpassword)){
+				flag = "newpassword_not_match";
+				json.put("flag", flag);
+				pw.write(json.toString());
+				pw.flush();
+				pw.close();
+				return "500_error_json";
+			}
+			user.setPassword(newpassword);
+		}
+		
+		userService.updateUser(user);
+		flag = "user_update_success";
+		json.put("flag", flag);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "200_success_json";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//=================================================
+	
+	
+
+	public String findPassword(){
+		Map<String,Object> session = ActionContext.getContext().getSession();
+		User userInfo = userService.getUserByUsername(user.getUsername());
+		if(userInfo == null){
+			//the user of the username does not exist
+			return "user_not_exists_findPassword";
+		}else{
+			//the user exist and the password is correct
+			String certCode=(String) session.get("certCode");
+			if(certCode.equals(user.getCertCode())){
+				String toMail = userInfo.getEmail();
+				StringBuffer sb = new StringBuffer(); 
+				sb.append("亲爱的用户"+ userInfo.getUsername()+"：您好！<br><br>");  
+	            sb.append("        您收到这封这封电子邮件是因为您 (也可能是某人冒充您的名义) 申请了一个新的密码。假如这不是您本人所申请, 请不用理会<br>这封电子邮件, 但是如果您持续收到这类的信件骚扰, 请您尽快联络管理员。<br><br>");  
+	            sb.append("        要使用新的密码, 请使用以下链接启用密码。<br><br>");  
+	            sb.append("        <a href='http://localhost:8080/EBP1/userAction_resetPassword.action?username="+userInfo.getUsername()+"'>http://localhost:8080/EBP1/userAction_resetPassword.action?username="+userInfo.getUsername()+"</a>");  
+	            sb.append("<br><br>我们将一如既往、热忱的为您服务！");  
+	            sb.append("<br>用户服务支持：<a href='mailto:liuzwei@cn.ibm.com'>liuzwei@cn.ibm.com</a><br><br><br>");  
+	            /** strm[1]第一个跟第二个@间内容,strm[strm.length - 1]最后一@内容 */  
+	            // 创建邮件  
+	            Mail mail = new Mail();  
+	            mail.setTo(toMail);  
+	            mail.setFrom("poseidon_eb2013@163.com");// 你的邮箱  
+	            mail.setHost("smtp.163.com");  
+	            mail.setUsername("poseidon_eb2013@163.com");// 用户  
+	            mail.setPassword("poseidon");// 密码  
+	            mail.setSubject("[Poseidon]找回您的账户密码");  
+	            mail.setContent(sb.toString()); 
+	            boolean result = mail.sendMail();
+	            if (result == true){  
+	            	return "find_password_success";
+	            }
+	        } 	
+			return "find_password_failure";	
+		}		 
+	}
+	
+	
+	
+	
+	
+	
+	public String getUserCandidateInfo(){
+	    Map<String,Object> session = ActionContext.getContext().getSession();
+		user = (User) session.get("current_user");
+	    int user_id = user.getUser_id();
+		/*
+		for(int i= 0 ;i<10;i++){
+			System.out.println("从session中取得的userId："+user_id);
+		}
+		*/
+		user = userService.getUserCandidateByUserId(user_id);
+		return "success_getCandidateInfo";
+	}
+	
+	public String getUserFromId(){
+		ActionContext context = ActionContext.getContext();
+	    HttpServletRequest request = (HttpServletRequest)context.get(ServletActionContext.HTTP_REQUEST);
+	   
+	    String user_id = request.getParameter("user_id");
+		
+		user = userService.getUserByUserId(Integer.parseInt(user_id));
+		
+		return "success_getUserFromId";
+	}
+	public String getUserCandidateFromId(){
+		ActionContext context = ActionContext.getContext();
+	    HttpServletRequest request = (HttpServletRequest)context.get(ServletActionContext.HTTP_REQUEST);
+	   
+	    String user_id = request.getParameter("user_id");
+		
+		user = userService.getUserCandidateByUserId(Integer.parseInt(user_id));
+		
+		return "success_getUserCandidateFromId";
+	}
+}

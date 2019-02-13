@@ -1,0 +1,1 @@
+{id="2394199683", screenName="糖果0909", name="糖果0909", province="22", city="1", location="吉林 长春", description="我爱吃糖！", url="", gender="f", followersCount="47", friendsCount="170", statusesCount="315", favouritesCount="2", createdAt="Sun Oct 02 22:05:56 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="6", lang="zh-cn"}

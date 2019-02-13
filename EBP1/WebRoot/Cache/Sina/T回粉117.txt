@@ -1,0 +1,1 @@
+{id="3501555187", screenName="T回粉117", name="T回粉117", province="35", city="7", location="福建 南平", description="埋葬回忆的过去", url="", gender="m", followersCount="14", friendsCount="20", statusesCount="0", favouritesCount="0", createdAt="Thu May 30 17:56:37 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

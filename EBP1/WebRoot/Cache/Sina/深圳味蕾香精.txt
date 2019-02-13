@@ -1,0 +1,1 @@
+{id="3253810865", screenName="深圳味蕾香精", name="深圳味蕾香精", province="36", city="10", location="江西 抚州", description="诚实是最好的策略", url="", gender="f", followersCount="244", friendsCount="1002", statusesCount="277", favouritesCount="0", createdAt="Tue Jan 22 10:42:07 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1", lang="zh-cn"}

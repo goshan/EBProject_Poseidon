@@ -1,0 +1,1 @@
+{id="2712681721", screenName="紫怡快乐小宝宝", name="紫怡快乐小宝宝", province="12", city="3", location="天津 河西区", description="", url="", gender="f", followersCount="343", friendsCount="1962", statusesCount="339", favouritesCount="1", createdAt="Thu Apr 19 09:05:06 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="285", lang="zh-cn"}

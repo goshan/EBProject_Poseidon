@@ -1,0 +1,1 @@
+{id="1933886262", screenName="非耶非也", name="非耶非也", province="31", city="7", location="上海 普陀区", description="", url="", gender="m", followersCount="160", friendsCount="201", statusesCount="177", favouritesCount="4", createdAt="Sun Feb 06 18:14:42 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="105", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="1797359597", screenName="chaojijun", name="chaojijun", province="42", city="1", location="ºþ±± Îäºº", description="", url="", gender="f", followersCount="217", friendsCount="144", statusesCount="1790", favouritesCount="15", createdAt="Tue Aug 17 22:16:48 CST 2010", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="83", lang="zh-cn"}

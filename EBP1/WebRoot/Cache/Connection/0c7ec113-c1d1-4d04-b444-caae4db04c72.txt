@@ -1,0 +1,3 @@
+ch
+Datastage Job - 并行删除作业的表死锁问题。
+ 悬赏解决 - 解决出来的我请喝咖啡。 问题： ETL的逻辑如下： a. 从数据库据DB里面表A的选择出一些列Company ID。 表A的select语句很简单，就是 select company_id from A b。把这些Company输出到一个Transformer以后 c。对一个数据库表B操作，删除表B里面的所有Company ID对应于步骤a的记录删除。 语句是 delete from B where company_id = :company_id 在表B里面，对company_id已经建立了索引，但是不唯一。 Job在执行的时候，一直遇到问题, 表B被锁，delete语句运行由于deadlock运行失败，job Fail。 

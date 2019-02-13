@@ -1,0 +1,193 @@
+
+function workbench_page(){
+	workbench_showTime();
+	setInterval("workbench_showTime()", 10000);
+	workbench_menuItemHover();
+	workbench_menuItemClick();
+	workbench_loadStation();
+	workbench_showUserOperation();
+	$("#workbench_search").click();
+}
+
+
+function workbench_showTime(){
+	var dateTime = new Date();
+	var year = dateTime.getFullYear();
+	var month = dateTime.getMonth()+1;
+	var day = dateTime.getDate();
+	var hour = dateTime.getHours();
+	var minute = dateTime.getMinutes();
+	if (hour < 10){
+		hour = "0"+hour;
+	}
+	if (minute < 10){
+		minute = "0"+minute;
+	}
+	var date = year+" / "+month+" / "+day;
+	var time = hour + ":" + minute;
+	
+	$("#workbench_date").text(date);
+	$("#workbench_time").text(time);
+}
+
+function workbench_menuItemHover(){
+	var interval = 250;
+	$(".workbench_root_item").hover(function(){
+		$(this).addClass("workbench_menu_hover");
+		$(this).parent().children(".workbench_light").animate({
+			"left": "-88px"
+		}, interval);
+	}, function(){
+		$(this).removeClass("workbench_menu_hover");
+		$(this).parent().children(".workbench_light").animate({
+			"left": "-176px"
+		}, interval);
+	});
+	$(".workbench_final_item").hover(function(e){
+		if ($(this).hasClass("workbench_menu_hover")){
+			$(this).removeClass("workbench_menu_hover");
+		}
+		else {
+			$(this).addClass("workbench_menu_hover");
+		}
+	});
+	$(".workbench_single_item").hover(function(){
+		$(this).addClass("workbench_menu_hover");
+		$(this).parent().children(".workbench_light").animate({
+			"left": "-88px"
+		}, interval);
+	}, function(){
+		$(this).removeClass("workbench_menu_hover");
+		$(this).parent().children(".workbench_light").animate({
+			"left": "-176px"
+		}, interval);
+	});
+}
+
+function workbench_menuItemClick(){
+	var lightInterval = 250;
+	var itemInterval = 500;
+	function switchRootMenu($this){
+		if ($this.hasClass("workbench_menu_expand")){
+			$this.removeClass("workbench_menu_expand");
+			$this.parent().animate({
+				"height": "46px"
+			}, itemInterval);
+			$this.parent().children(".workbench_menu_arrow").rotate({
+				animateTo: 0
+			});
+			$this.parent().children(".workbench_light").animate({
+				"left": "-176px"
+			}, lightInterval);
+			$this.parent().children(".workbench_final_item").each(function(index){
+				$(this).animate({
+					"top": "0px"
+				}, itemInterval);
+			});
+		}
+		else {
+			$this.addClass("workbench_menu_expand");
+			$this.parent().animate({
+				"height": "136px"
+			}, itemInterval);
+			$this.parent().children(".workbench_menu_arrow").rotate({
+				animateTo: -90
+			});
+			$this.parent().children(".workbench_light").animate({
+				"left": "0"
+			}, lightInterval);
+			$this.parent().children(".workbench_final_item").each(function(index){
+				$(this).animate({
+					"top": (index+1)*45+"px"
+				}, itemInterval);
+			});
+		}
+	}
+	
+	
+	$(".workbench_root_item").click(function(e){
+		switchRootMenu($(this));		
+		e.preventDefault();
+	});
+	
+	$(".workbench_final_item").click(function(e){
+		$(".workbench_menu_selected").children(".workbench_white_arrow").addClass("hidden");
+		$(".workbench_menu_selected").removeClass("workbench_menu_selected");
+		var current_root_menu = $(this).parent().children(".workbench_root_item");
+		$(".workbench_menu_expand").each(function(index){
+			if ($(this).attr("id") != current_root_menu.attr("id")){
+				switchRootMenu($(this));
+			}
+		});
+		$(this).parent().children(".workbench_root_item").addClass("workbench_menu_selected");
+		$(this).children(".workbench_white_arrow").removeClass("hidden");
+		$(this).addClass("workbench_menu_selected");
+		$("#workbench_title").text($(this).text());
+		$("#workbench_toolbar").css("border-color", $(this).parent().children(".workbench_light").css("background-color"));
+		
+		e.preventDefault();
+	});
+	
+	$(".workbench_single_item").click(function(e){
+		$(".workbench_menu_selected").children(".workbench_white_arrow").addClass("hidden");
+		$(".workbench_menu_selected").removeClass("workbench_menu_selected");
+		$(".workbench_menu_expand").each(function(index){
+			switchRootMenu($(this));
+		});
+		$(this).parent().children(".workbench_light").animate({
+			"left": "0"
+		}, lightInterval);
+		$(this).children(".workbench_white_arrow").removeClass("hidden");
+		$(this).addClass("workbench_menu_selected");
+		$("#workbench_title").text($(this).text());
+		$("#workbench_toolbar").css("border-color", $(this).parent().children(".workbench_light").css("background-color"));
+		
+		e.preventDefault();
+	});
+}
+
+function workbench_loadStation(){
+	$(".workbench_final_item, .workbench_single_item").click(function(e){
+		toggle_loading_tip();
+		var url = $(this).attr("href");
+		$("#workbench_station_panel").text("");
+		$.ajax({
+			method: "get", 
+			url: url, 
+			success: function(data){
+				$("#workbench_station_panel").append(data);
+				toggle_loading_tip();
+			}
+		});
+		
+		e.preventDefault();
+	});
+}
+
+function workbench_showUserOperation(){
+	var interval = 200;
+	$("#workbench_operate").click(function(e){
+		if ($("#workbench_operation_panel").hasClass("hidden")){
+			$(this).children().rotate({
+				animateTo: -90
+			});
+			$("#workbench_operation_panel").removeClass("hidden");
+			$("#workbench_operation_panel").animate({ 
+				"height": "74px"
+			}, interval);
+		}
+		else {
+			$(this).children().rotate({
+				animateTo: 0
+			});
+			$("#workbench_operation_panel").animate({
+				"height": "0"
+			}, interval);
+			setTimeout(function(){
+				$("#workbench_operation_panel").addClass("hidden");
+			}, interval);
+		}
+		
+		e.preventDefault();
+	});
+}

@@ -1,0 +1,126 @@
+@font-face {
+	font-family:"MavenPro";
+	src: url("/EBP1/font/Maven_Pro_Regular.ttf");
+}
+@font-face {
+	font-family:"MavenProLight300";
+	src: url("/EBP1/font/MavenProLight-300.otf");
+}
+@font-face {
+	font-family:"MissionGothicLight";
+	src: url("/EBP1/font/Mission_Gothic_Light.otf");
+}
+@font-face {
+	font-family:"MissionGothicThin";
+	src: url("/EBP1/font/Mission_Gothic_Thin.otf");
+}
+@font-face {
+	font-family:"MavenProMedium";
+	src: url("/EBP1/font/MavenPro_Medium.ttf");
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #ccc;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #ccc;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #ccc;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #ccc;
+}
+
+.hidden{
+	display: none;
+}
+.opacity{
+	opacity: 0;
+}
+
+body{
+	margin: 0;
+	font-family: MavenPro, Microsoft Yahei;
+}
+a{
+	text-decoration: none;
+}
+div, input, textarea{
+	outline: none;
+}
+textarea{
+	resize: none;
+}
+
+
+
+
+#panel_cover{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1366px;
+	height: 650px;
+	background-color: #000;
+	opacity: 0.5;
+	z-index: 150;
+}
+#loading_tip{
+	width: 275px;
+	height: 274px;
+	position: absolute;
+	top: 188px;
+	left: 545px;
+	z-index: 150;
+}
+#success_alert{
+	width: 160px;
+	height: 96px;
+	position: absolute;
+	top: 277px;
+	left: 603px;
+	z-index: 150;
+}
+#success_bg{
+	width: 150px;
+	height: 56px;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	z-index: -10;
+	background-color: #000;
+}
+#error_alert{
+	width: 477px;
+	height: 84px;
+	position: absolute;
+	top: 283px;
+	left: 444px;
+	z-index: 150;
+}
+#error_bg{
+	width: 477px;
+	height: 84px;
+	position: absolute;
+	z-index: -10;
+	background-color: #000;
+}
+#close_alert{
+	display: block;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 3px;
+	right: 3px;
+}
+#alert_content{
+	width: 190px;
+	height: 36px;
+	
+	position: absolute;
+	top: 27px;
+	left: 210px;
+	font-size: 16px;
+	color: #666;
+}

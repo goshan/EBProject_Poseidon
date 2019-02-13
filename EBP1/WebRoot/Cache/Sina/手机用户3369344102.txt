@@ -1,0 +1,1 @@
+{id="3369344102", screenName="手机用户3369344102", name="手机用户3369344102", province="100", city="1000", location="其他", description="", url="", gender="m", followersCount="24", friendsCount="186", statusesCount="3", favouritesCount="8", createdAt="Sat May 18 00:32:10 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="2", lang="zh-cn"}

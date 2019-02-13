@@ -1,0 +1,3 @@
+ch
+[Test Skills]如何计算Automation的coverage
+ 我们team是使用TTT来管理test scenario。scenario的粒度不一，有的weight=1（6分钟完成），有的weight=400（大约5天）。scenario的内容coverage的范围也会因人而异。有的scenario甚至包括 AVT、FVT、GVT的内容。 automation的工具主要是selenium。用selenium来automate UI相关的步骤。但是automation的步骤一般都比较简单，不会100% cover到某个scenario中所有的步骤。也就是说如果我把某个test scenario标记为已经automated了，但是不是这个scenario完全不需要manual testing了。 这种情况下，如何计算automation的coverage呢？ 或者大家对于如何管理test scenario，如何标记automated有更多的建议吗？ 多谢！ 

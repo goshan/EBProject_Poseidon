@@ -1,0 +1,1 @@
+{id="1907341517", screenName="鲍勃是哥不是哥", name="鲍勃是哥不是哥", province="11", city="5", location="北京 朝阳区", description="", url="", gender="m", followersCount="30", friendsCount="270", statusesCount="0", favouritesCount="137", createdAt="Thu Dec 30 23:51:52 CST 2010", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="17", lang="zh-cn"}

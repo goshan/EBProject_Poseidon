@@ -1,0 +1,1 @@
+{id="3518353594", screenName="佳佳佳月乖乖", name="佳佳佳月乖乖", province="44", city="9", location="广东 茂名", description="我爱我自己。没有情敌", url="", gender="f", followersCount="95", friendsCount="58", statusesCount="13", favouritesCount="1", createdAt="Sat Jun 29 19:37:28 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="5", lang="zh-cn"}

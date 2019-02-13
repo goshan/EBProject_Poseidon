@@ -1,0 +1,1 @@
+{id="3530767681", screenName="97的那一年", name="97的那一年", province="35", city="5", location="福建 泉州", description="", url="", gender="m", followersCount="1", friendsCount="86", statusesCount="0", favouritesCount="0", createdAt="Wed Jun 12 08:25:29 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

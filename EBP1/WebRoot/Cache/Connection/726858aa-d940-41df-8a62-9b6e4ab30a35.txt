@@ -1,0 +1,3 @@
+ch
+如何在xpage的富文本域中保存文书link
+ 如何实现把对话框中的选择到得一条文书的notesid， 把这条文书的notesid作为link， 保存到主画面的richitem 中， 格式要求是doclink（小图标) 

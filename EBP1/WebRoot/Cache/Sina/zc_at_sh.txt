@@ -1,0 +1,1 @@
+{id="1048268620", screenName="zc_at_sh", name="zc_at_sh", province="31", city="10", location="ÉÏº£ ÑîÆÖÇø", description="", url="", gender="m", followersCount="124", friendsCount="80", statusesCount="352", favouritesCount="1", createdAt="Thu Mar 17 17:57:05 CST 2011", following="true", verified="false", verifiedType="-1", followMe="true", biFollowersCount="64", lang="zh-cn"}

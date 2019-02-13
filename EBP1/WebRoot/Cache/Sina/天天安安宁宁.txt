@@ -1,0 +1,1 @@
+{id="1463420285", screenName="天天安安宁宁", name="天天安安宁宁", province="32", city="1", location="江苏 南京", description="最近喜欢上喝茶了。", url="", gender="f", followersCount="105", friendsCount="137", statusesCount="256", favouritesCount="20", createdAt="Tue Jun 07 23:13:55 CST 2011", following="true", verified="false", verifiedType="-1", followMe="true", biFollowersCount="40", lang="zh-cn"}

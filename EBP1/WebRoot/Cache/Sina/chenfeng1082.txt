@@ -1,0 +1,1 @@
+{id="2207869152", screenName="chenfeng1082", name="chenfeng1082", province="44", city="8", location="¹ã¶« Õ¿½­", description="", url="", gender="m", followersCount="22", friendsCount="60", statusesCount="239", favouritesCount="5", createdAt="Mon Nov 14 01:10:45 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

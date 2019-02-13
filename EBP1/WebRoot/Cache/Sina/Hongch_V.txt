@@ -1,0 +1,1 @@
+{id="1148112474", screenName="Hongch_V", name="Hongch_V", province="100", city="1000", location="ÆäËû", description="", url="", gender="m", followersCount="62", friendsCount="114", statusesCount="102", favouritesCount="5", createdAt="Tue Feb 15 22:18:15 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="37", lang="zh-cn"}

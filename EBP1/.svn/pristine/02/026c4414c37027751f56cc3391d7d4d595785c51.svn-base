@@ -1,0 +1,3 @@
+ch
+Lab 07的一个注意点
+如果大家最初建队列的时候用的是英文，就是队列名和XML的Address都是英文字母：NANJING/SHANGHAI/HANGZHOU等，那只要把代码里的3改成8，不要用NANJING，用SHANGHAI和HANGZHOU做测试即可完成练习。(NANJING是7位，SHANGHAI和HANGZHOU都是8位。)?如果大家用的是中文，南京市和上海市都是3位，照练习做应该没有问题。? 

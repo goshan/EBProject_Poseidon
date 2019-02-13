@@ -1,0 +1,1 @@
+{id="2139970364", screenName="小昕一", name="小昕一", province="11", city="8", location="北京 海淀区", description="", url="", gender="m", followersCount="57", friendsCount="170", statusesCount="37", favouritesCount="0", createdAt="Sat May 07 22:10:26 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="21", lang="zh-cn"}

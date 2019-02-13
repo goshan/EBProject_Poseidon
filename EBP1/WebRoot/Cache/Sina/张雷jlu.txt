@@ -1,0 +1,1 @@
+{id="2912792413", screenName="张雷jlu", name="张雷jlu", province="21", city="2", location="辽宁 大连", description="心做心是,不昧因果。", url="", gender="m", followersCount="56", friendsCount="54", statusesCount="9", favouritesCount="10", createdAt="Sat Aug 11 10:48:58 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="3", lang="zh-cn"}

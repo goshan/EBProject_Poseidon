@@ -1,0 +1,3 @@
+ch
+HMC password忘记，HMC恢复，关于update password步骤操作注意事项
+ 针对Power 7主机 当HMC恢复完成后，重新连接主机，需要有update password的操作。 注意此password为之前忘记的密码，切记，勿用新的HMC password尝试登陆，超过三次，FSP将会被锁定。 需要通过ASM进行相应的password更改： 1. 首先进入ADMIN user，将celogin user enable 2.logout ADMIN user 3.重新登陆celogin user,对原来忘记的HMC password 进行修改 4.用更改后的新密码，进行update password操作。 

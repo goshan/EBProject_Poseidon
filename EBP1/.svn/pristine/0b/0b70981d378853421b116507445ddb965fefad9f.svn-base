@@ -1,0 +1,212 @@
+package com.ibm.p1.dao.impl;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+
+import com.ibm.p1.dao.UserDao;
+import com.ibm.p1.entity.User;
+
+public class UserDaoImpl  extends HibernateDaoSupport implements UserDao{
+
+	private static final Logger log = LoggerFactory.getLogger(UserDaoImpl.class);
+	private SessionFactory sessionFactory;
+	@Autowired  
+	public void setSessionFactoryOverride(SessionFactory sessionFactory) {
+		super.setSessionFactory(sessionFactory);
+	}
+
+	public static Logger getLog() {
+		return log;
+	}
+
+
+	
+	public boolean createUser(User user) {
+		// TODO Auto-generated method stub
+		log.debug("saving User instance");
+		boolean result = false;
+		try
+		{
+			getHibernateTemplate().save(user);
+			result = true;
+			log.debug("save successfully");
+			return result;
+		}
+		catch(RuntimeException ex)
+		{
+			log.error("save failed", ex);
+			throw ex;
+			
+		}
+	}
+	public void createUserCandidate(User user) {
+		// TODO Auto-generated method stub
+		log.debug("saving User instance");
+		try
+		{
+			
+			getHibernateTemplate().save(user);
+			log.debug("save successfully");
+		}
+		catch(RuntimeException ex)
+		{
+			log.error("save failed", ex);
+			throw ex;
+		}
+	}
+
+	public void updateUser(User user) {
+		// TODO Auto-generated method stub
+		log.debug("udpating User instance");
+		try
+		{
+			getHibernateTemplate().update(user);
+			log.debug("update successfully");
+		}
+		catch(RuntimeException ex)
+		{
+			log.error("update failed", ex);
+		}
+	}
+	
+	public void deleteUser(User user) {
+		// TODO Auto-generated method stub
+		log.debug("deleting User instance");
+		try
+		{	
+			getHibernateTemplate().delete(user);
+			log.debug("delete successfully");
+		}
+		catch(RuntimeException ex)
+		{
+			log.error("delete failed", ex);
+			//session.close();
+			throw ex;
+		}
+	}
+	
+	public User findUserById(int user_id) {
+		// TODO Auto-generated method stub
+		log.debug("getting User instance with id: " + user_id);
+		try
+		{
+			User user = getHibernateTemplate().get(User.class, user_id);
+			return user;
+		}
+		catch(RuntimeException ex)
+		{
+			log.error("get failed", ex);
+			throw ex;
+		}
+	}
+
+	public User getUserCandidateByUserId(int user_id) {
+		// TODO Auto-generated method stub
+		log.debug("getting UserCandidate instance with id: " + user_id);
+		try
+		{
+			User user = getHibernateTemplate().get(User.class, user_id);
+			return user;
+		}
+		catch(RuntimeException ex)
+		{
+			log.error("get failed", ex);
+			throw ex;
+		}
+	}
+	public boolean existsUserCandidateByUserName(String username) {
+		// TODO Auto-generated method stub
+		log.debug("getting UserCandidate instance with username: " + username);
+		try
+		{
+			Session session=null;
+			session=super.getSessionFactory().getCurrentSession();
+			
+			String sql="select * from user where username='"+username+"'";
+			
+			Transaction tr=session.beginTransaction();
+			
+			List<User> list=session.createSQLQuery(sql).addEntity(User.class).list();
+			
+			return list.size() != 0;
+		}
+		catch(RuntimeException ex)
+		{
+			log.error("get failed", ex);
+			throw ex;
+		}
+	}
+	public User findUserByUsername(String username) {
+		// TODO Auto-generated method stub
+		log.debug("finding User instance with username: " + username);
+		try
+		{
+			User user = new User();
+			user.setUsername(username);
+			
+			@SuppressWarnings("unchecked")
+			List<User> users = this.getHibernateTemplate().findByExample(user);
+			//System.out.println("finduserbyname TEST:"+user.getUser_id()+ user.getUsername()+ user.getType());
+			if(users.size() > 0)
+			{
+				user = users.get(0);
+				return user;
+			}
+			else
+			{
+				return null;
+			}
+		}
+		catch(RuntimeException ex)
+		{
+			log.error("finding user failed", ex);
+			throw ex;
+		}
+	}
+
+	public List<User> getAllUsers() {
+		// TODO Auto-generated method stub
+		log.debug("finding all users");
+		try
+		{
+			User user = new User();
+			user.setType("admin");
+			List<User> users = this.getHibernateTemplate().findByExample(user);
+			User user2 = new User();
+			user2.setType("user");
+			List<User> users2 = this.getHibernateTemplate().findByExample(user2);
+			users.addAll(users2);
+			return users;
+		}
+		catch(RuntimeException ex)
+		{
+			log.error("finding all users failed", ex);
+			throw ex;
+		}
+	}
+
+	public List<User> getAllUserCandidates() {
+		// TODO Auto-generated method stub
+		log.debug("finding all userCandidates");
+		try
+		{
+			User user = new User();
+			user.setType("candidate");
+			@SuppressWarnings("unchecked")
+			List<User> userCandidates = this.getHibernateTemplate().findByExample(user);	
+			return userCandidates;
+		}
+		catch(RuntimeException ex)
+		{
+			log.error("finding all userCandidates failed", ex);
+			throw ex;
+		}
+	}
+}

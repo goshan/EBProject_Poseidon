@@ -1,0 +1,1 @@
+{id="2724085271", screenName="ÄÖÄÖ_Sarah", name="ÄÖÄÖ_Sarah", province="21", city="2", location="ÁÉÄş ´óÁ¬", description="", url="", gender="f", followersCount="142", friendsCount="131", statusesCount="908", favouritesCount="2", createdAt="Mon Apr 16 12:44:46 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="49", lang="zh-cn"}

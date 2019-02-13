@@ -1,0 +1,1 @@
+{id="1235288520", screenName="pmHI", name="pmHI", province="46", city="1", location="海南 海口", description="", url="", gender="m", followersCount="137", friendsCount="302", statusesCount="859", favouritesCount="9", createdAt="Tue Oct 20 09:24:33 CST 2009", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="11", lang="zh-cn"}

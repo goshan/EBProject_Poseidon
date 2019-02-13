@@ -1,0 +1,1 @@
+{id="1939565301", screenName="Ö£Çå²¨", name="Ö£Çå²¨", province="35", city="1000", location="¸£½¨", description="", url="", gender="m", followersCount="120", friendsCount="968", statusesCount="535", favouritesCount="0", createdAt="Sat Jan 29 02:09:13 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="2", lang="zh-cn"}

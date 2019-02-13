@@ -1,0 +1,1 @@
+{id="1965350981", screenName="北京VergiL", name="北京VergiL", province="11", city="8", location="北京 海淀区", description="学无止境", url="", gender="m", followersCount="164", friendsCount="158", statusesCount="823", favouritesCount="128", createdAt="Sat Feb 12 20:27:45 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="61", lang="zh-cn"}

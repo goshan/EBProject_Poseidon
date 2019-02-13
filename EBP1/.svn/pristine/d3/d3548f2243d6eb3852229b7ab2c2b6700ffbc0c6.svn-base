@@ -1,0 +1,3 @@
+ch
+QSAM和SDS区别
+ 我自己看书，看到Z/OS数据集的组织方式里面有一种是数据集是SDS（Sequential Data set）。另外，也看到有一种文件叫作QSAM，也是Sequential Data set。请问他们是包含关系还是就是一个东西？ 补充：问了一下周围的同事，告诉我的答复是，QSAM 是可以手动输入数据的文件，其他文件都不可以。 

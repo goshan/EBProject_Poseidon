@@ -1,0 +1,3 @@
+ch
+Human sensor
+human with sensor： 人身上携带sensor，sensor提供信息，如人的位置，温度 --- sensor主动，人不加工处理信息，盲人自动摄影，sensor可以是mobile，也可以是其他形式的人可携带的感应器。human as sensor： 人有意提供信息（拍照上传，提供comment，knowledge）--- 人有意识地对信息主动加工处理，如拍什么，怎么拍，可以通过device（如手机，电脑）传输 

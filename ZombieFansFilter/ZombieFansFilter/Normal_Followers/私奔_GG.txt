@@ -1,0 +1,1 @@
+{id="3500670164", screenName="Ë½±¼_GG", name="Ë½±¼_GG", province="43", city="4", location="ºþÄÏ ºâÑô", description="", url="", gender="m", followersCount="14", friendsCount="53", statusesCount="1", favouritesCount="0", createdAt="Wed May 29 17:34:40 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="2", lang="zh-cn"}

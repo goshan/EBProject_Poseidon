@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+	<bean id="userDaoImpl" class="com.ibm.p1.dao.impl.UserDaoImpl">
+		<property name="hibernateTemplate">
+			<ref bean="Template"/>
+		</property>
+	</bean>
+	<bean id="manageDaoImpl" class="com.ibm.p1.dao.impl.ManageDaoImpl">
+		<property name="hibernateTemplate">
+			<ref bean="Template"/>
+		</property>
+	</bean>
+	<bean id="acquireDaoImpl" class="com.ibm.p1.dao.impl.AcquireDaoImpl">
+		<property name="hibernateTemplate">
+			<ref bean="Template"/>
+		</property>
+	</bean>
+	<bean id="analysisDaoImpl" class="com.ibm.p1.dao.impl.AnalysisDaoImpl">
+		<property name="hibernateTemplate">
+			<ref bean="Template"/>
+		</property>
+	</bean>
+	<bean id="releaseDaoImpl" class="com.ibm.p1.dao.impl.ReleaseDaoImpl">
+		<property name="hibernateTemplate">
+			<ref bean="Template"/>
+		</property>
+	</bean>
+	<bean id="dataManageDaoImpl" class="com.ibm.p1.dao.impl.DataManageDaoImpl">
+		<property name="hibernateTemplate">
+			<ref bean="Template"/>
+		</property>
+	</bean>
+	<bean id="communicationDaoImpl" class="com.ibm.p1.dao.impl.CommunicationDaoImpl">
+		<property name="hibernateTemplate">
+			<ref bean="Template"/>
+		</property>
+	</bean>
+	<bean id="searchDaoImpl" class="com.ibm.p1.dao.impl.SearchDaoImpl">
+		<property name="hibernateTemplate">
+			<ref bean="Template"/>
+		</property>
+	</bean>
+	<!--
+	
+	-->
+</beans>

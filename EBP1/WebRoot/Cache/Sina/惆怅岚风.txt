@@ -1,0 +1,1 @@
+{id="1667392444", screenName="惆怅岚风", name="惆怅岚风", province="44", city="1000", location="广东", description="", url="", gender="m", followersCount="367", friendsCount="528", statusesCount="3923", favouritesCount="46", createdAt="Sun Dec 06 23:29:03 CST 2009", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="73", lang="zh-cn"}

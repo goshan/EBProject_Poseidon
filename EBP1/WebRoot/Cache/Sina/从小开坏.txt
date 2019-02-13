@@ -1,0 +1,1 @@
+{id="2463072710", screenName="从小开坏", name="从小开坏", province="33", city="2", location="浙江 宁波", description="", url="", gender="m", followersCount="0", friendsCount="1", statusesCount="0", favouritesCount="0", createdAt="Wed Oct 12 18:49:05 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

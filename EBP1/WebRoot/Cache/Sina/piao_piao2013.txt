@@ -1,0 +1,1 @@
+{id="3673957617", screenName="piao_piao2013", name="piao_piao2013", province="44", city="3", location="¹ã¶« ÉîÛÚ", description="", url="", gender="f", followersCount="10", friendsCount="41", statusesCount="0", favouritesCount="0", createdAt="Tue Jul 30 08:33:30 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="3500338297", screenName="种种玉米在发烧爆米花的味道", name="种种玉米在发烧爆米花的味道", province="400", city="41", location="海外 伊朗", description="", url="", gender="m", followersCount="17", friendsCount="272", statusesCount="193", favouritesCount="0", createdAt="Fri May 31 15:55:58 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1", lang="zh-cn"}

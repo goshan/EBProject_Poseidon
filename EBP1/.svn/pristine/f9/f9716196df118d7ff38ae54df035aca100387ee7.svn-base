@@ -1,0 +1,169 @@
+package com.ibm.p1.service.impl;
+
+import java.util.List;
+
+import org.quartz.Job;
+import org.quartz.JobExecutionContext;
+import org.quartz.JobExecutionException;
+
+import weibo4j.Comments;
+import weibo4j.Timeline;
+import weibo4j.model.Comment;
+import weibo4j.model.CommentWapper;
+import weibo4j.model.Paging;
+import weibo4j.model.Status;
+import weibo4j.model.StatusWapper;
+import weibo4j.model.WeiboException;
+
+import com.ibm.p1.dao.AcquireDao;
+import com.ibm.p1.entity.Parameter;
+import com.ibm.p1.entity.User;
+import com.ibm.p1.service.ManageService;
+
+public class AcquireWeiboDyn implements Job{
+
+	private int RECORD_NUM=100;
+
+	private User currentUser = new User();
+	public User getCurrentUser() {
+		return currentUser;
+	}
+	public void setCurrentUser(User currentUser) {
+		this.currentUser = currentUser;
+	}
+
+//	public void execute(JobExecutionContext context) throws JobExecutionException {
+//		// TODO Auto-generated method stub
+//		System.out.println("开始执行定时任务......");
+//		Parameter param=(Parameter)context.getJobDetail().getJobDataMap().get("param");
+//		AcquireDao dao=(AcquireDao)context.getJobDetail().getJobDataMap().get("dao");
+//	
+//		Comments comments=new Comments();
+//		comments.client.setToken(param.getAccess_token());
+//		Timeline tm=new Timeline();
+//		tm.client.setToken(param.getAccess_token());
+//		try {
+//			System.out.println("=========================================");
+//			System.out.println("开始获取@我的最新微博......");
+//			
+//			Paging page=new Paging(1,50);
+//			StatusWapper sw=tm.getMentions(page,0,0,0);
+//			long total=sw.getTotalNumber();
+//			long num=total > RECORD_NUM?RECORD_NUM:total;
+//			
+//			int pages=(int)Math.ceil((double)num/50);
+//			for(int i=0;i<pages;i++){
+//				 for(Status s:sw.getStatuses()){
+//					 dao.saveStatusesMentions(s);
+//				 }
+//				 page.setPage(i+2);
+//				 sw=tm.getMentions(page,0,0,0);
+//			 }
+//			System.out.println("=========================================");
+//			System.out.println("开始获取@我的评论列表......");
+//			page.setPage(1);
+//			CommentWapper cw=comments.getCommentMentions(page, 0, 0);
+//			
+//			total=cw.getTotalNumber();
+//			num=total > RECORD_NUM?RECORD_NUM:total;
+//			
+//			pages=(int)Math.ceil((double)num/50);
+//			for(int i=0;i<pages;i++){
+//				 for(Comment c:cw.getComments()){
+//					 dao.saveCommentsMentions(c);
+//				 }
+//				 page.setPage(i+2);
+//				 cw=comments.getCommentMentions(page, 0, 0);
+//			 }
+//			
+//		} catch (WeiboException e) {
+//			e.printStackTrace();
+//			throw new JobExecutionException("获取微博信息失败！");
+//		}
+//	}
+
+//	public void execute(JobExecutionContext context) throws JobExecutionException {
+//		// TODO Auto-generated method stub
+//		System.out.println("开始执行定时任务......");
+//		Parameter param=(Parameter)context.getJobDetail().getJobDataMap().get("param");
+//		AcquireDao dao=(AcquireDao)context.getJobDetail().getJobDataMap().get("dao");
+//
+//		Timeline tm=new Timeline();
+//		tm.client.setToken(param.getAccess_token());
+//		try {
+//			System.out.println("=========================================");
+//			System.out.println("开始获取我最新发布的微博......");
+//			
+//			Paging page=new Paging(1,100);
+//			StatusWapper sw=tm.getUserTimelineByName(param.getWeibo_account(), page, 0, 0);
+//			for(Status s:sw.getStatuses()){
+//				dao.saveStatuses(s);
+//			}
+//			System.out.println("=========================================");
+//			
+//		} catch (WeiboException e) {
+//			e.printStackTrace();
+//			throw new JobExecutionException("获取微博信息失败！");
+//		}
+//	}
+	public void execute(JobExecutionContext context) throws JobExecutionException {
+		// TODO Auto-generated method stub
+		System.out.println("开始执行定时任务......");
+		Parameter param=(Parameter)context.getJobDetail().getJobDataMap().get("param");
+		AcquireDao dao=(AcquireDao)context.getJobDetail().getJobDataMap().get("dao");
+		ManageService manageService=(ManageService)context.getJobDetail().getJobDataMap().get("manageService");
+		User currentUser=(User)context.getJobDetail().getJobDataMap().get("user");
+		if(!manageService.checkToolsConflict(manageService.AcquireWeiboReply)){
+			manageService.insertToolsRecord(manageService.AcquireWeiboReply, currentUser);
+			List<String> list=dao.getStatusIds();
+			
+			
+			Timeline tm=new Timeline();
+			tm.client.setToken(param.getAccess_token());
+			Comments comments=new Comments();
+			comments.client.setToken(param.getAccess_token());
+			try {
+				System.out.println("=========================================");
+				System.out.println("开始获取我最新发布的微博以及回复......");
+				
+				Paging page=new Paging(1,100);
+				StatusWapper sw=tm.getUserTimelineByName(param.getWeibo_account(), page, 0, 0);
+				for(Status s:sw.getStatuses()){
+					dao.saveStatuses(s);
+					
+					CommentWapper cw=comments.getCommentById(s.getId());
+					for(Comment c:cw.getComments()){
+						dao.saveComments(c);
+					}
+				}
+				manageService.fredToolsRecord(manageService.AcquireWeiboReply, currentUser);
+				System.out.println("=========================================");
+				
+			} catch (WeiboException e) {
+				e.printStackTrace();
+				String error="获取微博信息失败！";
+				if(e.getErrorCode() == 10023){
+					error+="{请求速率过快，少年！-_-!}";
+				}
+				
+				throw new JobExecutionException(error);
+			}
+		}
+		
+		
+//		System.out.println("=========================================");
+//		System.out.println("开始获取我最新发布的微博的回复......");
+//		
+//		for(String id:list){
+//			try {
+//				CommentWapper cw=comments.getCommentById(id);
+//				for(Comment c:cw.getComments()){
+//					dao.saveComments(c);
+//				}
+//			} catch (WeiboException e) {
+//				e.printStackTrace();
+//			}
+//		}
+	}
+	
+}

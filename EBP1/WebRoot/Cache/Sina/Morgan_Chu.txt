@@ -1,0 +1,1 @@
+{id="3313534593", screenName="Morgan_Chu", name="Morgan_Chu", province="33", city="1", location="’„Ω≠ ∫º÷›", description="", url="", gender="m", followersCount="35", friendsCount="80", statusesCount="26", favouritesCount="0", createdAt="Fri Jun 21 10:50:39 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="23", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="3495874175", screenName="热烘烘凯瑞迪KRD", name="热烘烘凯瑞迪KRD", province="14", city="8", location="山西 运城", description="", url="", gender="m", followersCount="15", friendsCount="298", statusesCount="171", favouritesCount="0", createdAt="Wed May 29 11:31:53 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

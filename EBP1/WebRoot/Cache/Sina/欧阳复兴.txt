@@ -1,0 +1,1 @@
+{id="2427468942", screenName="欧阳复兴", name="欧阳复兴", province="36", city="1", location="江西 南昌", description="", url="", gender="m", followersCount="69", friendsCount="147", statusesCount="31", favouritesCount="0", createdAt="Tue Sep 27 17:12:42 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

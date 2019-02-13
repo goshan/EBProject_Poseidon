@@ -1,0 +1,1 @@
+{id="3213650551", screenName="小凉风lt", name="小凉风lt", province="11", city="8", location="北京 海淀区", description="", url="", gender="m", followersCount="15", friendsCount="17", statusesCount="5", favouritesCount="0", createdAt="Fri Jan 04 20:16:20 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="2", lang="zh-cn"}

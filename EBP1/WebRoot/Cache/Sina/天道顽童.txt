@@ -1,0 +1,1 @@
+{id="1759512061", screenName="天道顽童", name="天道顽童", province="11", city="1", location="北京 东城区", description="天道昭昭，朗朗乾坤", url="", gender="m", followersCount="19", friendsCount="298", statusesCount="18", favouritesCount="272", createdAt="Fri Jun 18 18:45:56 CST 2010", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="3", lang="zh-cn"}

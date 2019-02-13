@@ -1,0 +1,1 @@
+{id="2263121397", screenName="人中鹿其", name="人中鹿其", province="11", city="5", location="北京 朝阳区", description="船到桥头自然沉 ......噗通", url="", gender="m", followersCount="72", friendsCount="101", statusesCount="82", favouritesCount="2", createdAt="Sat Jul 23 00:20:45 CST 2011", following="true", verified="false", verifiedType="-1", followMe="true", biFollowersCount="36", lang="zh-cn"}

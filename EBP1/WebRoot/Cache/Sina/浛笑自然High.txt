@@ -1,0 +1,1 @@
+{id="1894478180", screenName="浛笑自然High", name="浛笑自然High", province="52", city="1", location="贵州 贵阳", description="莫名其妙孩子气，年少轻狂一书生", url="", gender="m", followersCount="63", friendsCount="132", statusesCount="1", favouritesCount="4", createdAt="Wed Dec 15 17:28:31 CST 2010", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="3408142852", screenName="7谁不见了", name="7谁不见了", province="46", city="2", location="海南 三亚", description="湘江话桥", url="", gender="m", followersCount="4", friendsCount="1", statusesCount="0", favouritesCount="0", createdAt="Fri May 03 19:55:48 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

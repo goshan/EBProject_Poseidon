@@ -1,0 +1,1 @@
+{id="2609071353", screenName="只跑篮不投篮", name="只跑篮不投篮", province="11", city="8", location="北京 海淀区", description="", url="", gender="f", followersCount="87", friendsCount="120", statusesCount="311", favouritesCount="27", createdAt="Wed Feb 01 21:26:25 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="34", lang="zh-cn"}

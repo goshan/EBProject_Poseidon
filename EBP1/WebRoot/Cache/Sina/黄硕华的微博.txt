@@ -1,0 +1,1 @@
+{id="1772073100", screenName="黄硕华的微博", name="黄硕华的微博", province="32", city="2", location="江苏 无锡", description="", url="", gender="m", followersCount="29", friendsCount="92", statusesCount="28", favouritesCount="0", createdAt="Wed Jul 28 12:11:32 CST 2010", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1", lang="zh-cn"}

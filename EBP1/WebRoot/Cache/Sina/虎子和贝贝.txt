@@ -1,0 +1,1 @@
+{id="3170856693", screenName="虎子和贝贝", name="虎子和贝贝", province="13", city="1", location="河北 石家庄", description="", url="", gender="m", followersCount="21", friendsCount="69", statusesCount="54", favouritesCount="1", createdAt="Sat Dec 01 14:04:37 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1", lang="zh-cn"}

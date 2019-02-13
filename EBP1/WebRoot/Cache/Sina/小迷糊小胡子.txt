@@ -1,0 +1,1 @@
+{id="2245482173", screenName="小迷糊小胡子", name="小迷糊小胡子", province="100", city="1000", location="其他", description="", url="", gender="f", followersCount="103", friendsCount="180", statusesCount="885", favouritesCount="1086", createdAt="Thu Jul 14 02:01:10 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="30", lang="zh-cn"}

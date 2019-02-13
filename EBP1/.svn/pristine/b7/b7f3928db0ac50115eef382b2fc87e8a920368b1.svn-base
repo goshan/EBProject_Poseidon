@@ -1,0 +1,3 @@
+ch
+Company Code definition  solution
+ 一家欧洲公司的中国roll out,客户在欧盟国家设计的都是一个国家一个company code. 系统是ECC 6.0没有启用profit center和business area. FI和CO的很多自定义开发程序hard code了一个company code. 中国公司的问题是如果只设计一个company code在中国，是否能给其他城市分公司出BS和PL. 还有审计和税务是否能通过。（前提只设一个销售组织，logistic都集中，各城市的分公司只是设销售office).第一就是技术上如何解决帮底下分公司出报表。审计是否能通过，ps客户咨询过某四大审计公司居然拒绝回答他们这个问题 Faint. 

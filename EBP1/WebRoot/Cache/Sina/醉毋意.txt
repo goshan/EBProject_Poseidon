@@ -1,0 +1,1 @@
+{id="3623387653", screenName="醉毋意", name="醉毋意", province="44", city="9", location="广东 茂名", description="", url="", gender="m", followersCount="5", friendsCount="77", statusesCount="4", favouritesCount="0", createdAt="Sun Jul 14 15:45:25 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1", lang="zh-cn"}

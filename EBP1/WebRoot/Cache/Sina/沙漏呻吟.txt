@@ -1,0 +1,1 @@
+{id="3488503997", screenName="沙漏呻吟", name="沙漏呻吟", province="52", city="3", location="贵州 遵义", description="关山的回忆", url="", gender="m", followersCount="276", friendsCount="236", statusesCount="100", favouritesCount="0", createdAt="Thu May 23 19:52:35 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1", lang="zh-cn"}

@@ -1,0 +1,3 @@
+ch
+AIX KSH自动补全功能
+?还是bash比较方便，ksh下只找到下面这个的方法：#set -o vi上滚一条命令是ESC+k下滚一条命令是ESC+j自动补全是ESC+\ 

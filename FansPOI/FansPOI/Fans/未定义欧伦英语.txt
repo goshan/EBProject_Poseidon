@@ -1,0 +1,1 @@
+{id="3489481421", screenName="未定义欧伦英语", name="未定义欧伦英语", province="36", city="3", location="江西 萍乡", description="", url="", gender="f", followersCount="22", friendsCount="278", statusesCount="199", favouritesCount="0", createdAt="Sun May 26 08:42:58 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1", lang="zh-cn"}

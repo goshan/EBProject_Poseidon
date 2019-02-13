@@ -1,0 +1,1 @@
+{id="1892921541", screenName="-老毒物-", name="-老毒物-", province="31", city="14", location="上海 嘉定区", description="", url="", gender="m", followersCount="25", friendsCount="95", statusesCount="220", favouritesCount="32", createdAt="Tue Dec 14 20:07:37 CST 2010", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="4", lang="zh-cn"}

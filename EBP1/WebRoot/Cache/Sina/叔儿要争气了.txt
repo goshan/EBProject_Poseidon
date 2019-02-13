@@ -1,0 +1,1 @@
+{id="1161284401", screenName="叔儿要争气了", name="叔儿要争气了", province="400", city="1", location="海外 美国", description="", url="", gender="m", followersCount="79", friendsCount="109", statusesCount="261", favouritesCount="1", createdAt="Tue Nov 08 11:14:52 CST 2011", following="true", verified="false", verifiedType="-1", followMe="true", biFollowersCount="53", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="2742458187", screenName="求异存同cnpc", name="求异存同cnpc", province="11", city="1", location="北京 东城区", description="男儿志在四方", url="", gender="m", followersCount="54", friendsCount="617", statusesCount="774", favouritesCount="3", createdAt="Mon Apr 30 14:48:20 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="32", lang="zh-cn"}

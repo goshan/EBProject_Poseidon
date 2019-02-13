@@ -1,0 +1,1 @@
+{id="1912100045", screenName="ª∂¿÷Edwin", name="ª∂¿÷Edwin", province="31", city="1", location="…œ∫£ ª∆∆÷«¯", description="", url="", gender="m", followersCount="56", friendsCount="93", statusesCount="886", favouritesCount="219", createdAt="Wed Jan 05 12:07:45 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="28", lang="zh-cn"}

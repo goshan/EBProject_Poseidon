@@ -1,0 +1,1 @@
+{id="2159332884", screenName="心语如心愿", name="心语如心愿", province="100", city="1000", location="其他", description="慢慢来，比较快。", url="", gender="f", followersCount="92", friendsCount="293", statusesCount="71", favouritesCount="3", createdAt="Sun Jun 05 10:20:15 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="59", lang="zh-cn"}

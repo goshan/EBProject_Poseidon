@@ -1,0 +1,3 @@
+ch
+HDS的HAM功能和我们的HYPERSWAP是一样的么？
+ 最近了解到HDS宣传HAM能够实现和HYPERSWAP一样的存储双活。 我们DS8000的HYPERSWAP相对于HAM有什么优势？ 

@@ -1,0 +1,385 @@
+package com.ibm.p1.action;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+
+import org.apache.struts2.ServletActionContext;
+
+import com.ibm.p1.entity.SourceOfUser;
+import com.ibm.p1.entity.TotalKeyWords;
+import com.ibm.p1.entity.User;
+import com.ibm.p1.service.DataManageService;
+import com.ibm.p1.service.ManageService;
+import com.opensymphony.xwork2.ActionContext;
+
+public class DataManageAction {
+	private ManageService manageService;
+	private DataManageService dataManageService;
+	private List<TotalKeyWords> hotWordsList;
+
+	public ManageService getManageService() {
+		return manageService;
+	}
+
+	public void setManageService(ManageService manageService) {
+		this.manageService = manageService;
+	}
+
+	public DataManageService getDataManageService() {
+		return dataManageService;
+	}
+
+	public void setDataManageService(DataManageService dataManageService) {
+		this.dataManageService = dataManageService;
+	}
+
+	public List<TotalKeyWords> getHotWordsList() {
+		return hotWordsList;
+	}
+
+	public void setHotWordsList(List<TotalKeyWords> hotWordsList) {
+		this.hotWordsList = hotWordsList;
+	}
+
+	// 测试数据管理chart部分
+	public String showChartPage() {
+
+		return "success_showChartPage";
+	}
+
+	public String getNumOfConnection() throws IOException {
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest) context
+				.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw = response.getWriter();
+		JSONObject json = new JSONObject();
+		int num = dataManageService.getNumOfConnection();
+		json.put("num", num);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "success_getNumOfConnection";
+	}
+
+	public String getTopCountNumOfConnectionKeyWords() throws IOException {
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest) context
+				.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw = response.getWriter();
+		JSONObject json = new JSONObject();
+		Map<String, Integer> myMap = new HashMap<String, Integer>();
+		myMap = dataManageService.getTopCountNumOfConnectionKeyWords();
+
+		json.put("num", myMap);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "success_getTopCountNumOfConnectionKeyWords";
+	}
+
+	public String getNumOfZombieFans() throws IOException {
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest) context
+				.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw = response.getWriter();
+		JSONObject json = new JSONObject();
+		int num = dataManageService.getNumOfZombieFans();
+		json.put("num", num);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "success_getNumOfZombieFans";
+	}
+
+	public String getNumOfAllFans() throws IOException {
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest) context
+				.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw = response.getWriter();
+		JSONObject json = new JSONObject();
+		int num = dataManageService.getNumOfAllFans();
+		json.put("num", num);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "success_getNumOfAllFans";
+	}
+
+	public String getNumOfNormalFans() throws IOException {
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest) context
+				.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw = response.getWriter();
+		JSONObject json = new JSONObject();
+		int num = dataManageService.getNumOfNormalFans();
+		json.put("num", num);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "success_getNumOfNormalFans";
+	}
+
+	public String getTopCountNumOfFansKeyWords() throws IOException {
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest) context
+				.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw = response.getWriter();
+		JSONObject json = new JSONObject();
+		Map<String, Integer> myMap = new HashMap<String, Integer>();
+		myMap = dataManageService.getTopCountNumOfFansKeyWords();
+		json.put("num", myMap);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "success_getTopCountNumOfFansKeyWords";
+	}
+
+	public String getTotalhotWords() throws IOException {
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest) context
+				.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw = response.getWriter();
+		JSONObject jsonObj = new JSONObject();
+		JSONArray json = new JSONArray();
+		hotWordsList = dataManageService.getTotalHotWords();
+		json = JSONArray.fromObject(hotWordsList);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "success_getTotalhotWords";
+	}
+
+	public String getNumOfAdmin() throws IOException {
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest) context
+				.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw = response.getWriter();
+		JSONObject json = new JSONObject();
+		int num = dataManageService.getNumOfAdmin();
+		json.put("num", num);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "success_getNumOfAdmin";
+	}
+
+	public String getNumOfUser() throws IOException {
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest) context
+				.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw = response.getWriter();
+		JSONObject json = new JSONObject();
+		int num = dataManageService.getNumOfUser();
+		json.put("num", num);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "success_getNumOfUser";
+	}
+
+	public String getNumOfCandidate() throws IOException {
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest) context
+				.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw = response.getWriter();
+		JSONObject json = new JSONObject();
+		int num = dataManageService.getNumOfCandidate();
+		json.put("num", num);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "success_getNumOfCandidate";
+	}
+
+	// 某个用户发布的历史数据量
+	public String getReleaseNumAndUser() throws IOException {
+
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest) context
+				.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw = response.getWriter();
+		JSONObject json = new JSONObject();
+		Map<String, Integer> map = dataManageService.getReleaseNumAndUser();
+		json.put("map", map);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "success_getReleaseNumAndUser";
+
+	}
+
+	public String getReleaseNumAndDate() throws IOException {
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest) context
+				.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw = response.getWriter();
+		JSONObject json = new JSONObject();
+		Map<String, Integer> map = dataManageService.getReleaseNumAndDate();
+		json.put("map", map);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "success_getReleaseNumAndDate";
+
+	}// 某天发布的历史
+
+	public String getTotalNumOfRelease() throws IOException {
+
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest) context
+				.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw = response.getWriter();
+		JSONObject json = new JSONObject();
+		int num = dataManageService.getTotalNumOfRelease();
+		json.put("num", num);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "success_getTotalNumOfRelease";
+
+	}// 发布历史数据总数
+
+	public String getTotalNumOfReleaseDraft() throws IOException {
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest) context
+				.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw = response.getWriter();
+		JSONObject json = new JSONObject();
+		int num = dataManageService.getTotalNumOfReleaseDraft();
+		json.put("num", num);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "success_getTotalNumOfReleaseDraft";
+
+	}// 草稿总数
+
+	// 素材池相关
+	public String getNumOfAllSources() throws IOException{
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest) context
+				.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw = response.getWriter();
+		JSONObject json = new JSONObject();
+		int num = dataManageService.getNumOfAllSources();
+		json.put("num", num);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "success_getNumOfAllSources";
+	}//素材池素材总数
+	
+	public String getSourceOfDay() throws IOException{
+		
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest) context
+				.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw = response.getWriter();
+		JSONObject json = new JSONObject();
+		
+		Map<String, Integer> map = dataManageService.getSourceOfDay();
+		json.put("map", map);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "success_getSourceOfDay";
+		
+	}//某天素材池新增数量
+	
+	public String getSourceOfUser() throws IOException{
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest) context
+				.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw = response.getWriter();
+		JSONObject json = new JSONObject();
+		List<SourceOfUser> sus = dataManageService.getSourceOfUser();
+		json.put("list", sus);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "success_getSourceOfUser";
+		
+	}//某用户添加的所有素材
+	public String getTopCountNumOfSourceKeyWords() throws IOException{
+		
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest) context
+				.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw = response.getWriter();
+		JSONObject json = new JSONObject();
+		
+		Map<String, Float> map = dataManageService.getTopCountNumOfSourceKeyWords();
+		json.put("map", map);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		return "success_getTopCountNumOfSourceKeyWords";
+		
+		
+	}//素材池的关键词集合
+//	
+}

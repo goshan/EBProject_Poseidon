@@ -1,0 +1,1 @@
+{id="1996492675", screenName="我去Jevin", name="我去Jevin", province="12", city="2", location="天津 河东区", description="大气的做事", url="", gender="m", followersCount="127", friendsCount="163", statusesCount="295", favouritesCount="3", createdAt="Sun Feb 27 21:04:17 CST 2011", following="true", verified="false", verifiedType="-1", followMe="true", biFollowersCount="85", lang="zh-cn"}

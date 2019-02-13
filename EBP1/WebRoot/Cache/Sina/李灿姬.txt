@@ -1,0 +1,1 @@
+{id="2731042960", screenName="李灿姬", name="李灿姬", province="43", city="12", location="湖南 怀化", description="", url="", gender="f", followersCount="49", friendsCount="886", statusesCount="391", favouritesCount="0", createdAt="Fri Mar 02 22:49:28 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="2", lang="zh-cn"}

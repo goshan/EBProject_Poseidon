@@ -1,0 +1,1 @@
+{id="2973717141", screenName="撩人的吴金飞", name="撩人的吴金飞", province="44", city="1", location="广东 广州", description="", url="", gender="m", followersCount="189", friendsCount="1237", statusesCount="395", favouritesCount="0", createdAt="Wed Oct 03 18:07:47 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="69", lang="zh-cn"}

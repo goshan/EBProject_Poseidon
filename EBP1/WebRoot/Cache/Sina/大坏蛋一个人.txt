@@ -1,0 +1,1 @@
+{id="2431081005", screenName="大坏蛋一个人", name="大坏蛋一个人", province="41", city="17", location="河南 驻马店", description="", url="", gender="m", followersCount="20", friendsCount="171", statusesCount="27", favouritesCount="0", createdAt="Fri Oct 28 17:53:49 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

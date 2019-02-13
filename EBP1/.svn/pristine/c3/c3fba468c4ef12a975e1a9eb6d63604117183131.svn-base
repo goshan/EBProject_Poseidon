@@ -1,0 +1,203 @@
+#publish{
+	padding: 24px 0 0 34px;
+	width: 1116px;
+	height: 539px;
+}
+#publish_poi{
+	margin-bottom: 14px;
+}
+#publish_showpoi{
+	display: inline-block;
+	width: 106px;
+	height: 40px;
+	background: url("/EBP1/image/publishPoi.png") no-repeat 0 0;
+}
+#publish_poi_content{
+	position: relative;
+	display: inline;
+}
+.publish_poi_elem{
+	width: 101px;
+	height: 40px;
+	position: absolute;
+	text-align: center;
+	line-height: 40px;
+	font-family: Microsoft Yahei; 
+	font-size: 20px; 
+	color: #fff;
+}
+#publish_operate{
+	width: 1116px;
+	height: 470px;
+	border-width: 0 1px 1px 1px;
+	border-style: solid;
+	border-color: #b2b2b2;
+}
+#publish_candidate_panel{
+	width: 570px;
+	height: 470px;
+	float: left;
+}
+#publish_candidate_panel_corner{
+	position: absolute;
+	top: 199px;
+	left: 195px;
+}
+#publish_candidate_panel_title{
+	font-size: 28px;
+	color: #fff;
+	height: 35px;
+	line-height: 35px;
+	background-color: #089bff;
+	padding-left: 25px;
+	margin-left: -16px;
+}
+#publish_connection_panel_content, #publish_libary_panel_content{
+	padding: 12px 25px 0 19px;
+	width: 526px;
+	height: 435px;
+	background-color: #eaf3f4;
+}
+#publish_connection_panel_content_scroll_return, #publish_libary_panel_content_scroll_return{
+	width: 30px;
+	height: 30px;
+	background: url("/EBP1/image/publishCandidateReturn.png") no-repeat 0 0;
+	position: absolute;
+	top: 610px;
+	left: 726px;
+	opacity: 0;
+}
+#publish_connection_panel_content_scroll_return:hover, #publish_connection_panel_content_scroll_return:hover{
+	background: url("/EBP1/image/publishCandidateReturn.png") no-repeat 0 -30px;
+}
+.publish_candidate_topic{
+	width: 512px;
+	margin-top: 15px;
+	background-color: #fff;
+}
+.publish_candidate_title_line{
+	height: 28px;
+	border: 1px solid #b2b2b2;
+}
+.publish_candidate_title_prefix{
+	display: inline-block;
+	width: 4px;
+	height: 28px;
+	background-color: #089bff;
+	vertical-align: top;
+}
+.publish_candidate_title{
+	font-family: Microsoft Yahei;
+	font-size: 13pt;
+	color: #089bff;
+	line-height: 28px;
+}
+.publish_candidate_edit{
+	float: right;
+	display: inline-block;
+	width: 74px;
+	height: 30px;
+	margin: -1px -1px 0 0;
+	background: url("/EBP1/image/publishEditButton.png") no-repeat 0 0;
+}
+.publish_candidate_edit:hover{
+	background: url("/EBP1/image/publishEditButton.png") no-repeat 0 -30px;
+}
+.publish_candidate_edit:active{
+	background: url("/EBP1/image/publishEditButton.png") no-repeat 0 -60px;
+}
+.publish_candidate_content{
+	border-width: 0 1px 1px 1px;
+	border-style: solid;
+	border-color: #b2b2b2;
+	padding: 10px;
+	font-family: Microsoft Yahei;
+	font-size: 10pt;
+	color: #6d6d6d;
+}
+#publish_edit_panel{
+	float: right;
+	width: 546px;
+	height: 470px;
+}
+#publish_edit_panel_title{
+	font-size: 28px;
+	color: #fff;
+	height: 35px;
+	line-height: 35px;
+	background-color: #089bff;
+	padding-left: 25px;
+}
+#publish_edit_panel_content{
+	width: 546px;
+	height: 435px;
+	background-color: #f7f7f7;
+}
+#publish_edit_panel_shadow{
+	display: inline-block;
+	width: 6px;
+	height: 435px;
+	margin-left: 11px;
+	background: url("/EBP1/image/publishEditMidShadow.png") no-repeat center;
+	vertical-align: top;
+}
+#publish_edit_form{
+	display: inline-block;
+	margin: 2px 0 0 20px;
+}
+.publish_input_title{
+	font-size: 13px;
+	color: #089bff;
+	margin: 7px 0 3px 0;
+}
+#publish_edit_word_cnt{
+	float: right;
+	font-size: 13px;
+	color: #6d6d6d;
+}
+#publish_title_panel{
+	width: 486px;
+	height: 30px;
+	font-family: Microsoft Yahei;
+	font-size: 13pt;
+	color: #6d6d6d;
+	border: 1px solid #b2b2b2;
+	padding-left: 10px;
+}
+#publish_content_panel{
+	width: 486px;
+	height: 302px;
+	font-family: Microsoft Yahei;
+	font-size: 10pt;
+	color: #6d6d6d;
+	border: 1px solid #b2b2b2;
+	padding: 10px;
+}
+#publishEditButton{
+	margin-top: 8px;
+}
+#publishEditClear{
+	display: inline-block;
+	width: 65px;
+	height: 26px;
+	background: url("/EBP1/image/publishClearButton.png") no-repeat 0 0;
+}
+#publishEditClear:hover{
+	background: url("/EBP1/image/publishClearButton.png") no-repeat 0 -26px;
+}
+#publishEditClear:active{
+	background: url("/EBP1/image/publishClearButton.png") no-repeat 0 -52px;
+}
+#publishEditSubmit{
+	display: inline-block;
+	width: 75px;
+	height: 26px;
+	float: right;
+	background: url("/EBP1/image/publishSubmitButton.png") no-repeat 0 0;
+}
+#publishEditSubmit:hover{
+	background: url("/EBP1/image/publishSubmitButton.png") no-repeat 0 -26px;
+}
+#publishEditSubmit:active{
+	background: url("/EBP1/image/publishSubmitButton.png") no-repeat 0 -52px;
+}

@@ -1,0 +1,1 @@
+{id="2035107175", screenName="远方的冷风", name="远方的冷风", province="42", city="1", location="湖北 武汉", description="", url="", gender="m", followersCount="376", friendsCount="527", statusesCount="2983", favouritesCount="11", createdAt="Sat Mar 19 22:27:09 CST 2011", following="false", verified="false", verifiedType="220", followMe="true", biFollowersCount="93", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="1817366614", screenName="李素川", name="李素川", province="11", city="5", location="北京 朝阳区", description="个人简介为什么不能为空？", url="", gender="m", followersCount="246", friendsCount="178", statusesCount="965", favouritesCount="163", createdAt="Fri Oct 22 15:25:21 CST 2010", following="false", verified="false", verifiedType="220", followMe="true", biFollowersCount="100", lang="zh-cn"}

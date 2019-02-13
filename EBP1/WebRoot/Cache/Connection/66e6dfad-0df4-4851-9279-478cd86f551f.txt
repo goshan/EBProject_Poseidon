@@ -1,0 +1,3 @@
+ch
+smit命令和smitty命令是否一样啊？
+ 在字符界面：smitty 和 smit 效果是一样的。 在图形化界面： 要启动字符的 System Management就必须用smitty， 启动图形窗口的 System Management 用smit 

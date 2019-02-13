@@ -1,0 +1,3 @@
+ch
+你知道EGL语言吗？
+ via by blackhat on 12/8/11 IBM宣布发布新的开源EGL程序语言开发工具。 EGL是IBM设计的面向企业的平台无关高级程序语言，语法类似其它常见语言，EGL程序可以编译成COBOL、Java或 JavaScript代码，以运行在不同平台和浏览器上。它是一种通用的应用程序开发语言。 内部资料： Description: Technical overview of EGL for System z, including CICS and IMS 

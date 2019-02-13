@@ -1,0 +1,1 @@
+{id="1966558345", screenName="各种小皮", name="各种小皮", province="31", city="4", location="上海 徐汇区", description="", url="", gender="m", followersCount="0", friendsCount="14", statusesCount="1", favouritesCount="0", createdAt="Tue Aug 27 16:49:11 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

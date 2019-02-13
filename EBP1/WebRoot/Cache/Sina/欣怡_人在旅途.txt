@@ -1,0 +1,1 @@
+{id="2120334891", screenName="欣怡_人在旅途", name="欣怡_人在旅途", province="11", city="5", location="北京 朝阳区", description="", url="", gender="f", followersCount="191", friendsCount="146", statusesCount="405", favouritesCount="240", createdAt="Wed May 04 21:00:19 CST 2011", following="true", verified="false", verifiedType="-1", followMe="true", biFollowersCount="47", lang="zh-cn"}

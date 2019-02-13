@@ -1,0 +1,1 @@
+{id="1706411913", screenName="csdn_net", name="csdn_net", province="11", city="8", location="北京 海淀区", description="", url="", gender="m", followersCount="42", friendsCount="66", statusesCount="2", favouritesCount="0", createdAt="Sun Apr 24 00:28:43 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

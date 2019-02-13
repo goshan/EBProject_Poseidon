@@ -1,0 +1,1 @@
+{id="1750575925", screenName="脑子瓦特了", name="脑子瓦特了", province="32", city="5", location="江苏 苏州", description="这家伙很聪明，什么都没有留下", url="", gender="m", followersCount="15", friendsCount="310", statusesCount="51", favouritesCount="0", createdAt="Thu Jun 03 23:11:32 CST 2010", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="2", lang="zh-cn"}

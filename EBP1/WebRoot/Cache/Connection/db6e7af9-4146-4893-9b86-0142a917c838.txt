@@ -1,0 +1,3 @@
+ch
+REXX程序如何遍历当前存在的所有PANEL
+ 在rexx程序中，如何遍历所有的panel，并取出每个panel的简单相关信息。 

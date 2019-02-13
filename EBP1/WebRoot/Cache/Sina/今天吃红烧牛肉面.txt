@@ -1,0 +1,1 @@
+{id="3283873091", screenName="今天吃红烧牛肉面", name="今天吃红烧牛肉面", province="53", city="25", location="云南 红河", description="", url="", gender="m", followersCount="34", friendsCount="241", statusesCount="41", favouritesCount="2", createdAt="Mon Apr 01 11:36:56 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

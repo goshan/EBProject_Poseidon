@@ -1,0 +1,614 @@
+package com.ibm.p1.service.impl;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.net.URL;
+import java.net.URLConnection;
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import org.quartz.CronExpression;
+import org.quartz.CronTrigger;
+import org.quartz.JobDetail;
+import org.quartz.Scheduler;
+import org.quartz.SchedulerException;
+import org.quartz.SimpleTrigger;
+import org.quartz.Trigger;
+import org.quartz.impl.StdSchedulerFactory;
+
+import com.ibm.p1.dao.AcquireDao;
+import com.ibm.p1.entity.Parameter;
+import com.ibm.p1.entity.User;
+import com.ibm.p1.service.AcquireService;
+import com.ibm.p1.service.AnalysisService;
+import com.ibm.p1.service.ManageService;
+import com.ibm.p1.service.UserService;
+import com.ibm.p1.tools.HibernateUtil;
+import com.ibm.p1.tools.Utils;
+import com.opensymphony.xwork2.ActionContext;
+import com.sun.syndication.feed.synd.SyndEntry;
+import com.sun.syndication.feed.synd.SyndFeed;
+import com.sun.syndication.io.SyndFeedInput;
+import com.sun.syndication.io.XmlReader;
+
+public class AcquireServiceImpl implements AcquireService {
+
+	private Parameter param;
+	private User user = new User();
+	private AcquireDao acquireDao;
+	private String connectionHostUrl;
+	private String communityUrl;
+	private String topicUrl;
+	private String cacheDir;
+	private int communitiesSum;
+	private int pageSize;
+	private boolean chineseFilter;
+	private AcquireWeibo weibo;
+	private ManageService manageService;
+	private UserService userService;
+	
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public UserService getUserService() {
+		return userService;
+	}
+
+	public void setUserService(UserService userService) {
+		this.userService = userService;
+	}
+
+	public ManageService getManageService() {
+		return manageService;
+	}
+
+	public void setManageService(ManageService manageService) {
+		this.manageService = manageService;
+	}
+	// Quartz定时
+	/*
+	 * 1.只允许一个获得微博粉丝和connections信息并分析的job定时执行 2.只允许一个获得最新发布微博及其评论的job定时执行
+	 */
+	private Scheduler sched = null;
+	private String jobgroup = "jobgroup";
+	private String triggergroup = "triggergroup";
+
+	private String analysisJob = "job1";
+	private String analysisTrigger = "trigger1";
+
+	private String weiboJob = "job2";
+	private String weiboTrigger = "trigger2";
+
+	private String connectionsJob = "job3";
+	private String connectionsTrigger = "trigger3";
+
+	
+	public Parameter getParam() {
+		return param;
+	}
+
+	public void setParam(Parameter param) {
+		this.param = param;
+	}
+
+	public AcquireDao getAcquireDao() {
+		return acquireDao;
+	}
+
+	public void setAcquireDao(AcquireDao acquireDao) {
+
+		this.acquireDao = acquireDao;
+	}
+
+	public AcquireServiceImpl() {
+		// 无参构造函数
+		this.param = HibernateUtil.getParam();
+		this.weibo = new AcquireWeibo(param);
+
+		if (sched == null) {
+			try {
+				sched = StdSchedulerFactory.getDefaultScheduler();
+			} catch (SchedulerException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	public void init() {
+		this.connectionHostUrl = "https://w3-connections.ibm.com";
+		this.communityUrl = "/communities/service/atom/communities/all?sortBy=modified";
+		this.topicUrl = "/communities/service/atom/community/forum/topics";
+		this.cacheDir = System.getProperty("user.dir").substring(0,
+				System.getProperty("user.dir").lastIndexOf("\\"))
+				+ "\\webapps\\EBP1\\" + param.getCache_dir_connection();
+		this.communitiesSum = param.getCommunitiesNum();
+		this.pageSize = 300;
+		this.chineseFilter = param.getChineseFilter() == 1 ? true : false;
+	}
+
+	private ArrayList<String> hackAllCommunity() {
+		int pageSum = communitiesSum / pageSize + 1;
+		int page = 1;
+		ArrayList<String> res = new ArrayList<String>();
+		while (true) {
+			try {
+				if (communitiesSum != 0 && page > pageSum) {
+					break;
+				}
+				String url = connectionHostUrl + communityUrl + "&ps="
+						+ pageSize + "&page=" + page;
+				URLConnection feedUrl = new URL(url).openConnection();
+				feedUrl
+						.setRequestProperty("User-Agent",
+								"Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; http://itindex.net)");
+				SyndFeedInput input = new SyndFeedInput();
+				SyndFeed feed = input.build(new XmlReader(feedUrl));
+				List<SyndEntry> list = feed.getEntries();
+				for (SyndEntry e : list) {
+					String uuid = e.getLink().substring(
+							e.getLink().lastIndexOf("=") + 1);
+					res.add(uuid);
+				}
+				if (list.size() < pageSize) {
+					break;
+				}
+				page++;
+			} catch (Exception e) {
+				page++;
+				System.out
+						.println("Error in Connection hacking (Community hacking) page: "
+								+ page);
+				e.printStackTrace();
+			}
+		}
+		return res;
+	}
+
+	private ArrayList<SyndEntry> hackTopics(String comUuid) {
+		int page = 1;
+		ArrayList<SyndEntry> res = new ArrayList<SyndEntry>();
+		try {
+			while (true) {
+				String url = connectionHostUrl + topicUrl + "?communityUuid="
+						+ comUuid + "&ps=" + pageSize + "&page=" + page;
+				URLConnection feedUrl = new URL(url).openConnection();
+				feedUrl
+						.setRequestProperty("User-Agent",
+								"Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; http://itindex.net)");
+				SyndFeedInput input = new SyndFeedInput();
+				SyndFeed feed = input.build(new XmlReader(feedUrl));
+				List<SyndEntry> list = feed.getEntries();
+				for (SyndEntry e : list) {
+					res.add(e);
+				}
+				if (list.size() < pageSize) {
+					break;
+				}
+				page++;
+			}
+		} catch (Exception e) {
+			System.out
+					.println("Error in Connection hacking (topics hacking -- community uuid: "
+							+ comUuid + ") page: " + page);
+			e.printStackTrace();
+		}
+		return res;
+	}
+
+	private boolean isChinese(String content) {
+		int chineseSum = 0;
+		int length = content.length();
+		String regEx = "[\u4e00-\u9fa5]";
+		Pattern p = Pattern.compile(regEx);
+		Matcher m = p.matcher(content);
+		while (m.find()) {
+			for (int i = 0; i <= m.groupCount(); i++) {
+				chineseSum++;
+			}
+		}
+		if ((double) chineseSum / length > 0.3) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	private void toFile(ArrayList<SyndEntry> topics) {
+		for (SyndEntry e : topics) {
+			try {
+				String content = e.getContents().get(0).toString();
+				content = content.substring(content
+						.indexOf("SyndContentImpl.value=")
+						+ new String("SyndContentImpl.value=").length());
+				content = content.substring(0, content
+						.indexOf("SyndContentImpl.interface="));
+				content = acquireDao.contentWash(content);
+				boolean isCh = this.isChinese(content);
+
+				if (!chineseFilter || isCh) {
+					File f = new File(cacheDir
+							+ "\\"
+							+ e.getLink().substring(
+									e.getLink().lastIndexOf("=") + 1) + ".txt");
+					if (!f.exists()) {
+						f.createNewFile();
+					}
+					BufferedWriter bw = new BufferedWriter(
+							new OutputStreamWriter(new FileOutputStream(f)));
+					bw.write((isCh ? "ch" : "en") + "\r\n");
+					bw.write(e.getTitle() + "\r\n");
+					bw.write(content);
+					bw.flush();
+					bw.close();
+				}
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		}
+	}
+
+	public void hackTopicsFromConnections() {
+		this.init();
+		System.out.println("begin connection hacking");
+		ArrayList<String> communities = this.hackAllCommunity();
+		System.out.println("finished community hack");
+		int i = 1;
+		for (String uuid : communities) {
+			System.out.println("hacking topics in community " + i + " (" + uuid
+					+ ")");
+			ArrayList<SyndEntry> topics = this.hackTopics(uuid);
+			System.out.println("write to file");
+			this.toFile(topics);
+			i++;
+		}
+		System.out.println("finished connection hacking");
+	}
+
+	//
+	public Object getWeiboData() {
+		return weibo.getData(-1, 100);
+	}
+
+	public Object getWeiboData(int statuses) {
+		return weibo.getData(-1, statuses);
+	}
+
+	//
+	public Object getWeiboData(int users, int statuses) {
+		// System.out.println("asdasdasdasda");
+		// TODO Auto-generated method stub
+		if (users <= 0) {
+			System.out.println("获取粉丝数不能小于或等于0!");
+			return null;
+		}
+
+		return weibo.getData(users, statuses);
+
+	}
+
+	public synchronized  Object getWeiboDataDynamically() {
+		// TODO Auto-generated method stub
+		if (sched == null) {
+			System.out.println("Quartz调度器为空！");
+			return null;
+		}
+		try {
+			int state = sched.getTriggerState(weiboTrigger, triggergroup);
+
+			if (state == Trigger.STATE_NONE) {
+				JobDetail jobDetail = new JobDetail(weiboJob, jobgroup,
+						AcquireWeiboDyn.class);
+
+				Parameter param = HibernateUtil.getParam();
+				jobDetail.getJobDataMap().put("param", param);
+				jobDetail.getJobDataMap().put("dao", acquireDao);
+				jobDetail.getJobDataMap().put("manageService", manageService);
+				user = userService.getUserByUsername("SYSTEM");
+				jobDetail.getJobDataMap().put("user", user);
+				CronTrigger trigger = new CronTrigger(weiboTrigger,
+						triggergroup);
+				try {
+					CronExpression expression = new CronExpression(
+							"0 0 8/2 * * ?");
+					trigger.setCronExpression(expression);
+				} catch (ParseException e) {
+					e.printStackTrace();
+				}
+
+				sched.scheduleJob(jobDetail, trigger);
+
+				if (!sched.isStarted()) {
+					sched.start();
+				}
+
+			} else if (state == Trigger.STATE_PAUSED) {
+				sched.resumeTrigger(weiboTrigger, triggergroup);
+			}
+
+		} catch (SchedulerException e1) {
+			e1.printStackTrace();
+		}
+
+		return null;
+	}
+
+	public synchronized Object getConnectionRepliesDynamically() {
+		// TODO Auto-generated method stub
+
+		if (sched == null) {
+			System.out.println("Quartz调度器为空！");
+			return null;
+		}
+		try {
+			int state = sched.getTriggerState(connectionsTrigger, triggergroup);
+
+			if (state == Trigger.STATE_NONE) {
+				JobDetail jobDetail = new JobDetail(connectionsJob, jobgroup,
+						AcquireForumRepliesDyn.class);
+
+				Parameter param = HibernateUtil.getParam();
+				jobDetail.getJobDataMap().put("param", param);
+				jobDetail.getJobDataMap().put("dao", acquireDao);
+				jobDetail.getJobDataMap().put("manageService", manageService);
+				user = userService.getUserByUsername("SYSTEM");
+				jobDetail.getJobDataMap().put("user", user);
+				CronTrigger trigger = new CronTrigger(connectionsTrigger,
+						triggergroup);
+				try {
+					CronExpression expression = new CronExpression(
+							"0 59 22 * * ?");
+					trigger.setCronExpression(expression);
+				} catch (ParseException e) {
+					e.printStackTrace();
+				}
+
+				sched.scheduleJob(jobDetail, trigger);
+
+				if (!sched.isStarted()) {
+					sched.start();
+				}
+
+			} else if (state == Trigger.STATE_PAUSED) {
+				sched.resumeTrigger(connectionsTrigger, triggergroup);
+			}
+
+		} catch (SchedulerException e1) {
+			e1.printStackTrace();
+		}
+
+		return null;
+	}
+
+	public synchronized Object getWeiboFansAndConnectionsDataToAnalyse(
+			AnalysisService analysis) {
+
+		if (sched == null) {
+			System.out.println("Quartz调度器为空！");
+			return null;
+		}
+		try {
+			int state = sched.getTriggerState(analysisTrigger, triggergroup);
+
+			if (state == Trigger.STATE_NONE) {
+				JobDetail jobDetail = new JobDetail(analysisJob, jobgroup,
+						AcquireFansAndConnData.class);
+
+				Parameter param = HibernateUtil.getParam();
+				jobDetail.getJobDataMap().put("param", param);
+				jobDetail.getJobDataMap().put("acquireService", this);
+				jobDetail.getJobDataMap().put("analysisService", analysis);
+				jobDetail.getJobDataMap().put("manageService", manageService);
+				user = userService.getUserByUsername("SYSTEM");
+				jobDetail.getJobDataMap().put("user", user);
+				CronTrigger trigger = new CronTrigger(analysisTrigger,
+						triggergroup);
+				try {
+					CronExpression expression = new CronExpression(
+							"0 59 2 * * ?");
+					trigger.setCronExpression(expression);
+				} catch (ParseException e) {
+					e.printStackTrace();
+				}
+
+				sched.scheduleJob(jobDetail, trigger);
+
+				if (!sched.isStarted()) {
+					sched.start();
+				}
+
+			} else if (state == Trigger.STATE_PAUSED) {
+				sched.resumeTrigger(analysisTrigger, triggergroup);
+			}
+
+		} catch (SchedulerException e1) {
+			e1.printStackTrace();
+		}
+
+		return null;
+	}
+
+	public synchronized boolean pauseConnectionReplies() {
+		// TODO Auto-generated method stub
+		if (sched == null) {
+			return false;
+		} else {
+			try {
+				if (sched.isStarted()) {
+					sched.pauseTrigger(connectionsTrigger, triggergroup);
+				}
+			} catch (SchedulerException e) {
+				return false;
+			}
+
+		}
+		return true;
+	}
+	public synchronized boolean pauseWeiboData() {
+		// TODO Auto-generated method stub
+		if (sched == null) {
+			return false;
+		} else {
+			try {
+				if (sched.isStarted()) {
+					sched.pauseTrigger(weiboTrigger, triggergroup);
+				}
+			} catch (SchedulerException e) {
+				return false;
+			}
+
+		}
+		return true;
+	}
+	public synchronized boolean pauseWeiboFansAndConnectionsDataToAnalyse() {
+		// TODO Auto-generated method stub
+
+		if (sched == null) {
+			return false;
+		} else {
+
+			try {
+				if (sched.isStarted()) {
+					sched.pauseTrigger(analysisTrigger, triggergroup);
+				}
+			} catch (SchedulerException e) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public void getWeiboDataNow(){
+		try {
+			Scheduler s=StdSchedulerFactory.getDefaultScheduler();
+			
+			JobDetail jobDetail = new JobDetail("job", "jobgroup",
+					AcquireWeiboDyn.class);
+
+			Parameter param = HibernateUtil.getParam();
+			jobDetail.getJobDataMap().put("param", param);
+			jobDetail.getJobDataMap().put("dao", acquireDao);
+			jobDetail.getJobDataMap().put("manageService", manageService);
+			Map<String,Object> session = ActionContext.getContext().getSession();
+			user = Utils.currentUser();
+			
+			jobDetail.getJobDataMap().put("user", user);
+			SimpleTrigger trigger = new SimpleTrigger("trigger",
+					"triggergroup");
+			trigger.setRepeatCount(0);
+			Date now=new Date(System.currentTimeMillis());
+			trigger.setStartTime(now);
+			s.scheduleJob(jobDetail, trigger);
+			s.start();
+			
+			
+			
+		} catch (SchedulerException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	public void getConnsRepliesNow(){
+		
+		try {
+			Scheduler s=StdSchedulerFactory.getDefaultScheduler();
+			
+			JobDetail jobDetail = new JobDetail("job", "jobgroup",
+					AcquireForumRepliesDyn.class);
+
+			Parameter param = HibernateUtil.getParam();
+			jobDetail.getJobDataMap().put("param", param);
+			jobDetail.getJobDataMap().put("dao", acquireDao);
+			jobDetail.getJobDataMap().put("manageService", manageService);
+			Map<String,Object> session = ActionContext.getContext().getSession();
+			user = Utils.currentUser();
+			jobDetail.getJobDataMap().put("user", user);
+			SimpleTrigger trigger = new SimpleTrigger("trigger",
+					"triggergroup");
+
+			trigger.setRepeatCount(0);
+			Date now=new Date(System.currentTimeMillis());
+			trigger.setStartTime(now);
+			s.scheduleJob(jobDetail, trigger);
+			s.start();
+		} catch (SchedulerException e) {
+			e.printStackTrace();
+		}
+	}
+	public void getDataAndAnalyseNow(AnalysisService analysis){
+		try {
+			//System.out.println("QuaaasdasdASDad");
+			Scheduler s=StdSchedulerFactory.getDefaultScheduler();
+			
+			JobDetail jobDetail = new JobDetail("job", "jobgroup",
+					AcquireFansAndConnData.class);
+
+			Parameter param = HibernateUtil.getParam();
+			jobDetail.getJobDataMap().put("param", param);
+			jobDetail.getJobDataMap().put("acquireService", this);
+			jobDetail.getJobDataMap().put("analysisService", analysis);
+			jobDetail.getJobDataMap().put("manageService", manageService);
+			Map<String,Object> session = ActionContext.getContext().getSession();
+			user = Utils.currentUser();
+			jobDetail.getJobDataMap().put("user", user);
+			
+			System.out.println("Current User from AcquireAction:"+user.getUsername());
+
+			SimpleTrigger trigger = new SimpleTrigger("trigger",
+					"triggergroup");
+			trigger.setRepeatCount(0);
+			Date now=new Date(System.currentTimeMillis());
+			trigger.setStartTime(now);
+			s.scheduleJob(jobDetail, trigger);
+			s.start();
+		} catch (SchedulerException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public boolean isScheduleMessionOpen(String acquireMession){
+		String trigger = "";
+		if (acquireMession.equals(manageService.AcquireAndAnalyse)){
+			trigger = analysisTrigger;
+		}
+		else if (acquireMession.equals(manageService.AcquireWeiboReply)){
+			trigger = weiboTrigger;
+		}
+		else if (acquireMession.equals(manageService.AcquireConnectionReply)){
+			trigger = connectionsTrigger;
+		}
+		
+		if (sched == null) {
+			return false;
+		}
+		try {
+			int state = sched.getTriggerState(trigger, triggergroup);
+			if (state == Trigger.STATE_NONE){
+				return false;
+			}
+			else if (state == Trigger.STATE_PAUSED) {
+				return false;
+			}
+			else {
+				return true;
+			}
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		return false;
+	}	
+}

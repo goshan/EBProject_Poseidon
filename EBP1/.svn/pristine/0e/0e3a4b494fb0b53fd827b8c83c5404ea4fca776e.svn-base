@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+ 	<constant name="struts.i18n.encoding" value="UTF-8"></constant>  
+    <constant name="struts-objectFactory" value="spring"></constant>  
+    <constant name="struts.ui.theme" value="simple" />
+   	<package name="datamanage" extends="struts-default"> 	
+		<action name="dataManageAction_*" class="dataManageAction" method="{1}">
+			<result name="success_showChartPage">/WEB-INF/view/chart.jsp</result>	
+		</action>
+  	</package>
+ 	<package name="dataManage-json"  extends="json-default" >
+  		<action name="dataManageAjaxAction_*" class="dataManageAjaxAction" method="{1}" >
+  			<result name="success_getNumOfConnection" type="json">
+				<param name="json">json</param>
+			</result>
+  			<result name="success_getTopCountNumOfConnectionKeyWords" type="json">
+				<param name="json">json</param>
+			</result>
+			<result name="success_getNumOfZombieFans" type="json">
+				<param name="json">json</param>
+			</result>
+			<result name="success_getNumOfAllFans" type="json">
+				<param name="json">json</param>
+			</result>
+			<result name="success_getNumOfNormalFans" type="json">
+				<param name="json">json</param>
+			</result>
+			<result name="success_getTopCountNumOfFansKeyWords" type="json">
+				<param name="json">json</param>
+			</result>
+			<result name="success_getTotalhotWords" type="json">
+				<param name="json">json</param>
+			</result>
+			<result name="success_getNumOfUser" type="json">
+				<param name="json">json</param>
+			</result>
+			<result name="success_getNumOfAdmin" type="json">
+				<param name="json">json</param>
+			</result>
+			<result name="success_getNumOfCandidate" type="json">
+				<param name="json">json</param>
+			</result>
+			<result name="success_zombieChart" type="json">
+				<param name="json">json</param>
+			</result>
+			<result name="success_dynamicChart" type="json">
+				<param name="json">json</param>
+			</result>
+			<result name="success_columnChart" type="json">
+				<param name="json">json</param>
+			</result>
+			
+			
+  		</action>
+  	 </package>
+</struts>

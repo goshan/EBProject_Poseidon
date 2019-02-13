@@ -1,0 +1,1 @@
+{id="2563816700", screenName="hhresre", name="hhresre", province="44", city="1", location="广东 广州", description="", url="", gender="f", followersCount="369", friendsCount="1814", statusesCount="0", favouritesCount="6", createdAt="Sat Nov 26 22:55:21 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="178", lang="zh-cn"}

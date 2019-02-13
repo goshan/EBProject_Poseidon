@@ -1,0 +1,1 @@
+{id="2605199463", screenName="swiftmoon", name="swiftmoon", province="12", city="1", location="天津 和平区", description="", url="", gender="m", followersCount="46", friendsCount="198", statusesCount="183", favouritesCount="4", createdAt="Wed Jan 18 11:09:10 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="24", lang="zh-cn"}

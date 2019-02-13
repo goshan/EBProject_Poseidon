@@ -1,0 +1,3 @@
+ch
+word是日文版，excel 为什么是英文版的呢？
+ 前几天，用CIS的office 2007 安装盘，装了office2007之后发现，word是日文版的，但excel是英文版的， 谁知道是怎么回事 

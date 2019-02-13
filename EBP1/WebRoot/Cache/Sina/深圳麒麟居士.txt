@@ -1,0 +1,1 @@
+{id="1205318881", screenName="深圳麒麟居士", name="深圳麒麟居士", province="44", city="3", location="广东 深圳", description="", url="", gender="m", followersCount="16", friendsCount="15", statusesCount="0", favouritesCount="0", createdAt="Wed Nov 02 18:14:06 CST 2011", following="true", verified="false", verifiedType="-1", followMe="true", biFollowersCount="2", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="3298637097", screenName="锋者乎", name="锋者乎", province="32", city="1", location="江苏 南京", description="", url="", gender="m", followersCount="17", friendsCount="258", statusesCount="8", favouritesCount="1", createdAt="Sat Mar 02 20:43:57 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="17", lang="zh-cn"}

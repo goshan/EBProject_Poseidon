@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+ 	<constant name="struts.i18n.encoding" value="UTF-8"></constant>  
+    <constant name="struts-objectFactory" value="spring"></constant>  
+    <constant name="struts.ui.theme" value="simple" />
+   	<package name="publishQuestions" extends="struts-default">
+   	
+	<action name="publishQuestionsAction_*" class="publishQuestionsAction" method="{1}">
+		<result name="success_publishQuestions">/Release/publishQuestions2Connections.jsp</result>
+	</action>
+  	</package>
+  
+</struts>

@@ -1,0 +1,1 @@
+{id="3504969473", screenName="光明阿发xm", name="光明阿发xm", province="32", city="8", location="江苏 淮安", description="", url="", gender="f", followersCount="22", friendsCount="236", statusesCount="140", favouritesCount="0", createdAt="Sun Jun 02 12:41:03 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

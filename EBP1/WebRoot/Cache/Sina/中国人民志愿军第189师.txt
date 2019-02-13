@@ -1,0 +1,1 @@
+{id="2680323191", screenName="中国人民志愿军第189师", name="中国人民志愿军第189师", province="400", city="23", location="海外 瑞士", description="", url="", gender="f", followersCount="48", friendsCount="203", statusesCount="31", favouritesCount="5", createdAt="Sat Mar 24 18:58:55 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="22", lang="zh-cn"}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+ 	<constant name="struts.i18n.encoding" value="UTF-8"></constant>  
+    <constant name="struts-objectFactory" value="spring"></constant>  
+    <constant name="struts.ui.theme" value="simple" />
+    
+   	<package name="communication" extends="struts-default">
+	<action name="communicationAction_*" class="communicationAction" method="{1}">
+		<result name="401_page">/error401.jsp</result>
+		<result name="403_page">/error403.jsp</result>
+		<result name="500_page">/error500.jsp</result>
+		<result name="admin_page">//WEB-INF/view/adminWorkbench.jsp</result>
+		<result name="user_page">//WEB-INF/view/userIndex.jsp</result>
+		<result name="candidate_page">//WEB-INF/view/candidateIndex.jsp</result>
+		<result name="success_publishPage">/WEB-INF/view/publish.jsp</result>
+	
+		<result name="success_showSearchPage">//WEB-INF/view/search.jsp</result>
+		<result name="success_showMonitorPage">//WEB-INF/view/monitor.jsp</result>
+		<result name="success_showChartPage">//WEB-INF/view/chart.jsp</result>
+		<result name="success_showLibraryPage">//WEB-INF/view/library.jsp</result>
+		<result name="success_getSourceById">/index.jsp</result>
+		<result name="success_gotoAddPage">/Communication/addSource.jsp</result>
+		<result name="success_addSource">/success.jsp</result>
+	</action>
+  	</package>
+  	<package name="communication-json"  extends="json-default" >
+  	<action name="communicationAjaxAction_*" class="communicationAjaxAction" method="{1}" >
+  			<result name="success_getConnectionRecommend" type="json">
+				<param name="json">json</param>
+			</result>
+			<result name="unknown_request_type" type="json">
+				<param name="json">json</param>
+			</result>
+			<result name="fail_to_get_user_by_accesstoken" type="json">
+				<param name="json">json</param>
+			</result>
+			<result name="success_getAllSourceForMobile" type="json">
+				<param name="json">json</param>
+			</result>
+			<result name="success_getSourcesYesterdayAndToday" type="json">
+				<param name="json">json</param>
+			</result>
+			<result name="success_addSourceByMobile" type="json">
+				<param name="json">json</param>
+			</result>
+			
+			
+  	</action>
+  	</package>
+
+  
+</struts>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+ 	<constant name="struts.i18n.encoding" value="UTF-8"></constant>  
+    <constant name="struts-objectFactory" value="spring"></constant>
+    <constant name="struts.ui.theme" value="simple" />
+    
+	<include file="com/ibm/p1/action/struts_analysis.xml"></include>
+	<include file="com/ibm/p1/action/struts_communication.xml"></include>
+	<include file="com/ibm/p1/action/struts_manage.xml"></include>
+	<include file="com/ibm/p1/action/struts_monitor.xml"></include>
+	<include file="com/ibm/p1/action/struts_release.xml"></include>
+	<include file="com/ibm/p1/action/struts_search.xml"></include>
+	<include file="com/ibm/p1/action/struts_user.xml"></include>
+	<include file="com/ibm/p1/action/struts_acquire.xml"></include>
+	<include file="com/ibm/p1/action/struts_reply.xml"></include>
+	<include file="com/ibm/p1/action/struts_publishQuestions2Connections.xml"></include>
+	<include file="com/ibm/p1/action/struts_publishQuestions.xml"></include>
+	<include file="com/ibm/p1/action/struts_datamanage.xml"></include> 
+	<include file="com/ibm/p1/action/struts_connectionsReply.xml"></include>
+	
+</struts>    
+
+

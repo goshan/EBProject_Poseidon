@@ -1,0 +1,1 @@
+{id="2704745933", screenName="sa兜805", name="sa兜805", province="44", city="1", location="广东 广州", description="", url="", gender="f", followersCount="16", friendsCount="34", statusesCount="12", favouritesCount="1", createdAt="Tue Apr 10 20:52:57 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="12", lang="zh-cn"}

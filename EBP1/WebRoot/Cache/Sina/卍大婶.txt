@@ -1,0 +1,1 @@
+{id="3080376505", screenName="卍大婶", name="卍大婶", province="61", city="9", location="陕西 安康", description="", url="", gender="f", followersCount="35", friendsCount="119", statusesCount="5", favouritesCount="0", createdAt="Wed Oct 31 15:05:51 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

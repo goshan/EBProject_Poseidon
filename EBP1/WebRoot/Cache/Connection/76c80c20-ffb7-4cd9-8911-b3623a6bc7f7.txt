@@ -1,0 +1,3 @@
+ch
+実プロジェクトで利用したIOM成果物一覧
+ IOMの成果物で、実プロジェクト（製造業　ＥＢＳ　ＳＣＭ導入）で作成した成果物一覧を添付します。 Inception　担当：Oracle社 Inception以降：　担当：IBM シート「成果物一覧(ASEAN)」のQ列○が最終的な作成対象物です。 

@@ -1,0 +1,1 @@
+{id="2396291625", screenName="百年老窖百年荣耀", name="百年老窖百年荣耀", province="12", city="3", location="天津 河西区", description="中国白酒第一坛", url="", gender="m", followersCount="123", friendsCount="801", statusesCount="41", favouritesCount="0", createdAt="Tue Oct 04 21:15:24 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="80", lang="zh-cn"}

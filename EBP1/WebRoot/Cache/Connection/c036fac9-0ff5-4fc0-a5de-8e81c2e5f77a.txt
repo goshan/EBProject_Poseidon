@@ -1,0 +1,3 @@
+ch
+【Share Session】SAP Automatic Payments on June.18 by Zhen Zhen Tu
+ 内容简介： 这个培训是介绍SAP自动支付的配置和相关操作。 1. 自动支付的概述 2. 自动支付的系统配置 3. 自动支付的相关操作 日期： 2013年06月18日，(周二) 时间： 14:00-16:00, GMT+8 演讲人： Zhen Zhen Tu/China/IBM 6年以上的AP FICO模块实施经验(咨询+维护) 熟练的SAP财务控制模块（FICO）实施技能，以及相关业务增强功能的实现技巧 熟悉中国会计法规和会计准则，熟悉中国一般的会计业务操作，对日本会计制度也有一定了解 语言： 普通话 演示材料：点击 这里 下载演示文件 (Playback will be here after the session) 虚拟教室链接： 

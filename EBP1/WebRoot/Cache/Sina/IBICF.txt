@@ -1,0 +1,1 @@
+{id="1665232051", screenName="IBICF", name="IBICF", province="11", city="8", location="北京 海淀区", description="", url="", gender="m", followersCount="43", friendsCount="47", statusesCount="35", favouritesCount="25", createdAt="Tue Dec 01 09:58:55 CST 2009", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="11", lang="zh-cn"}

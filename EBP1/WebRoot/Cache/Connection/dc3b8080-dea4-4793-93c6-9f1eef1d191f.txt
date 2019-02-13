@@ -1,0 +1,3 @@
+ch
+【AIS Community Sharenet】8/16 11:00 WebSphere Commerce 7.0 BOD and web service application
+ WebSphere Commerce 7.0 BOD and web service application 内容简介： Business object document(BOD)是一种基于OAGIS 的message structure，它提供了一种common xml message架构 由Nouns和Verbs来构成。 BOD在7.0以后发挥了越来越突出的作用，IBM有倾向于用它来修改甚至取代与原先的EJB，在以后的commerce版本中，这种趋势会更加明显。 所以BOD在我们的commerce的开发中，起到了非常重要的作用。 日期： 2012年08月16日，(周四) 时间： 11:00-12:30, GMT+8 演讲人： (Gui Shuang Luo/China/IBM) 他有五年的IT领域的经验，曾参与近两年的某大型电信项目的开发。 目前在Polo项目致力于Sales center, Management center及Mobile的开发工作。 语言： 普通话 演示材料： 点击 下载演示文件 虚拟教室 链接： 备用链接： 

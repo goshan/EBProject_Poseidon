@@ -1,0 +1,1 @@
+{id="1459382383", screenName="Mttbb", name="Mttbb", province="31", city="15", location="上海 浦东新区", description="", url="", gender="m", followersCount="3", friendsCount="165", statusesCount="7", favouritesCount="1", createdAt="Mon Sep 10 23:07:57 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="2", lang="zh-cn"}

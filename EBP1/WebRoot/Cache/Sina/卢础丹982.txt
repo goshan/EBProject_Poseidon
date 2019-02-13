@@ -1,0 +1,1 @@
+{id="2439982961", screenName="卢础丹982", name="卢础丹982", province="44", city="1", location="广东 广州", description="", url="", gender="f", followersCount="173", friendsCount="991", statusesCount="284", favouritesCount="0", createdAt="Wed Nov 02 16:25:12 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="81", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="2377010754", screenName="Gomy_Wu", name="Gomy_Wu", province="32", city="5", location="Ω≠À’ À’÷›", description="", url="", gender="f", followersCount="94", friendsCount="88", statusesCount="772", favouritesCount="0", createdAt="Wed Sep 07 12:47:58 CST 2011", following="true", verified="false", verifiedType="-1", followMe="true", biFollowersCount="23", lang="zh-cn"}

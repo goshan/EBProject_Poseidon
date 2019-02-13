@@ -1,0 +1,1 @@
+{id="3714280400", screenName="追影子的阿狸", name="追影子的阿狸", province="14", city="1", location="山西 太原", description="", url="", gender="m", followersCount="10", friendsCount="9", statusesCount="0", favouritesCount="0", createdAt="Mon Aug 12 13:44:33 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

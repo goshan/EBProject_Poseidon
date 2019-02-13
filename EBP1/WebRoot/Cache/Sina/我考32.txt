@@ -1,0 +1,1 @@
+{id="3289650032", screenName="我考32", name="我考32", province="11", city="4", location="北京 宣武区", description="NO.40 《阿甘正传》", url="", gender="m", followersCount="410", friendsCount="568", statusesCount="148", favouritesCount="0", createdAt="Fri Apr 05 08:28:22 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

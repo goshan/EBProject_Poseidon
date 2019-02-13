@@ -1,0 +1,3 @@
+ch
+NAS维护的一点建议
+ NAS 大家接触的比较少，平时如果碰到，建议收集以下命令的输出结果： 建议大家将自己操作的整个过程都用超级终端的捕获文字或PUTTY等保存到文件中，方便分析故障！ 1、sysconfig -a 必要操作，就象存储的profile文件，可以看到整个系统的配置信息； 2、sysconfig -r或aggr status -r 可以看到阵列的情况； 3、disk show -v 可以看到硬盘的情况； 4、rdfile /etc/messages 显示日志文件，可以的话最好把原文件拷出来； 5、/etc/log/autosupport/ 想办法将此目录下的文件拷出来，这个L2可能需要的文件； 6、storage 这个命令蛮好用的，如storage show disk -a,可以看到硬盘的某些信息 show adapter [ -a ] [ name ] show initiators [-a] show hub [ -a ] [ hub-name ] show expander [ -a ] [ expander-name ] show disk [ -a | -x | -p ] [ name ] show fabric show mc [ name ] show port [ name ] show switch [ name ] cc：某些命令在某些模式下可能不能用，可以用 ？ 调出该模式下所有的命令作参考，另外，如果是双机，两台机都应该各收集一下； 

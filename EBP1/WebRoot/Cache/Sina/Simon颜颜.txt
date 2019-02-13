@@ -1,0 +1,1 @@
+{id="3057984151", screenName="Simon颜颜", name="Simon颜颜", province="44", city="1", location="广东 广州", description="", url="", gender="f", followersCount="33", friendsCount="206", statusesCount="7", favouritesCount="0", createdAt="Mon Oct 22 19:40:47 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

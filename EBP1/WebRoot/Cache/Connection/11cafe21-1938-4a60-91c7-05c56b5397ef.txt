@@ -1,0 +1,3 @@
+ch
+请发表意见（2个问题）：VSR 和15360 Plane。
+ 1. 在我们的PPT有关VSR的那张图片，个人认为是有问题的： 每个Chip 16个Plane，跨10个Chip作了Raid 5. 。。。在Plane故障时，个人认为不会涉及所有的Plane，应该只会VSR Plane本身在的这个Raid 5（有资料说可从Raid 5 9+1到Raid 5 4+1），但动画中所有的Plane都发生了容量变化。。。什么意思？16个个Raid 5都做变化？各位的意见？ 2. 每个Chip 16个Plane， fully loaded 820 has total 15360 plane...如何计算的？ 注意我们可以1080个Plane的故障。。。 

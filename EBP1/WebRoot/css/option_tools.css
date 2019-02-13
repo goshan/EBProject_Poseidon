@@ -1,0 +1,160 @@
+#option_tools_tittle{
+	width: 1130px;
+	height: 52px;
+	background-color: #cf96ea;
+}
+#option_tools_title_content{
+	vertical-align: top;
+	width: 300px;
+	height: 52px;
+	line-height: 52px;
+	font-size: 22px;
+	color: #fff;
+	margin-left: 50px;
+}
+#option_tools_conrner{
+	position: absolute;
+}
+#option_tools_table{
+	width: 1115px;
+	height: 390px;
+	margin-left: 15px;
+}
+#option_tools_table_head{
+	width: 1115px;
+	height: 40px;
+	font-family: MavenProMedium;
+	font-size: 18px;
+	color: #6f249b;
+	line-height: 40px;
+	background-color: #dfd3ea;
+}
+#option_tools_name{
+	display: inline-block;
+	width: 343px;
+	height: 40px;
+	padding-left: 39px;
+}
+#option_tools_cycle{
+	display: inline-block;
+	width: 163px;
+	height: 40px;
+	padding-left: 25px;
+}
+#option_tools_status{
+	display: inline-block;
+	width: 112px;
+	height: 40px;
+	padding-left: 83px;
+}
+.option_tools_line_even{
+	width: 1115px;
+	height: 42px;
+	font-size: 16px;
+	color: #a09c97;
+	line-height: 42px;
+	background-color: #fff;
+}
+.option_tools_line_odd{
+	width: 1115px;
+	height: 42px;
+	font-size: 16px;
+	color: #a09c97;
+	line-height: 42px;
+	background-color: #f5eff9;
+}
+.option_tools_name_content{
+	display: inline-block;
+	width: 343px;
+	height: 42px;
+	padding-left: 39px;
+}
+.option_tools_cycle_content{
+	display: inline-block;
+	width: 163px;
+	height: 42px;
+	padding-left: 25px;
+}
+.option_tools_status_running{
+	display: inline-block;
+	width: 58px;
+	height: 42px;
+	padding-left: 45px;
+}
+.option_tools_status_mession{
+	display: inline-block;
+	width: 58px;
+	height: 42px;
+	padding-left: 13px;
+}
+.option_tools_status_single{
+	margin-right: 76px;
+}
+.option_tools_status_open{
+	color: #c04ac6;
+}
+.option_tools_detail{
+	display: inline-block;
+	width: 75px;
+	height: 24px;
+	background: url("/EBP1/image/optionToolsIntroButton.png") no-repeat 0 0;
+	vertical-align: middle;
+	margin-left: 60px;
+}
+.option_tools_detail_content{
+	position: absolute;
+	width: 175px;
+	height: 32px;
+	right: 313px;
+	font-size: 14px;
+	color: #6d6a6d;
+	line-height: 16px;
+	padding: 5px;
+	background: url("/EBP1/image/optionIntroDialog1.png") no-repeat center;
+	
+}
+.option_tools_detail:hover{
+	background: url("/EBP1/image/optionToolsIntroButton.png") no-repeat 0 -24px;
+}
+.option_tools_detail:active{
+	background: url("/EBP1/image/optionToolsIntroButton.png") no-repeat 0 -48px;
+}
+.option_tools_action_mession{
+	display: inline-block;
+	width: 75px;
+	height: 24px;
+	vertical-align: middle;
+	margin-left: 4px;
+}
+.option_tools_action_running{
+	display: inline-block;
+	width: 75px;
+	height: 24px;
+	vertical-align: middle;
+	margin-left: 4px;
+	background: url("/EBP1/image/optionManualStart.png") no-repeat 0 0;
+}
+.option_tools_action_running:hover{
+	background: url("/EBP1/image/optionManualStart.png") no-repeat 0 -24px;
+}
+.option_tools_action_running:active{
+	background: url("/EBP1/image/optionManualStart.png") no-repeat 0 -48px;
+}
+.option_tools_open{
+	background: url("/EBP1/image/optionTimingOnButton.png") no-repeat 0 0;
+}
+.option_tools_open:hover{
+	background: url("/EBP1/image/optionTimingOnButton.png") no-repeat 0 -24px;
+}
+.option_tools_open:active{
+	background: url("/EBP1/image/optionTimingOnButton.png") no-repeat 0 -48px;
+}
+.option_tools_close{
+	background: url("/EBP1/image/optionTimingOffButton.png") no-repeat 0 0;
+}
+.option_tools_close:hover{
+	background: url("/EBP1/image/optionTimingOffButton.png") no-repeat 0 -24px;
+}
+.option_tools_close:active{
+	background: url("/EBP1/image/optionTimingOffButton.png") no-repeat 0 -48px;
+}

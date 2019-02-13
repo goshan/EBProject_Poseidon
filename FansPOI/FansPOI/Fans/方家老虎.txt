@@ -1,0 +1,1 @@
+{id="1759729015", screenName="方家老虎", name="方家老虎", province="32", city="1", location="江苏 南京", description="捧着良心 传道授业", url="", gender="m", followersCount="12089", friendsCount="273", statusesCount="6591", favouritesCount="21", createdAt="Sat Jun 19 10:37:10 CST 2010", following="false", verified="false", verifiedType="220", followMe="true", biFollowersCount="193", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="1658343364", screenName="蓝宝石头", name="蓝宝石头", province="51", city="1", location="四川 成都", description="", url="", gender="m", followersCount="0", friendsCount="1", statusesCount="3", favouritesCount="0", createdAt="Fri Jan 15 15:50:05 CST 2010", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

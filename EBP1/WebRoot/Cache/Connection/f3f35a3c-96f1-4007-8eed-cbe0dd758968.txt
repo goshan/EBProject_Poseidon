@@ -1,0 +1,4 @@
+ch
+ Club -- 2013 首届 IBM XI'AN CLUB 卡拉OK大赛
+
+ Dear All, 非常感谢大家长期以来对 "2013 首届 IBM Xi'an Club 卡拉OK大赛"的支持。 CDL的同事请访问： \\xinas1\Training\2013-K拉OK大赛\决赛视频 CSTL的同事请访问： Windows： \\cnxasamba.eng.platformlab.ibm.com\picture Linux: mount 9.111.248.205:/data/picture a_local_directory 排名榜： 一等奖：李鹏（CDL） 二等奖：闫峰（S&amp;D） 张宇凡（CDL） 三等奖：吴旻（CDL） 王亮（CSTL） 武娟（CDL） 优秀奖：杨驭龙（S&amp;D） 秦五一（CDL） 罗琛（CDL） 入围奖：聂鹏程（CSTL） 胡庚（CSTL） 杨超群（S&amp;D） 赵娟（CSTL） 感谢评委们辛勤的工作，感谢所有选手为本次比赛的努力付出，感谢所有同事对本次活动的积极参与，感谢摄影俱乐部工作人员的付出与Club其他部门的大力支持。 Cheers !!! 声乐俱乐部、K歌比赛组委会, IBM Club GCG XiAn 

@@ -1,0 +1,3 @@
+ch
+【Tools】Share Session中讲师设置麦克的方法——Mic Boost for Windows 7
+ 在我们以往的Share Session出现过讲师麦克没有声音的情况，调试占用了课堂很多时间， 因此向大家提供附件中WIN7系统麦克设定方法说明文档， 讲师在每次开课前，务必根据附件中的文档做好事前准备工作。 

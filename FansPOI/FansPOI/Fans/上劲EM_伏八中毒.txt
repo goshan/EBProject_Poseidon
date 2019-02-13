@@ -1,0 +1,1 @@
+{id="3498603464", screenName="上劲EM_伏八中毒", name="上劲EM_伏八中毒", province="11", city="17", location="北京 平谷区", description="", url="", gender="m", followersCount="20", friendsCount="276", statusesCount="148", favouritesCount="0", createdAt="Thu May 30 08:39:59 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1", lang="zh-cn"}

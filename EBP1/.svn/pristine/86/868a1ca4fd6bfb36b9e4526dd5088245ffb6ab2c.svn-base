@@ -1,0 +1,3 @@
+ch
+多语言报表打印
+ 请问各位SAP有没有标准的多语言报表打印？我网上查了一下只有BW和Crystal Report有。SAP里有一个Generation variant在Basic Data &amp; Tools模块下的Report Definition功能下面，这个有人用过不？这个可以满足双语报表么？ 

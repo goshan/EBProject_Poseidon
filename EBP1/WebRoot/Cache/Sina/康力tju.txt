@@ -1,0 +1,1 @@
+{id="1735815854", screenName="康力tju", name="康力tju", province="12", city="4", location="天津 南开区", description="我是你们的小粒粒~~~", url="", gender="m", followersCount="292", friendsCount="326", statusesCount="255", favouritesCount="0", createdAt="Thu Apr 29 12:14:10 CST 2010", following="true", verified="false", verifiedType="220", followMe="true", biFollowersCount="155", lang="zh-cn"}

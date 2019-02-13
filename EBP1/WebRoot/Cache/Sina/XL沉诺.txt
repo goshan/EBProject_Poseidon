@@ -1,0 +1,1 @@
+{id="2719579303", screenName="XL³ÁÅµ", name="XL³ÁÅµ", province="34", city="2", location="°²»Õ Îßºþ", description="", url="", gender="m", followersCount="28", friendsCount="17", statusesCount="11", favouritesCount="0", createdAt="Tue Apr 24 14:16:06 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="6", lang="zh-cn"}

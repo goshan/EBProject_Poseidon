@@ -1,0 +1,1 @@
+{id="1336520657", screenName="狂奔大和尚", name="狂奔大和尚", province="11", city="8", location="北京 海淀区", description="要为自己的梦想活着。", url="", gender="m", followersCount="121", friendsCount="446", statusesCount="1305", favouritesCount="9", createdAt="Sat Apr 09 09:31:27 CST 2011", following="true", verified="false", verifiedType="-1", followMe="true", biFollowersCount="35", lang="zh-cn"}

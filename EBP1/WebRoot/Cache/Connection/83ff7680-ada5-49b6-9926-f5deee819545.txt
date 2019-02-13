@@ -1,0 +1,3 @@
+ch
+如何把试用版的XLC、XLCPP、XL Fortran 升级到正式版
+ 如果客户要从试用版升级到正式版，只要卸载试用版license文件集，安装正式版license文件集，而其他的文件集不需要变动。 具体来说： 对于XLC来说，只需要卸载vac.tnb，安装vac.lic 对于XLCPP来说，只需要卸载vacpp.tnb,安装vacpp.lic和vacpp.licAgreement 对于XL Fortran来说，只需要卸载xlf.tnb,安装xlf.lic和xlf.licAgreement 

@@ -1,0 +1,3 @@
+ch
+[Test Tool] The automation tool of iphone app
+ 无线客户端的发展很快，特别针对是android和ios两款无线的客户端应用，相应的工具也应运而生，我想问问大家有没有针对 App的工具？例如：接口测试工具、注入式UI测试工具、录放式UI测试工具。。 

@@ -1,0 +1,3 @@
+ch
+客户需求与设计经验分享
+ 今天中午lunch meeting的PPT，主要介绍如何从Banco Popular客户的角度审视我们的需求，以及软件设计中的经验分享： 

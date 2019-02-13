@@ -1,0 +1,1 @@
+{id="1860065604", screenName="小水225", name="小水225", province="11", city="8", location="北京 海淀区", description="懒猪一只", url="", gender="f", followersCount="149", friendsCount="171", statusesCount="1122", favouritesCount="19", createdAt="Tue Feb 22 20:44:29 CST 2011", following="true", verified="false", verifiedType="-1", followMe="true", biFollowersCount="50", lang="zh-cn"}

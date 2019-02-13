@@ -1,0 +1,1 @@
+{id="1955889931", screenName="Teresadlyyx", name="Teresadlyyx", province="31", city="1000", location="…œ∫£", description="", url="", gender="f", followersCount="163", friendsCount="300", statusesCount="695", favouritesCount="14", createdAt="Mon Feb 27 20:47:46 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="61", lang="zh-cn"}

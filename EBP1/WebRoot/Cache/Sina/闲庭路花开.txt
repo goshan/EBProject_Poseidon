@@ -1,0 +1,1 @@
+{id="2768306865", screenName="闲庭路花开", name="闲庭路花开", province="11", city="8", location="北京 海淀区", description="充电，继续充电！", url="", gender="f", followersCount="60", friendsCount="134", statusesCount="43", favouritesCount="3", createdAt="Fri Dec 14 23:02:17 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="17", lang="zh-cn"}

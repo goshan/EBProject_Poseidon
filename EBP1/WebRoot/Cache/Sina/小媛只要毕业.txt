@@ -1,0 +1,1 @@
+{id="1226162823", screenName="小媛只要毕业", name="小媛只要毕业", province="12", city="4", location="天津 南开区", description="", url="", gender="f", followersCount="337", friendsCount="195", statusesCount="850", favouritesCount="1", createdAt="Wed Oct 26 21:58:50 CST 2011", following="true", verified="false", verifiedType="-1", followMe="true", biFollowersCount="165", lang="zh-cn"}

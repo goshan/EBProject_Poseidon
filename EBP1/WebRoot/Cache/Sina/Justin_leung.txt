@@ -1,0 +1,1 @@
+{id="1945602741", screenName="Justin_leung", name="Justin_leung", province="21", city="2", location="ÁÉÄþ ´óÁ¬", description="", url="", gender="m", followersCount="49", friendsCount="107", statusesCount="7", favouritesCount="1", createdAt="Tue Feb 01 14:55:59 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="32", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="1829354761", screenName="牛明珠", name="牛明珠", province="11", city="12", location="北京 通州区", description="", url="", gender="m", followersCount="227", friendsCount="302", statusesCount="363", favouritesCount="3", createdAt="Thu Dec 09 16:41:53 CST 2010", following="false", verified="true", verifiedType="0", followMe="true", biFollowersCount="139", lang="zh-cn"}

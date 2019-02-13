@@ -1,0 +1,1 @@
+{id="1652221943", screenName="xboy", name="xboy", province="400", city="1", location="海外 美国", description="", url="", gender="m", followersCount="197", friendsCount="197", statusesCount="280", favouritesCount="26", createdAt="Thu Oct 08 12:46:22 CST 2009", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="123", lang="zh-cn"}

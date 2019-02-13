@@ -1,0 +1,3 @@
+ch
+AIX下实现ftp锁定用户在主目录
+ 问题 需要staff组某用户从特定路径下ftp获取文件，且锁定该用户在主目录，不允许cd到其他上级目录。 解决方案 1.login os with root. 2.touch /etc/ftpaccess.ctl 3.vi /etc/ftpaccess.ctl 4.add "puseronly: username,staff" into the ftpaccess.ctl file . 5.exit vi ,save file. 6.refresh -s inetd 实现效果 在使用该用户名ftp进去server后，使用pwd命令看到的当前目录是"/" ，将主目录映射成为了根目录，无法进入上级目录，从而实现锁定用户在主目录。 

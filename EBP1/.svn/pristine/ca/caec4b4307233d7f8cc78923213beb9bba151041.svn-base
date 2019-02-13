@@ -1,0 +1,188 @@
+@font-face {
+	font-family:"MavenPro";
+	src: url("/EBP1/font/Maven_Pro_Regular.ttf");
+}
+#monitor_panel{
+	padding: 18px 0 0 19px;
+}
+#monitor_head{
+	width: 1131px;
+	height: 39px;
+	background-color: #E74C3C;
+}
+#monitor_head_content{
+	height: 39px;
+	padding-left: 40px;
+	font-size: 28px;
+	color: #fff;
+	background-color: #E74C3C;
+}
+#monitor_scroll{
+	width: 1116px;
+	height: 463px;
+	background-color: #F7F2F2;
+	margin-left: 34px;
+	margin-top: -15px;
+}
+#monitor_head_3d{
+	width: 1060px;
+	height: 16px;
+	margin-left: 25px;
+	background-color: #F7F2F2;
+}
+#monitor_main_body{
+	width: 1060px;
+	height: 600px;
+	/*height: 1885px;*/
+	margin-left: 25px;
+	background-color: #F7F2F2;
+}
+#monitor_all_monitor_content{
+	width: 1060px;
+	height: 239px;
+	padding: 3px 0 14px 13px;
+}
+.monitor_all_monitor_line1{
+	width: 1060px;
+	min-height: 40px;
+	margin-bottom: 15px;
+	border-width: 1px 1px 1px 4px;
+	border-style: solid;
+	border-left-color: #E74C3C;
+	border-top-color: #b2b2b2;
+	border-right-color: #b2b2b2;
+	border-bottom-color: #b2b2b2;
+	background-color: #fff;
+}
+.monitor_all_monitor_line2{
+	width: 1060px;
+	min-height: 40px;
+	margin-bottom: 15px;
+	border-width: 1px 1px 1px 4px;
+	border-style: solid;
+	border-left-color: #E74C3C;
+	border-top-color: #b2b2b2;
+	border-right-color: #b2b2b2;
+	border-bottom-color: #b2b2b2;
+	background-color: #fff;
+}
+.monitor_all_monitor_line3{
+	width: 1060px;
+	min-height: 40px;
+	margin-bottom: 15px;
+	border-width: 1px 1px 1px 4px;
+	border-style: solid;
+	border-left-color: #E74C3C;
+	border-top-color: #b2b2b2;
+	border-right-color: #b2b2b2;
+	border-bottom-color: #b2b2b2;
+	background-color: #fff;
+}
+.monitor_all_monitor_line4{
+	width: 1060px;
+	min-height: 40px;
+	margin-bottom: 15px;
+	border-width: 1px 1px 1px 4px;
+	border-style: solid;
+	border-left-color: #E74C3C;
+	border-top-color: #b2b2b2;
+	border-right-color: #b2b2b2;
+	border-bottom-color: #b2b2b2;
+	background-color: #fff;
+}
+.monitor_all_monitor_line5{
+	width: 1060px;
+	min-height: 40px;
+	margin-bottom: 15px;
+	border-width: 1px 1px 1px 4px;
+	border-style: solid;
+	border-left-color: #E74C3C;
+	border-top-color: #b2b2b2;
+	border-right-color: #b2b2b2;
+	border-bottom-color: #b2b2b2;
+	background-color: #fff;
+}
+.monitor_all_monitor_line6{
+	width: 1060px;
+	min-height: 40px;
+	margin-bottom: 15px;
+	border-width: 1px 1px 1px 4px;
+	border-style: solid;
+	border-left-color: #E74C3C;
+	border-top-color: #b2b2b2;
+	border-right-color: #b2b2b2;
+	border-bottom-color: #b2b2b2;
+	background-color: #fff;
+}
+.monitor_all_monitor_fans{
+	display: inline-block;
+	width: 85px;
+	font-size: 12pt;
+	color: #6d6d6d;
+	margin: 12px 0 12px 12px;
+	vertical-align: middle;
+}
+.monitor_all_monitor_text{
+	display: inline-block;
+	width: 520px;
+	font-size: 12pt;
+	color: #6d6d6d;
+	margin: 12px 0 12px 12px;
+	vertical-align: middle;
+}
+.monitor_all_monitor_time{
+	display: inline-block;
+	width: 146px;
+	font-size: 12pt;
+	color: #6d6d6d;
+	margin: 12px 0 12px 12px;
+	vertical-align: middle;
+	text-align: center;
+}
+.monitor_all_monitor_operate{
+	/*
+
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	*/
+	height: 5em;
+	line-height: 5em;
+	overflow: hidden;
+	width: 0px;
+	margin: 12px 0px 12px 32.6px;
+
+}
+.monitor_all_monitor_button{
+	display: inline-block;
+	width: 60px;
+	height: 26px;
+	margin-right: 4px;
+}
+.monitor_all_monitor_detail{
+	background: url("/EBP1/image/monitorDetailButton.png") no-repeat 0 0;
+}
+.monitor_all_monitor_detail:hover{
+	background: url("/EBP1/image/monitorDetailButton.png") no-repeat 0 -26px;
+}
+.monitor_all_monitor_detail:active{
+	background: url("/EBP1/image/monitorDetailButton.png") no-repeat 0 -52px;
+}
+.monitor_all_monitor_ignore{
+	background: url("/EBP1/image/monitorIgnoreButton.png") no-repeat 0 0;
+}
+.monitor_all_monitor_ignore:hover{
+	background: url("/EBP1/image/monitorIgnoreButton.png") no-repeat 0 -26px;
+}
+.monitor_all_monitor_ignore:active{
+	background: url("/EBP1/image/monitorIgnoreButton.png") no-repeat 0 -52px;
+}
+.monitor_all_monitor_alarm{
+	background: url("/EBP1/image/monitorAlarm.png") no-repeat 0 0;
+}
+.monitor_all_monitor_alarm:hover{
+	background: url("/EBP1/image/monitorAlarm.png") no-repeat 0 -26px;
+}
+.monitor_all_monitor_alarm:active{
+	background: url("/EBP1/image/monitorAlarm.png") no-repeat 0 -52px;
+}

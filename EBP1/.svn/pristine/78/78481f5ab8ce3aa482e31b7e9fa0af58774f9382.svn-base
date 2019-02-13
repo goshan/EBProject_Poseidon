@@ -1,0 +1,56 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<%@ taglib prefix ="c" uri ="http://java.sun.com/jsp/jstl/core"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+     <%@include file="/head.jsp" %>
+
+  </head>
+  
+  <body>
+		<a name="getNumOfConnection" href="/EBP1/dataManageAction_getNumOfConnection.action">chart：获取所有connection数量</a>
+  		<br/>
+  		<a name="getTopCountNumOfConnectionKeyWords" href="/EBP1/dataManageAction_getTopCountNumOfConnectionKeyWords.action">chart：获取Top Connection KeyWords</a>
+  		<br/>
+  		<a name="getNumOfAllFans" href="/EBP1/dataManageAction_getNumOfAllFans.action">chart：获取全部粉丝数量</a>
+  		<br/>
+  		<a name="getNumOfNormalFans" href="/EBP1/dataManageAction_getNumOfNormalFans.action">chart：获取正常粉丝数量</a>
+  		<br/>
+  		<a name="getNumOfZombieFans" href="/EBP1/dataManageAction_getNumOfZombieFans.action">chart：获取僵尸粉数量</a>
+  		<br/>
+  		<a name="getTopCountNumOfFansKeyWords" href="/EBP1/dataManageAction_getTopCountNumOfFansKeyWords.action">chart：获取Top Fans KeyWords</a>
+  		<br/>
+  		<a name="getTotalhotWords" href="/EBP1/dataManageAction_getTotalhotWords.action">chart：获取Total Hot Words</a>
+  		<br/>
+  		<a name="getNumOfAdmin" href="/EBP1/dataManageAction_getNumOfAdmin.action">chart：获取管理员数量</a>
+  		<br/>
+  		<a name="getNumOfUser" href="/EBP1/dataManageAction_getNumOfUser.action">chart：获取用户数量</a>
+  		<br/>
+  		<a name="getNumOfCandidate" href="/EBP1/dataManageAction_getNumOfCandidate.action">chart：获取未通过批准用户数量</a>
+  		<br/>
+  		<a name="getReleaseNumAndUser" href="/EBP1/dataManageAction_getReleaseNumAndUser.action">chart：获取发布用户ID以及发布数量</a>
+  		<br/>
+  		<a name="getReleaseNumAndDate" href="/EBP1/dataManageAction_getReleaseNumAndDate.action">chart：获取每天发布数量</a>
+  		<br/>
+  		<a name="getTotalNumOfRelease" href="/EBP1/dataManageAction_getTotalNumOfRelease.action">chart：获取历史发布总数</a>
+  		<br/>
+  		<a name="getTotalNumOfReleaseDraft" href="/EBP1/dataManageAction_getTotalNumOfReleaseDraft.action">chart：获取草稿数</a>
+  		<br/>
+  		<a name="getNumOfAllSources" href="/EBP1/dataManageAction_getNumOfAllSources.action">chart：获取素材池素材总数</a>
+  		<br/>
+  		<a name="getSourceOfDay" href="/EBP1/dataManageAction_getSourceOfDay.action">chart：获取素材池每天添加素材数</a>
+  		<br/>
+  		<a name="getSourceOfUser" href="/EBP1/dataManageAction_getSourceOfUser.action">chart：获取素材池每用户添加素材</a>
+  		<br/>
+  		<a name="getTopCountNumOfSourceKeyWords" href="/EBP1/dataManageAction_getTopCountNumOfSourceKeyWords.action">chart：获取素材池关键词库</a>
+  		
+  </body>
+</html>

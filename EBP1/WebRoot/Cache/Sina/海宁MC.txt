@@ -1,0 +1,1 @@
+{id="1912482460", screenName="海宁MC", name="海宁MC", province="33", city="4", location="浙江 嘉兴", description="", url="", gender="m", followersCount="43", friendsCount="124", statusesCount="8", favouritesCount="0", createdAt="Sat Jan 01 15:14:17 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="4", lang="zh-cn"}

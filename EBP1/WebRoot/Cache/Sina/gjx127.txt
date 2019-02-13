@@ -1,0 +1,1 @@
+{id="2822835110", screenName="gjx127", name="gjx127", province="44", city="3", location="¹ã¶« ÉîÛÚ", description="", url="", gender="m", followersCount="14", friendsCount="35", statusesCount="4", favouritesCount="0", createdAt="Mon Jun 04 16:12:50 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

@@ -1,0 +1,45 @@
+package com.ibm.p1.action;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+
+import com.ibm.p1.tools.ConnectionsForumTopics;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class PublishQuestions2ConnectionsAction extends ActionSupport{
+
+	private String title;
+	private String content;
+	private String result;
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public String getResult() {
+		return result;
+	}
+	public void setResult(String result) {
+		this.result = result;
+	}
+	public String execute() {
+		result="发布问题成功！";
+		
+		try {
+			System.out.println("title:"+URLDecoder.decode(title,"utf-8"));
+			System.out.println("content:"+URLDecoder.decode(content,"utf-8"));
+			ConnectionsForumTopics.createTopic(title, content);
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+			result="发布问题失败！";
+		}
+		return this.SUCCESS;
+	}
+}

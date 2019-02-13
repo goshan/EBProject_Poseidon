@@ -1,0 +1,3 @@
+ch
+How to Apply MTS ID (如何申请MTS ID)
+ 其实这个很多同事都已经有了，所以这个主意针对个别被遗忘的孩子（比如我）。 首先你要发邮件给BUZZIT，跟他们说你要MTS ID。 然后他们会回你邮件，里面有个链接，点进去，你会下载一个文档，文档上面有写Band7 or below的我们怎么申请MTS ID。 具体说一下，他会给你一个DB Link.，具体的链接是：。 点进去，各种申请，点MTS ID Application.选一下band几。 然后跳出你的信息，一个一个填下来，Department Code在你的Bluepages里面有，还需要你的PM的信息以及你的项目名称。 最后写一下申请理由。然后submit。 你需要做的就到这里了，有兴趣的话可以时不时查看一下进程。 接下来你的PeM和你的PM都会收到邮件，得到他们的Approve之后，还需要IT那边的操作，应该需要3个工作日之后你就能拿到你的MTS ID了。（我感觉我没有等那么久，lucky！） MTS ID的申请流程就是这样，有什么不明白的可以找我，尽量不要麻烦老大，他很忙的~ 我的Notes ID: Wei Chao WC Qian/China/IBM@IBMCN 

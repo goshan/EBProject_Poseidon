@@ -1,0 +1,1 @@
+{id="3316557002", screenName="大头是条跟腚狗", name="大头是条跟腚狗", province="52", city="2", location="贵州 六盘水", description="夜的自语", url="", gender="f", followersCount="31", friendsCount="334", statusesCount="93", favouritesCount="0", createdAt="Thu Apr 11 03:38:20 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="2", lang="zh-cn"}

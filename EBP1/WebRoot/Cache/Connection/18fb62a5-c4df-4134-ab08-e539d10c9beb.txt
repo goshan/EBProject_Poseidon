@@ -1,0 +1,3 @@
+ch
+[Tips] How to close a PMH. (切记要将PMH的状态从“OP1L1”改成“CL1L1”)
+ 由于贴不了图。参见附件！ 

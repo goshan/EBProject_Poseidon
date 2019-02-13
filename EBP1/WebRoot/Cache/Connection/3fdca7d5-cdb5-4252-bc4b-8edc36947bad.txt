@@ -1,0 +1,3 @@
+ch
+有谁实际操作过 power 770/780 在线更换SCM或者menory
+ 如题，有谁实际做过在线的更换POWER 770/780 processor backplane里面的东西？ 想问下是否可行。 注：要LPAR开着的，只是standby神马的木有意义 如果有的话求具体环境 

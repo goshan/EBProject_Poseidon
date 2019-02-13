@@ -1,0 +1,1 @@
+{id="3345559364", screenName="柯大公子", name="柯大公子", province="35", city="2", location="福建 厦门", description="", url="", gender="m", followersCount="19", friendsCount="33", statusesCount="9", favouritesCount="1", createdAt="Sat Apr 20 20:41:01 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1", lang="zh-cn"}

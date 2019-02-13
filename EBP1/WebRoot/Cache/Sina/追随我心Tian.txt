@@ -1,0 +1,1 @@
+{id="2182116241", screenName="追随我心Tian", name="追随我心Tian", province="12", city="1000", location="天津", description="天津大学", url="", gender="m", followersCount="176", friendsCount="589", statusesCount="291", favouritesCount="40", createdAt="Thu Jun 16 23:51:44 CST 2011", following="true", verified="false", verifiedType="220", followMe="true", biFollowersCount="132", lang="zh-cn"}

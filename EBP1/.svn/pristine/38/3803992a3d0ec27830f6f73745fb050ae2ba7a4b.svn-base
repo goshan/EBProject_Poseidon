@@ -1,0 +1,3 @@
+ch
+BBU failed question
+ 前幾天遇到 TSMC DS8700 2421-941 75VR460 (mark 一下，聽說這台兩三次了) 吐Error code (BE192451) , FRU Location Code U2421.A01.75VR460-E11-E2, FRU Location Code U2421.A01.75VR460-E12-E2 算是Hit到Bug，於是執行Dummy replacement修復兩個BBU。 有個問題想問問看有沒人有經驗的，客戶 Server上，十個Lun裡有兩個hdisk出現temp adapter error，這個好解釋，因為有access到的關係， 但客戶問說BBU有問題，為什麼會有瞬斷情況，這我就不知道如何解釋了，感覺上應該沒關係才對。應該也不會有Controller或HBA切換才對？ 有人有好的說法可解釋嗎？不用真的root cause，只要合理即可。 

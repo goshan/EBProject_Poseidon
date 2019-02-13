@@ -1,0 +1,1 @@
+{id="2608441742", screenName="糊涂的糊糊", name="糊涂的糊糊", province="44", city="1", location="广东 广州", description="", url="", gender="m", followersCount="0", friendsCount="200", statusesCount="0", favouritesCount="0", createdAt="Wed Dec 14 15:06:21 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

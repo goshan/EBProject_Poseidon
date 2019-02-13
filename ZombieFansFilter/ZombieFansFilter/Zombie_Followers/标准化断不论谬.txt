@@ -1,0 +1,1 @@
+{id="3497811655", screenName="标准化断不论谬", name="标准化断不论谬", province="35", city="7", location="福建 南平", description="", url="", gender="f", followersCount="27", friendsCount="311", statusesCount="172", favouritesCount="0", createdAt="Thu May 30 13:59:51 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1", lang="zh-cn"}

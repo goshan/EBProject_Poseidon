@@ -1,0 +1,1 @@
+{id="1177665637", screenName="欧阳潼瑶", name="欧阳潼瑶", province="31", city="15", location="上海 浦东新区", description="瑶瑶她爹代管本微博。", url="", gender="f", followersCount="224", friendsCount="293", statusesCount="1352", favouritesCount="0", createdAt="Sun Oct 11 15:42:50 CST 2009", following="true", verified="false", verifiedType="-1", followMe="true", biFollowersCount="132", lang="zh-cn"}

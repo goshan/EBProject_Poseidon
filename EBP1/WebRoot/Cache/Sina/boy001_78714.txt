@@ -1,0 +1,1 @@
+{id="3704757994", screenName="boy001_78714", name="boy001_78714", province="11", city="1", location="北京 东城区", description="", url="", gender="m", followersCount="0", friendsCount="16", statusesCount="0", favouritesCount="0", createdAt="Wed Aug 07 10:28:07 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

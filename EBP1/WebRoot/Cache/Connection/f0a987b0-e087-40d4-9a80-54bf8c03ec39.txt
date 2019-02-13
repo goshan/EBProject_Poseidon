@@ -1,0 +1,3 @@
+ch
+如何在OC中使用core
+ core是不支持redhat OC的，安装程序是 exe。 但如果直接把nsf和一些配文件copy到OC中，也是可以使用的。 

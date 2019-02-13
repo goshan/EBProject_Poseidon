@@ -1,0 +1,1 @@
+{id="2318906422", screenName="我爱BY2的小窝", name="我爱BY2的小窝", province="44", city="5", location="广东 汕头", description="", url="", gender="m", followersCount="33", friendsCount="195", statusesCount="0", favouritesCount="0", createdAt="Thu Aug 18 12:18:11 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1", lang="zh-cn"}

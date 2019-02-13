@@ -1,0 +1,1 @@
+{id="2519228500", screenName="寻找华格纳", name="寻找华格纳", province="13", city="1", location="河北 石家庄", description="", url="", gender="f", followersCount="23", friendsCount="17", statusesCount="10", favouritesCount="0", createdAt="Mon Nov 07 12:57:20 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="8", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="3071342487", screenName="日落巴黎912", name="日落巴黎912", province="82", city="1", location="澳门 其他", description="我是周杰伦，我来自中国", url="", gender="f", followersCount="77", friendsCount="836", statusesCount="359", favouritesCount="0", createdAt="Sun Oct 28 03:23:20 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="2", lang="zh-cn"}

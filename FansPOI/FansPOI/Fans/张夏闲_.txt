@@ -1,0 +1,1 @@
+{id="1238742104", screenName="张夏闲_", name="张夏闲_", province="44", city="3", location="广东 深圳", description="所有人都不约而同地叫我忙忙", url="", gender="m", followersCount="32", friendsCount="135", statusesCount="202", favouritesCount="0", createdAt="Wed Apr 18 08:25:42 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="14", lang="zh-cn"}

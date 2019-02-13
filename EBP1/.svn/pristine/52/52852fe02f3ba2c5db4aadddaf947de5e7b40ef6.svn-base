@@ -1,0 +1,320 @@
+package com.ibm.p1.service.impl;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
+import com.ibm.p1.dao.AnalysisDao;
+import com.ibm.p1.dao.impl.AnalysisDaoImpl;
+import com.ibm.p1.entity.Connection;
+import com.ibm.p1.entity.Parameter;
+import com.ibm.p1.entity.User;
+import com.ibm.p1.service.AnalysisService;
+import com.ibm.p1.service.ManageService;
+import com.ibm.p1.tools.HibernateUtil;
+import com.opensymphony.xwork2.ActionContext;
+
+public class AnalysisServiceImpl implements AnalysisService{
+	
+	private Parameter param;
+	private String volume;
+	private AnalysisDao analysisDao ;//= new AnalysisDaoImpl();
+	//private AnalysisDao analysisDao;
+	private ManageService manageService = new ManageServiceImpl();
+	public ManageService getManageService() {
+		return manageService;
+	}
+	public void setManageService(ManageService manageService) {
+		this.manageService = manageService;
+	}
+	public Parameter getParam() {
+		return param;
+	}
+	public AnalysisDao getAnalysisDao() {
+		return analysisDao;
+	}
+	public void setAnalysisDao(AnalysisDao analysisDao) {
+		this.analysisDao = analysisDao;
+	}
+	public void setParam(Parameter param) {
+		this.param = param;
+	}
+	public String getVolume() {
+		return volume;
+	}
+	public void setVolume(String volume) {
+		this.volume = volume;
+	}
+	
+	public AnalysisServiceImpl(){
+		//无参构造函数
+	}
+	public AnalysisServiceImpl(Parameter param){
+		//有参构造函数
+		this.param = param;
+		((AnalysisDaoImpl)analysisDao).setParameter(param);
+	}
+	
+	public void init(){
+		this.param = HibernateUtil.getParam();
+		((AnalysisDaoImpl)analysisDao).setParameter(param);
+		this.volume = param.getRootPath().substring(0, param.getRootPath().indexOf("\\"));
+	}
+	public boolean FansPOI(){
+		this.init();
+		try {
+			String exe1 = this.param.getRootPath()+this.param.getTools_dir_FansPOI()+" && FansPOI";
+			String input1 = this.param.getRootPath()+this.param.getCache_dir_sina();
+			String output_dir1 = this.param.getRootPath()+this.param.getCache_dir_FansPOI();
+			String cmd1 = "cmd /c \""+this.volume+" && cd "+exe1+" "+input1+" "+output_dir1+"\"";
+			Process p1 = Runtime.getRuntime().exec(cmd1);
+			BufferedReader br1 = new BufferedReader(new InputStreamReader(p1.getInputStream()));
+			String res1 = br1.readLine();
+			boolean result1 = analysisDao.saveFansPOI();
+			
+			String exe2 = this.param.getRootPath()+this.param.getTools_dir_ZombieType()+" && ZombieFansFilter";
+			String input2 = this.param.getRootPath()+this.param.getCache_dir_sina();
+			String output_dir2 = this.param.getRootPath()+this.param.getCache_dir_ZombieType();
+			String cmd2 = "cmd /c \""+this.volume+" && cd "+exe2+" "+input2+" "+output_dir2+"\"";
+			Process p2 = Runtime.getRuntime().exec(cmd2);
+			BufferedReader br2 = new BufferedReader(new InputStreamReader(p2.getInputStream()));
+			String res2 = br2.readLine();
+			boolean result2 = analysisDao.saveZombieTypeCheck();
+	
+			String exe3 = this.param.getRootPath()+this.param.getTools_dir_TotalPOI()+" && TotalPOI";
+			String input31 = this.param.getRootPath()+this.param.getCache_dir_ZombieType()+"ZombieType.res";
+			String input32 = this.param.getRootPath()+this.param.getCache_dir_FansPOI()+"Weight.res";
+			String output_dir3 = this.param.getRootPath()+this.param.getCache_dir_TotalPOI();
+			String cmd3 = "cmd /c \""+this.volume+" && cd "+exe3+" "+input31+" "+input32+" "+output_dir3+"\"";
+			Process p3 = Runtime.getRuntime().exec(cmd3);
+			BufferedReader br3 = new BufferedReader(new InputStreamReader(p3.getInputStream()));
+			String res3 = br3.readLine();
+			boolean result3 = analysisDao.saveTotalPOI();
+			
+			if (res1.equals("process_finished")&& result1 && res2.equals("process_finished")&& result2 && res3.equals("process_finished")&& result3){
+				return true;
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+	}
+	
+	public boolean connectionKeyWords(){
+		this.init();
+		try {
+			String exe = this.param.getRootPath()+this.param.getTools_dir_ConnectionKeyWords()+" && ConnectionKeyWords";
+			String input = this.param.getRootPath()+this.param.getCache_dir_connection();
+			String output_dir = this.param.getRootPath()+this.param.getCache_dir_ConnectionKeyWords();
+			String cmd = "cmd /c \""+this.volume+" && cd "+exe+" "+input+" "+output_dir+"\"";
+			Process p = Runtime.getRuntime().exec(cmd);
+			BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
+			String res = br.readLine();
+			boolean result1 = analysisDao.saveConnectionKeyWords();
+			boolean result2 = analysisDao.saveConnectionInfo();
+			
+			if (res.equals("process_finished")&& result1 && result2){
+				return true;
+			}
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	public boolean keyWordsMatch(){
+		this.init();
+		try {
+			String exe = this.param.getRootPath()+this.param.getTools_dir_KeyWordsMatch()+" && KeyWordsMatch";
+			String input1 = this.param.getRootPath()+this.param.getCache_dir_TotalPOI()+"Weight.res";
+			String input2 = this.param.getRootPath()+this.param.getCache_dir_ConnectionKeyWords()+"Weight.res";
+			String output_dir = this.param.getRootPath()+this.param.getCache_dir_KeyWordsMatch();
+			String cmd = "cmd /c \""+this.volume+" && cd "+exe+" "+input1+" "+input2+" "+output_dir+"\"";
+			Process p = Runtime.getRuntime().exec(cmd);
+			BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
+			String res = br.readLine();
+			boolean result = analysisDao.saveKeyWordsMatch();
+
+			if (res.equals("process_finished")&& result == true){
+				return true;
+			}
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+	}
+	
+	public boolean RecommandQA(String question){
+		this.init();
+		try {
+			String exe = this.param.getRootPath()+this.param.getTools_dir_RecommandQA()+" && RecommandQA";
+			String input = this.param.getRootPath()+this.param.getCache_dir_ConnectionKeyWords()+"Weight.res";
+			String output_dir = this.param.getRootPath()+this.param.getCache_dir_RecommandQA();
+			String cmd = "cmd /c \""+this.volume+" && cd "+exe+" \""+question+"\" "+input+" "+output_dir+"\"";
+			Process p = Runtime.getRuntime().exec(cmd);
+			BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
+			String res = br.readLine();
+			boolean result = analysisDao.saveQuestion();
+			if (res.equals("process_finished") && result){
+				return true;
+			}
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+	}
+	
+	public Map getRecommandResult(){
+		this.init();
+		String tools_path = param.getRootPath()+param.getCache_dir_RecommandQA();
+		HashMap res = new HashMap();
+		try {
+			File f = new File(tools_path+"Similairty.res");
+			BufferedReader br;
+			br = new BufferedReader(new InputStreamReader(new FileInputStream(f)));
+			String line = "";
+			boolean readKeyWords = false;
+			ArrayList<String> keywords = new ArrayList<String>();
+			HashMap<String, Double> topics = new HashMap<String, Double>();
+			while ((line = br.readLine()) != null){
+				if (line.startsWith("####")){
+					readKeyWords = true;
+				}
+				else if (line.startsWith("====")){
+					readKeyWords = false;
+				}
+				else if (readKeyWords){
+					String word = line.substring(0, line.indexOf("\t"));
+					keywords.add(word);
+				}
+				else {
+					String uuid = line.substring(0, line.lastIndexOf("\t"));
+					uuid = uuid.substring(0, uuid.lastIndexOf("."));
+					Double weight = new Double(line.substring(line.indexOf("\t")+1));
+					topics.put(uuid, weight);
+				}
+			}
+			ArrayList<Entry<String,Double>> list = new ArrayList<Entry<String,Double>>(topics.entrySet());
+			Collections.sort(list, new Comparator<Object>(){
+				public int compare(Object e1, Object e2){   
+					double v1 = ((Entry<String, Double>)e1).getValue();   
+					double v2 = ((Entry<String, Double>)e2).getValue();
+					if (v1 == v2){
+						return 0;
+					}
+					else if (v1 > v2){
+						return -1;
+					}
+					else {
+						return 1;
+					}
+				}
+			});
+			ArrayList<Entry<String, Double>> uuids = new ArrayList<Entry<String, Double>>();
+			for (int i=0; i<(list.size()>20 ? 20 : list.size()); i++){
+			    uuids.add(list.get(i));   
+			}
+			ArrayList<Connection> candidates = analysisDao.loadConnectionFromUuid(uuids);
+			res.put("keywords", keywords);
+			res.put("candidates", candidates);
+		} catch (Exception e3) {
+			// TODO Auto-generated catch block
+			e3.printStackTrace();
+		}
+		return res;
+	}
+	public boolean SourceKeyWords() {
+		// TODO Auto-generated method stub
+		this.init();
+		try {
+			String exe = this.param.getRootPath()+this.param.getTools_dir_SourceKeyWords()+" && SourceKeyWords";
+			String input = this.param.getRootPath()+this.param.getCache_dir_SourceKeyWords()+"sources.txt";
+			String output_dir = this.param.getRootPath()+this.param.getCache_dir_SourceKeyWords();
+			String cmd = "cmd /c \""+this.volume+" && cd "+exe+" "+input+" "+output_dir+"\"";
+			Process p = Runtime.getRuntime().exec(cmd);
+			BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
+			String res = br.readLine();
+			boolean result = analysisDao.saveSourceKeyWords();
+			if (res.equals("process_finished")&& result){
+				return true;
+			}
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+	}
+	public boolean calAtKeyWords() {
+		// TODO Auto-generated method stub
+		this.init();
+		try {
+			String exe = this.param.getRootPath()+this.param.getTools_dir_SourceKeyWords()+" && SourceKeyWords";
+			String input=this.param.getRootPath()+this.param.getCache_dir_AtFans()+"AtSources.txt";
+			String output_dir=this.param.getRootPath()+this.param.getCache_dir_AtFans();
+			
+			String cmd = "cmd /c \""+this.volume+" && cd "+exe+" "+input+" "+output_dir+"\"";
+			Process p = Runtime.getRuntime().exec(cmd);
+			BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
+			String res = br.readLine();
+			
+			
+			if (res.equals("process_finished")){
+				String dir=this.param.getRootPath()+this.param.getCache_dir_AtFans();
+				File inputFile = new File(dir+"Weight.res");
+				File outputFile = new File(dir+"AtWeight.res");
+				if(outputFile.exists()){
+					outputFile.delete();
+				}
+				outputFile.createNewFile();
+				BufferedReader reader = null;
+			    reader = new BufferedReader(new FileReader(inputFile));
+				BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputFile)));
+			    String tempString = null;
+			    String replaced=null;
+			    int cnt = 0;
+	            while ((tempString = reader.readLine()) != null) {
+	            	if(tempString.contains("####")){
+	            		continue;
+	            	}
+	            	else if(tempString.startsWith("====")){
+						break;
+					}
+	            	else if (cnt >= 10){
+						break;
+					}
+					replaced=tempString.replaceFirst("/(v|n)+\\s+", "\t");
+					writer.write(replaced+"\r\n");
+					cnt ++;
+	            }
+	            writer.close();
+	            reader.close();
+				return true;
+			}
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+	}
+}

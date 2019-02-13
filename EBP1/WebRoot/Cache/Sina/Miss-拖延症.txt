@@ -1,0 +1,1 @@
+{id="2246057001", screenName="Miss-拖延症", name="Miss-拖延症", province="11", city="8", location="北京 海淀区", description="但行好事，莫问前程", url="", gender="f", followersCount="141", friendsCount="143", statusesCount="611", favouritesCount="1", createdAt="Wed Jul 13 23:18:15 CST 2011", following="true", verified="false", verifiedType="220", followMe="true", biFollowersCount="68", lang="zh-cn"}

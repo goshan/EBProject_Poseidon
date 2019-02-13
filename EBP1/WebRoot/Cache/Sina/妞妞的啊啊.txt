@@ -1,0 +1,1 @@
+{id="3243449860", screenName="妞妞的啊啊", name="妞妞的啊啊", province="34", city="11", location="安徽 滁州", description="原来我的心里一直都是年", url="", gender="f", followersCount="134", friendsCount="684", statusesCount="338", favouritesCount="0", createdAt="Thu Mar 28 01:22:42 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="3029871433", screenName="郭素娴", name="郭素娴", province="41", city="1", location="河南 郑州", description="归去，也无风雨也无晴", url="", gender="f", followersCount="98", friendsCount="223", statusesCount="348", favouritesCount="27", createdAt="Mon Oct 08 23:53:15 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="43", lang="zh-cn"}

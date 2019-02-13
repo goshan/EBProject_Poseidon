@@ -1,0 +1,1 @@
+{id="2772636333", screenName="曹小怡期末要雄起", name="曹小怡期末要雄起", province="11", city="5", location="北京 朝阳区", description="啦啦啦啦~", url="", gender="f", followersCount="63", friendsCount="113", statusesCount="73", favouritesCount="0", createdAt="Tue Jul 03 17:15:11 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="34", lang="zh-cn"}

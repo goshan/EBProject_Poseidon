@@ -1,0 +1,1 @@
+{id="3498724161", screenName="连贯好一个多巴胺", name="连贯好一个多巴胺", province="15", city="2", location="内蒙古 包头", description="", url="", gender="f", followersCount="25", friendsCount="279", statusesCount="175", favouritesCount="0", createdAt="Thu May 30 19:15:55 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

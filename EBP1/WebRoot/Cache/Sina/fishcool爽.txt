@@ -1,0 +1,1 @@
+{id="1911543277", screenName="fishcool爽", name="fishcool爽", province="11", city="2", location="北京 西城区", description="", url="", gender="f", followersCount="184", friendsCount="235", statusesCount="87", favouritesCount="26", createdAt="Tue Jan 04 17:28:25 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="103", lang="zh-cn"}

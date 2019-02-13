@@ -1,0 +1,1 @@
+{id="2039313480", screenName="一夜之间床", name="一夜之间床", province="100", city="1000", location="其他", description="", url="", gender="f", followersCount="56", friendsCount="863", statusesCount="1", favouritesCount="0", createdAt="Sun Jun 05 18:47:31 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="26", lang="zh-cn"}

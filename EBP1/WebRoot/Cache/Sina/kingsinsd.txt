@@ -1,0 +1,1 @@
+{id="2308802143", screenName="kingsinsd", name="kingsinsd", province="31", city="15", location="上海 浦东新区", description="", url="", gender="m", followersCount="112", friendsCount="52", statusesCount="146", favouritesCount="1", createdAt="Thu Aug 18 07:43:11 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="14", lang="zh-cn"}

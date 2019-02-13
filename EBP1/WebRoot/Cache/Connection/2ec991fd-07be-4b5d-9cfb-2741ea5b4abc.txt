@@ -1,0 +1,3 @@
+ch
+[技术专题]2011 Q4 - 自动登录及退出系统
+2011年第四季度技术专题：自动登录及退出系统 (Login and logoff automatically)?大家每天可能都要登录并退出操作系统，无论你是在哪个平台上工作，z/OS、UNIX、AIX还是Windows系统。多数情况下，我们都是手工登录及退出系统的。但是大家是否知道怎样用工具(PCOM,NetTerm,FTP等)或语言(VBS,Perl,SH,REXX,CLIST等)来进行系统的自动登录及退出呢？这在AMDS的工作中可是很重要的一环。比如说，你可以在PC上通过PCOM自动登录主机(Mainframe)，自动从主机上退出；也可以在PC上通过FTP脚本自动登录主机，再从主机上退出；甚至在PC上用远程控制的方式访问AIX，再从AIX的通过Telnet的方式访问主机(Mainframe)；当然，你也可以写远程唤醒PC机并登录，发送命令来让PC自动关机，系统自动拨号或自动登录防火墙等等。?关于PCOM自动登录主机，可以参见Jiang Lei写的。 

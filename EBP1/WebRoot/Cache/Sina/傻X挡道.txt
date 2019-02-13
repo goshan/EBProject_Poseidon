@@ -1,0 +1,1 @@
+{id="2273357173", screenName="傻X挡道", name="傻X挡道", province="44", city="1", location="广东 广州", description="不挥霍一下青春总觉得会遗憾。", url="", gender="m", followersCount="1386", friendsCount="1482", statusesCount="267", favouritesCount="0", createdAt="Tue May 28 21:41:08 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1290", lang="zh-cn"}

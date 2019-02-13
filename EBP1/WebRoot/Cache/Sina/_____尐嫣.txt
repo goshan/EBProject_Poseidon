@@ -1,0 +1,1 @@
+{id="1990185731", screenName="_____Œ¨æÌ", name="_____Œ¨æÌ", province="23", city="10", location="ºÚÁú½­ Äµµ¤½­", description="", url="", gender="f", followersCount="21", friendsCount="111", statusesCount="39", favouritesCount="2", createdAt="Fri Feb 25 10:13:07 CST 2011", following="true", verified="false", verifiedType="-1", followMe="true", biFollowersCount="12", lang="zh-cn"}

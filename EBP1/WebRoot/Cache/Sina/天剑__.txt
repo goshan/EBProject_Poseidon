@@ -1,0 +1,1 @@
+{id="3497630081", screenName="天剑__", name="天剑__", province="13", city="8", location="河北 承德", description="下雪，真美", url="", gender="f", followersCount="30", friendsCount="723", statusesCount="344", favouritesCount="0", createdAt="Tue May 28 18:08:26 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="2", lang="zh-cn"}

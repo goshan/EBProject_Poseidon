@@ -1,0 +1,3 @@
+ch
+关于技术文档的release
+ 看到大伙一下子release这么多好文档，才发现community这个平台的重要性！ 可是大伙share的文档，考虑因素是否全面，会不会以讹传讹呢？ 建议 FJ team 二位 LSG 审核下大伙share的文档，审核通过后，在文档版本控制信息中签署自己大名，然后才release给大家！ 这样大家看到经过LSG　review 的文档即可放心使用！ 

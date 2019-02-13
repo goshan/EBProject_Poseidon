@@ -1,0 +1,94 @@
+#search_panel{
+	padding: 18px 0 0 19px;
+}
+#search_head{
+	width: 1130px;
+	height: 52px;
+	background-color: #2de276;
+}
+#search_query_input{
+	width: 662px;
+	height: 35px;
+	line-height: 35px;
+	font-family: MavenPro, Microsoft Yahei;
+	font-size: 22px;
+	color: #ccc;
+	padding: 0 108px 0 19px;
+	margin: 8px 0 0 50px;
+	
+	-moz-border-radius:19px;
+	-webkit-border-radius:19px;
+	border-radius:19px;
+	border-width: 0;
+}
+#search_button{
+	display: inline-block;
+	width: 103px;
+	height: 35px;
+	vertical-align: top;
+	margin: 8px 0 0 -108px;
+	background: url("/EBP1/image/searchSearchButton.png") no-repeat 0 0;
+}
+#search_button:hover{
+	background: url("/EBP1/image/searchSearchButton.png") no-repeat 0 -35px;
+}
+#search_button:active{
+	background: url("/EBP1/image/searchSearchButton.png") no-repeat 0 -70px;
+}
+#search_date_select{
+	display: none;
+	font-size: 15px;
+	color: #fff;
+	margin-left: 8px;
+}
+#search_start_date, #search_end_date{
+	width: 105px;
+	height: 25px;
+	padding: 0 12px;
+	font-size: 16px;
+	color: #bcbcbc;
+	
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	border-width: 0;
+}
+#search_start_date_button, #search_end_date_button{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	margin-right: 5px;
+	background: url("/EBP1/image/searchCalendarButton.png") no-repeat center;
+}
+#search_corner{
+	position: absolute;
+}
+#search_type_select{
+	width: 1115px;
+	height: 50px;
+	margin-left: 15px;
+}
+.search_type_tab{
+	display: inline-block;
+	width: 278px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 26px;
+	color: #fff;
+	background-color: #dbdbdb;
+	margin-right: -4px;
+}
+.search_type_tab_selected{
+	background-color: #19cc61;
+}
+.search_arrow{
+	position: absolute;
+	top: 207px;
+}
+#search_result_panel{
+	width: 1115px;
+	height: 410px;
+	margin: 10px 0 0 15px;
+}

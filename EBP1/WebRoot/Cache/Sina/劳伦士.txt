@@ -1,0 +1,1 @@
+{id="1764314484", screenName="劳伦士", name="劳伦士", province="100", city="1000", location="其他", description="", url="", gender="m", followersCount="737", friendsCount="413", statusesCount="118", favouritesCount="606", createdAt="Sun Jun 20 17:04:43 CST 2010", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="188", lang="zh-cn"}

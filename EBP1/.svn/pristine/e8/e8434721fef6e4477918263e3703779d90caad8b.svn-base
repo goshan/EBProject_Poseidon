@@ -1,0 +1,108 @@
+#option_config_tittle{
+	width: 1131px;
+	height: 52px;
+	background-color: #cf96ea;
+}
+#option_config_title_content{
+	vertical-align: top;
+	width: 300px;
+	height: 52px;
+	line-height: 52px;
+	font-size: 22px;
+	color: #fff;
+	margin-left: 50px;
+}
+#option_save{
+	display: inline-block;
+	float: right;
+	width: 98px;
+	height: 52px;
+	background: url("/EBP1/image/optionSaveButton.png") no-repeat 0 0;
+	margin-right: 60px;
+}
+#option_save:hover{
+	background: url("/EBP1/image/optionSaveButton.png") no-repeat 0 -52px;
+}
+#option_save:active{
+	background: url("/EBP1/image/optionSaveButton.png") no-repeat 0 -104px;
+}
+#option_config_conrner{
+	position: absolute;
+}
+#option_config_scroll{
+	width: 1055px;
+	height: 375px;
+	margin-left: 15px;
+	padding: 15px 0 0 60px;
+	background-color: #f5eff9;
+}
+.option_input_line{
+	width: 995px;
+	height: 35px;
+	margin-bottom: 5px;
+}
+.option_input_label{
+	display: inline-block;
+	width: 226px;
+	height: 35px;
+	line-height: 35px;
+	padding-left: 22px;
+	font-family: Microsoft Yahei;
+	font-size: 16px;
+	color: #fff;
+	background-color: #ad77c6;
+	vertical-align: top;
+}
+.option_input_content{
+	display: none;
+	width: 523px;
+	height: 35px;
+	line-height: 35px;
+	font-family: Microsoft Yahei;
+	font-size: 16px;
+	color: #e4dfea;
+	background-color: #aca5b7;
+	margin-left: -5px;
+	padding-left: 36px;
+	border: none;
+	vertical-align: top;
+}
+.option_input_content_freeze{
+	display: inline-block;
+	width: 487px;
+	height: 35px;
+	line-height: 35px;
+	font-family: Microsoft Yahei;
+	font-size: 16px;
+	color: #727272;
+	background-color: #d4cedd;
+	margin-left: -5px;
+	padding-left: 36px;
+	vertical-align: top;
+}
+.option_edit{
+	display: inline-block;
+	width: 98px;
+	height: 35px;
+	margin-left: 9px;
+	background: url("/EBP1/image/optionEditButton.png") no-repeat 0 0;
+}
+.option_edit:hover{
+	background: url("/EBP1/image/optionEditButton.png") no-repeat 0 -35px;
+}
+.option_edit:active{
+	background: url("/EBP1/image/optionEditButton.png") no-repeat 0 -70px;
+}
+.option_back{
+	display: inline-block;
+	width: 98px;
+	height: 35px;
+	margin-left: 9px;
+	background: url("/EBP1/image/optionBackButton.png") no-repeat 0 0;
+}
+.option_back:hover{
+	background: url("/EBP1/image/optionBackButton.png") no-repeat 0 -35px;
+}
+.option_back:active{
+	background: url("/EBP1/image/optionBackButton.png") no-repeat 0 -70px;
+}

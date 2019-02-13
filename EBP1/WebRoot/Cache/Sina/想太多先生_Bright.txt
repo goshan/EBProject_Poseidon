@@ -1,0 +1,1 @@
+{id="1766591897", screenName="想太多先生_Bright", name="想太多先生_Bright", province="31", city="20", location="上海 奉贤区", description="", url="", gender="m", followersCount="95", friendsCount="42", statusesCount="114", favouritesCount="1", createdAt="Fri Jul 02 16:24:59 CST 2010", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="6", lang="zh-cn"}

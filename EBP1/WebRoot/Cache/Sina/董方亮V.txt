@@ -1,0 +1,1 @@
+{id="1672711944", screenName="董方亮V", name="董方亮V", province="31", city="8", location="上海 闸北区", description="畅畅他爹", url="", gender="m", followersCount="562", friendsCount="317", statusesCount="2691", favouritesCount="762", createdAt="Tue Dec 22 20:34:15 CST 2009", following="true", verified="false", verifiedType="220", followMe="true", biFollowersCount="218", lang="zh-cn"}

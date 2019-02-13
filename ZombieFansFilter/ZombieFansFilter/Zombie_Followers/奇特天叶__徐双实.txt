@@ -1,0 +1,1 @@
+{id="3492044233", screenName="奇特天叶__徐双实", name="奇特天叶__徐双实", province="62", city="30", location="甘肃 甘南", description="", url="", gender="m", followersCount="20", friendsCount="316", statusesCount="189", favouritesCount="0", createdAt="Tue May 28 10:52:53 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

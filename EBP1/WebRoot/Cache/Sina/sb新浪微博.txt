@@ -1,0 +1,1 @@
+{id="1952519445", screenName="sb新浪微博", name="sb新浪微博", province="11", city="1000", location="北京", description="", url="", gender="m", followersCount="567", friendsCount="1391", statusesCount="1997", favouritesCount="0", createdAt="Wed May 11 00:04:48 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="11", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="2091913803", screenName="默默的通通", name="默默的通通", province="11", city="8", location="北京 海淀区", description="爱玩，爱钻研，一直很努力。", url="", gender="m", followersCount="55", friendsCount="144", statusesCount="119", favouritesCount="2", createdAt="Sun Apr 17 20:14:05 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="38", lang="zh-cn"}

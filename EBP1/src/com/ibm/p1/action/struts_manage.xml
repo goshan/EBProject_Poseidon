@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+ 	<constant name="struts.i18n.encoding" value="UTF-8"></constant>  
+    <constant name="struts-objectFactory" value="spring"></constant>  
+    <constant name="struts.ui.theme" value="simple" />
+   	<package name="manage" extends="struts-default">
+   	
+	<action name="manageAction_*" class="manageAction" method="{1}">
+		<result name="401_page">/error401.jsp</result>
+		<result name="403_page">/error403.jsp</result>
+		<result name="500_page">/error500.jsp</result>
+		<result name="success_showOptionPage">/WEB-INF/view/option.jsp</result>
+		<result name="success_getAllAcquireInfo">/WEB-INF/view/option_config.jsp</result>
+		<result name="success_getAllToolsStatus">/WEB-INF/view/option_tools.jsp</result>
+		<result name="401_error_json">/json.jsp</result>
+		<result name="403_error_json">/json.jsp</result>
+		<result name="500_error_json">/json.jsp</result>
+		<result name="200_success_json">/json.jsp</result>
+		
+		
+		
+		
+		
+		
+		
+		
+		<result name="success_getAcquireInfoById">/Manage/setAcquireInfo.jsp</result>
+		
+		<result name="success_getAdminTransInstitution">/Manage/showAdminTransInstitution.jsp</result>
+		<result name="success_editAdminTransInstitution">/Manage/editAdminTransInstitution.jsp</result>
+		<result name="success_editAdminTransInstitutionById">/Manage/editAdminTransInstitutionById.jsp</result>
+		
+		<result name="success_getMyLastToolsStatus">/Manage/showStatusOfTool.jsp</result>
+		<result name="success_getLastToolsStatus">/Manage/showStatusOfTool.jsp</result>
+		<result name="success_addTools">success.jsp</result>
+		<result name="success_getAllRunningCurrentToolsStatus">/Manage/showToolsStatus.jsp</result>
+		<result name="success_getAllFreeCurrentToolsStatus">/Manage/showToolsStatus.jsp</result>
+		<result name="success_getCurrentToolsStatusByName">/Manage/showToolsStatus.jsp</result>
+		<result name="success_getCurrentToolsStatusById">/Manage/showStatusOfTool.jsp</result>
+		<result name="success_getAllCurrentToolsStatus">/Manage/showToolsStatus.jsp</result>
+		<result name="success_changeCurrentToolsStatusToWorkingById">success.jsp</result>
+		<result name="success_changeCurrentToolsStatusToFreeById">success.jsp</result>
+		<result name="fail_changeCurrentToolsStatusToWorking">error.jsp</result>
+		<result name="fail_changeCurrentToolsStatusToFree">error.jsp</result>
+		<result name="success_changeCurrentToolsStatusToFreeByName">success.jsp</result>
+		<result name="fail_changeCurrentToolsStatusToFreeByName">error.jsp</result>
+		<result name="success_insertCurrentToolsStatusAndChangeToWorkingByName">success.jsp</result>
+		<result name="fail_insertCurrentToolsStatusAndChangeToWorkingByName">error.jsp</result>
+		
+		<result name="success_setAdminTransInstitution" type ="redirectAction">
+			<param name="actionName">manageAction_getAdminTransInstitution.action</param>
+		</result>
+		<result name="success_setAdminTransInstitutionById" type ="redirectAction">
+			<param name="actionName">manageAction_getAdminTransInstitution.action</param>
+		</result>
+	</action>
+	
+	<action name="manageAction_getAdminTransInstitution.action" class="manageAction" method="{1}" >
+   		<result name="success_getAdminTransInstitution">/Manage/showAdminTransInstitution.jsp</result>
+   	</action>
+  	</package>
+  	
+  	<package name="manage-json"  extends="json-default" >
+  		<action name="manageAjaxAction_*" class="manageAjaxAction" method="{1}" >
+  			<result name="200_success_json" type="json">
+				<param name="json">json</param>
+			</result>
+  			<result name="401_error_json" type="json">
+				<param name="json">json</param>
+			</result>
+			<result name="403_error_json" type="json">
+				<param name="json">json</param>
+			</result>
+			<result name="500_error_json" type="json">
+				<param name="json">json</param>
+			</result>
+			
+  		</action>
+  	</package>
+  
+</struts>

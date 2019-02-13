@@ -1,0 +1,3 @@
+ch
+Issue&Action Log for System Management
+ 【目的】 Project／保守作業を実施する上で、System管理手続きに関わる、悩み、疑問、改善提案を識別し、解決する。 【Memberへの依頼内容】 悩み、疑問、改善提案をもつ担当者は、当文書に添付するExcel Fileに課題（悩み、疑問、改善提案など）を記載する。 【今後の進め方】 1. 4/12実施予定の会議にて、識別された課題から影響度を元に、優先度を決定する 2. 優先度をもとに、Issue owner、Action planを決定する 3. 課題がある一定の数に減るまで、このCycleを繰り返す Issue &amp; Action List はこちらで管理: 

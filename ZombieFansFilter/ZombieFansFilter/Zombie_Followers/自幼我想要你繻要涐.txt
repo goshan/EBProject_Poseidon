@@ -1,0 +1,1 @@
+{id="3489018593", screenName="自幼我想要你繻要涐", name="自幼我想要你繻要涐", province="71", city="3", location="台湾 基隆市", description="", url="", gender="f", followersCount="23", friendsCount="278", statusesCount="149", favouritesCount="0", createdAt="Sun May 26 02:22:49 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

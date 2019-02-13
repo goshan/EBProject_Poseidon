@@ -1,0 +1,1 @@
+{id="3652934067", screenName="佰钧成", name="佰钧成", province="44", city="6", location="广东 佛山", description="", url="", gender="f", followersCount="14", friendsCount="69", statusesCount="3", favouritesCount="1", createdAt="Tue Jul 23 21:37:05 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="2", lang="zh-cn"}

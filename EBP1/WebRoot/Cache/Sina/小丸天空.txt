@@ -1,0 +1,1 @@
+{id="2942080287", screenName="小丸天空", name="小丸天空", province="81", city="2", location="香港 中西区", description="", url="", gender="f", followersCount="54", friendsCount="8", statusesCount="92", favouritesCount="0", createdAt="Tue Oct 02 00:33:33 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-tw"}

@@ -1,0 +1,1 @@
+{id="3224795104", screenName="好项目8", name="好项目8", province="51", city="32", location="四川 阿坝", description="忆，伤城", url="", gender="m", followersCount="135", friendsCount="1089", statusesCount="265", favouritesCount="0", createdAt="Wed Mar 13 07:09:20 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="3667963415", screenName="imrexhuang", name="imrexhuang", province="71", city="10", location="Ã®ÕÂ Ã“‘∞œÿ", description="", url="", gender="m", followersCount="12", friendsCount="117", statusesCount="12", favouritesCount="2", createdAt="Sat Jul 27 20:01:18 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1", lang="zh-cn"}

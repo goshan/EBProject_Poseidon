@@ -1,0 +1,1 @@
+{id="3498605181", screenName="洋洋大连平面模特_", name="洋洋大连平面模特_", province="46", city="90", location="海南 其他", description="", url="", gender="f", followersCount="26", friendsCount="272", statusesCount="154", favouritesCount="0", createdAt="Thu May 30 09:48:19 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1", lang="zh-cn"}

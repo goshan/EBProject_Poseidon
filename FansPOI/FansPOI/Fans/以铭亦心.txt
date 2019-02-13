@@ -1,0 +1,1 @@
+{id="2172567631", screenName="以铭亦心", name="以铭亦心", province="42", city="1", location="湖北 武汉", description="", url="", gender="f", followersCount="22", friendsCount="5", statusesCount="0", favouritesCount="0", createdAt="Sat Jun 11 11:02:50 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

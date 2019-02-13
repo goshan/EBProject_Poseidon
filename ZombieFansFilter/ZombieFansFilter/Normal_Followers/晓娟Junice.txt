@@ -1,0 +1,1 @@
+{id="2856512930", screenName="Ïþ¾êJunice", name="Ïþ¾êJunice", province="32", city="10", location="½­ËÕ ÑïÖÝ", description="", url="", gender="f", followersCount="18", friendsCount="56", statusesCount="37", favouritesCount="2", createdAt="Sun Jul 01 00:07:52 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="11", lang="zh-cn"}

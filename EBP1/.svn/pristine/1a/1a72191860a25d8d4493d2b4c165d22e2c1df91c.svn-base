@@ -1,0 +1,209 @@
+#workbench_content{
+	width: 1366px;
+	height: 650px;
+}
+#workbench_nav{
+	width: 176px;
+	height: 650px;
+	float: left;
+	background-color: #2a3235;
+}
+#workbench_watch{
+	border-top: 6px solid #7a8587;
+	text-align: center;
+}
+#workbench_time, #workbench_date{
+	font-family: MissionGothicThin;
+	color: #fff;
+	opacity: 0.5;
+}
+#workbench_time{
+	font-size: 50px;
+}
+#workbench_date{
+	font-size: 18px;
+}
+#workbench_select{
+	margin-top: 15px;
+}
+.workbench_root_item{
+	width: 126px;
+	padding-left: 50px;
+	z-index: 50;
+}
+.workbench_final_item{
+	width: 111px;
+	padding-left: 65px;
+	z-index: 10;
+}
+.workbench_single_item{
+	width: 126px;
+	padding-left: 50px;
+	z-index: 50;
+}
+.workbench_root_item, .workbench_final_item, .workbench_single_item{
+	display: block;
+	height: 45px;
+	line-height: 45px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 13px;
+	color: #8d9599;
+}
+.workbench_section{
+	position: relative;
+	height: 46px;
+}
+.workbench_light{
+	width: 176px;
+	height: 2px;
+	position: absolute;
+	top: 0;
+	left: -176px;
+	z-index: 100;
+}
+.workbench_menu_arrow{
+	position: absolute;
+	top: 17px;
+	right: 19px;
+	z-index: 100;
+}
+.workbench_white_arrow{
+	position: absolute;
+	right: -4px;
+	z-index: 100;
+}
+#workbench_publish_light{
+	background-color: #089bff;
+}
+.workbench_publish_bg{
+	background: url("/EBP1/image/workbenchPublish.png") no-repeat 0 0;
+}
+.workbench_publish_connection_bg{
+	background: url("/EBP1/image/workbenchPublish2ndMenuButtonUp.png") no-repeat 0 0;
+}
+.workbench_publish_libray_bg{
+	background: url("/EBP1/image/workbenchPublish2ndMenuButtonDown.png") no-repeat 0 0;
+}
+#workbench_reply_light{
+	background-color: #1abc9c;
+}
+.workbench_reply_bg{
+	background: url("/EBP1/image/workbenchReply.png") no-repeat 0 0;
+}
+.workbench_reply_weibo_bg{
+	background: url("/EBP1/image/workbenchReply2ndMenuButtonUp.png") no-repeat 0 0;
+}
+.workbench_reply_connection_bg{
+	background: url("/EBP1/image/workbenchReply2ndMenuButtonDown.png") no-repeat 0 0;
+}
+#workbench_search_light{
+	background-color: #2de276;
+}
+.workbench_search_bg{
+	background: url("/EBP1/image/workbenchSearch.png") no-repeat 0 0;
+}
+#workbench_chart_light{
+	background-color: #f1c40f;
+}
+.workbench_chart_bg{
+	background: url("/EBP1/image/workbenchChart.png") no-repeat 0 0;
+}
+#workbench_membership_light{
+	background-color: #e67e22;
+}
+.workbench_membership_bg{
+	background: url("/EBP1/image/workbenchMembership.png") no-repeat 0 0;
+}
+#workbench_monitor_light{
+	background-color: #e74c3c;
+}
+.workbench_monitor_bg{
+	background: url("/EBP1/image/workbenchMonitor.png") no-repeat 0 0;
+}
+#workbench_option_light{
+	background-color: #9b59b6;
+}
+.workbench_option_bg{
+	background: url("/EBP1/image/workbenchOption.png") no-repeat 0 0;
+}
+.workbench_menu_hover{
+	background-position-y: -45px;
+	color: #fff;
+}
+.workbench_menu_expand{
+	background-position-y: -45px;
+	color: #fff;
+}
+.workbench_menu_selected{
+	background-position-y: -90px;
+	color: #fff;
+}
+
+#workbench_toolbar{
+	width: 1190px;
+	height: 59px;
+	margin-left: 176px;
+	border-top: 6px solid #089bff;
+}
+#workbench_title{
+	float: left;
+	margin: 3px 0 12px 36px;
+	font-size: 36px;
+	color: #ccc;
+}
+#workbench_profile{
+	float: right;
+	margin: 8px 107px 0 0;
+	font-size: 17px;
+	color: #ccc;
+}
+#workbench_operation_panel{
+	position: absolute;
+	top: 82px;
+	left: 1132px;
+	width: 156px;
+	height: 0;
+	z-index: 100;
+	background: url("/EBP1/image/workbenchUserOperation.png") no-repeat 0 0;
+}
+#workbench_avatar{
+	margin-right: 10px;
+	vertical-align: middle;
+}
+#workbench_operate{
+	margin-left: 10px;
+}
+
+#workbench_setting{
+	display: block;
+	width: 94px;
+	height: 32px;
+	margin: 10px 0 0 12px;
+	background: url("/EBP1/image/workbenchUserSetting.png") no-repeat 0 0;
+}
+#workbench_logout{
+	display: block;
+	width: 94px;
+	height: 32px;
+	margin: 1px 0 0 12px;
+	background: url("/EBP1/image/workbenchUserLogout.png") no-repeat 0 0;
+}
+#workbench_setting:hover{
+	background: url("/EBP1/image/workbenchUserSetting.png") no-repeat 0 -32px;
+}
+#workbench_logout:hover{
+	background: url("/EBP1/image/workbenchUserLogout.png") no-repeat 0 -32px;
+}
+#workbench_setting:active{
+	background: url("/EBP1/image/workbenchUserSetting.png") no-repeat 0 -64px;
+}
+#workbench_logout:active{
+	background: url("/EBP1/image/workbenchUserLogout.png") no-repeat 0 -64px;
+}
+#workbench_station_panel{
+	width: 1190px;
+	height: 560px;
+	margin-left:176px;
+}

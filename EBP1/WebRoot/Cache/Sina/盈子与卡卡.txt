@@ -1,0 +1,1 @@
+{id="1746999153", screenName="盈子与卡卡", name="盈子与卡卡", province="44", city="1", location="广东 广州", description="", url="", gender="f", followersCount="417", friendsCount="374", statusesCount="2163", favouritesCount="12", createdAt="Thu Feb 17 17:44:35 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="182", lang="zh-cn"}

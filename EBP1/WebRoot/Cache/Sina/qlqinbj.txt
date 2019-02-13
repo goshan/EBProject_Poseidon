@@ -1,0 +1,1 @@
+{id="1875431371", screenName="qlqinbj", name="qlqinbj", province="11", city="8", location="北京 海淀区", description="", url="", gender="f", followersCount="6", friendsCount="8", statusesCount="81", favouritesCount="1", createdAt="Tue Jan 11 12:44:29 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="5", lang="zh-cn"}

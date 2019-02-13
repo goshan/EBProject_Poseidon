@@ -1,0 +1,1 @@
+{id="1879279385", screenName="幸运的JDMBEY", name="幸运的JDMBEY", province="41", city="13", location="河南 南阳", description="", url="", gender="f", followersCount="33", friendsCount="36", statusesCount="48", favouritesCount="0", createdAt="Wed Dec 01 18:01:46 CST 2010", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="4", lang="zh-cn"}

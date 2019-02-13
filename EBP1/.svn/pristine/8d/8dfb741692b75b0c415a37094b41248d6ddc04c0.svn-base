@@ -1,0 +1,3 @@
+ch
+Questions  about Zookeeper, Hbase, Rest Server
+ (1) Zookeeper 是用来解决分布式应用中的统一命名服务，状态同步服务，集群管理，分布式应用配置管理。 能给举一些例子Zookeeper在ISAAC里边主要解决什么问题？ (2) Hadoop and Hbase Hbase 有很强大的能力去处理非常庞大的表，但是为了有更好的数据可靠性和系统的健壮性，Hbase 需要使用Hadoop作为文件系统。 Hbase里边会存储一些ISAAC的什么数据？ 比如说instance的name.... Hadoop 文件系统在compute node或者storage node上是怎么分布的？ (3) Rest Server 是不是user通过web页面使用ISAAC时，当可能要访问到Hbase的时候，就要通过REST server作为gateway来传递这个请求？ 

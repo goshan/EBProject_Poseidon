@@ -1,0 +1,3 @@
+ch
+如何限制用户改变密码?
+ 可以用命令pwdadm -f ADMIN username来实现，如果想让用户恢复更改密码的权利，运行pwdadm -f ADMCHG username 来重置. 

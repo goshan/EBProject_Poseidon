@@ -1,0 +1,1 @@
+{id="1932114080", screenName="³Ê¿­Âè", name="³Ê¿­Âè", province="51", city="1", location="ËÄ´¨ ³É¶¼", description="", url="", gender="f", followersCount="169", friendsCount="210", statusesCount="209", favouritesCount="6", createdAt="Tue May 17 09:31:37 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="94", lang="zh-cn"}

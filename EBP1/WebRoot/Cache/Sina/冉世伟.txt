@@ -1,0 +1,1 @@
+{id="1971125255", screenName="冉世伟", name="冉世伟", province="37", city="9", location="山东 泰安", description="", url="", gender="m", followersCount="98", friendsCount="155", statusesCount="35", favouritesCount="0", createdAt="Tue Feb 15 19:42:13 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="15", lang="zh-cn"}

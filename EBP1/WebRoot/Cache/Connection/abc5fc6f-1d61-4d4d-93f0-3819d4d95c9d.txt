@@ -1,0 +1,3 @@
+ch
+在redbook里发现这么一段关于flashsystem用法建议的
+ 大家看看是否有帮助～ 

@@ -1,0 +1,1 @@
+{id="1915847401", screenName="啊行啊2011", name="啊行啊2011", province="32", city="1", location="江苏 南京", description="无聊的生活着！", url="", gender="m", followersCount="44", friendsCount="89", statusesCount="96", favouritesCount="3", createdAt="Sun Jan 09 10:53:57 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="3", lang="zh-cn"}

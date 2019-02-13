@@ -1,0 +1,1 @@
+{id="1248529955", screenName="skyyer", name="skyyer", province="11", city="8", location="北京 海淀区", description="", url="", gender="m", followersCount="59", friendsCount="116", statusesCount="65", favouritesCount="19", createdAt="Sat Dec 19 01:57:34 CST 2009", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="45", lang="zh-cn"}

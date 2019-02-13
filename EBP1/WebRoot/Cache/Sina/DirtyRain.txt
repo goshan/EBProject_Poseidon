@@ -1,0 +1,1 @@
+{id="2084776663", screenName="DirtyRain", name="DirtyRain", province="11", city="1000", location="北京", description="孩儿他爹地", url="", gender="m", followersCount="84", friendsCount="303", statusesCount="281", favouritesCount="18", createdAt="Wed Apr 13 18:35:51 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="33", lang="zh-cn"}

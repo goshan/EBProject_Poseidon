@@ -1,0 +1,1 @@
+{id="1847026845", screenName="我de自画像", name="我de自画像", province="31", city="15", location="上海 浦东新区", description="", url="", gender="m", followersCount="78", friendsCount="273", statusesCount="635", favouritesCount="18", createdAt="Sun Mar 27 22:56:39 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="43", lang="zh-cn"}

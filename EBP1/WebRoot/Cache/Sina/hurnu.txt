@@ -1,0 +1,1 @@
+{id="3686529002", screenName="hurnu", name="hurnu", province="11", city="1", location="北京 东城区", description="", url="", gender="m", followersCount="0", friendsCount="19", statusesCount="1", favouritesCount="0", createdAt="Fri Aug 16 09:59:08 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

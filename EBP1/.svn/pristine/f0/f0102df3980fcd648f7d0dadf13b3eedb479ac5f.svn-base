@@ -1,0 +1,3 @@
+ch
+【技巧分享】如何在forum中上传图片
+ 最近收到很多同事的询问，如何添加图片在Forum正文里。我为大家总结了一下，只要按照以下步骤操作就可以了。 1.进入IBM Media Library网站：https://w3.tap.ibm.com/medialibrary/ ，在页面左边工具栏中选择Share Media 2.登录后，在主页面中选择Stand-alone Media, 然后点击Add Stand-alone Media。 3.根据Add Media 界面提示步骤上传照片。请注意，带有红色星号的项目为必填项目。 4.上传完成后将会返回到Stand-alone Media 界面，点击自己上传的文件，会看到以下界面: 右键点击Media，选择拷贝链接地址。拷贝链接地址的方法可能会根据不同的浏览器而有所不同。 5.重新回到GCG STG Labs Community, 在forum的编辑界面中选择"插入图像"的标记： 然后将拷贝的链接地址粘贴到URL一栏中，点击确定后图片就上传完成了。 想跟大家分享自己的图片和视频，也可以选择将图片和视频上传到GCG STG Labs Community中的Media Gallery。不过Media Gallery只能存放500MB的文件，所以管理员会定期的对一些文件进行清理。 

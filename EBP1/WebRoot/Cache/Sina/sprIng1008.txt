@@ -1,0 +1,1 @@
+{id="2214541964", screenName="sprIng1008", name="sprIng1008", province="12", city="1", location="天津 和平区", description="", url="", gender="m", followersCount="12", friendsCount="23", statusesCount="1", favouritesCount="0", createdAt="Mon Jul 04 16:52:16 CST 2011", following="true", verified="false", verifiedType="-1", followMe="true", biFollowersCount="10", lang="zh-cn"}

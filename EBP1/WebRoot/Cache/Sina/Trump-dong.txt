@@ -1,0 +1,1 @@
+{id="1801081693", screenName="Trump-dong", name="Trump-dong", province="21", city="2", location="ÁÉÄþ ´óÁ¬", description="", url="", gender="m", followersCount="49", friendsCount="39", statusesCount="50", favouritesCount="0", createdAt="Wed Oct 19 18:33:47 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="6", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="2198267832", screenName="纯金银条27", name="纯金银条27", province="100", city="1000", location="其他", description="", url="", gender="m", followersCount="352", friendsCount="1788", statusesCount="15", favouritesCount="0", createdAt="Mon Jun 27 15:16:20 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="271", lang="zh-cn"}

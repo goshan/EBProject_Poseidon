@@ -1,0 +1,220 @@
+function reply_weibo_page(){
+	reply_detail_close();
+	reply_panel_scroll();
+	reply_word_count();
+	reply_edit_click();
+	reply_clear_and_submit_click();
+	reply_all_replies_click();
+	reply_search_click();
+}
+
+
+function reply_panel_scroll(){
+	$("#reply_all_replies_content").goshanScroll();
+	$("#reply_candidates_content").goshanScroll();
+	$("#reply_detail_replies_content").goshanScroll();
+}
+
+function reply_word_count(){
+	$("#reply_edit_content").goshanWordCnt({
+		"word_limit": 140, 
+		"normal_color": "#1abc9c", 
+		"warning_color": "red", 
+		"word_show_div": $("#reply_edit_word_cnt"), 
+		"submit_button": $("#reply_edit_submit")
+	});
+}
+
+function reply_edit_click(){
+	$(".reply_candidates_edit").live("click", function(e){
+		var content = $(this).parent().parent().children(".reply_candidates_content").text();
+		$("#reply_edit_content").val(content);
+		$("#reply_edit_content").goshanUpdateWordCnt();
+		
+		e.preventDefault();
+	});
+}
+
+function reply_clear_and_submit_click(){
+	$("#reply_edit_clear").click(function(e){
+		$("#reply_edit_content").val("");
+		$("#reply_edit_content").goshanUpdateWordCnt();
+		
+		e.preventDefault();
+	});
+	$("#reply_edit_submit").click(function(e){
+		toggle_loading_tip();
+		
+		var status_id = $("#reply_edit_status_id").text();
+		var comment_id = $("#reply_edit_comment_id").text();
+		var comment = $("#reply_edit_content").val();
+		$.ajax({
+			method: "post", 
+			url: "/EBP1/releaseAction_releaseSinaReply.action", 
+			data: {
+				"status_id": status_id, 
+				"comment_id": comment_id, 
+				"content": comment
+			}, 
+			success: function(json){
+				toggle_loading_tip();
+				
+				var res = json["flag"];
+				show_alert(res);
+				if (res == "reply_success"){
+					$("#workbench_reply_weibo").click();
+				}
+			}
+		});
+		
+		e.preventDefault();
+	});
+}
+
+function reply_detail_close(){
+	$("#reply_detail_close").click(function(e){
+		$("#reply_detail").addClass("hidden");
+		$("#reply_cover").addClass("hidden");
+		
+		e.preventDefault();
+	});
+}
+
+function reply_show_detail(comment_id, json){
+	$("#reply_cover").removeClass("hidden");
+	
+	var status = json["status"];
+	var allComments = json["all_comments"];
+	$("#reply_detail_weibo_fans").text(status.userName);
+	$("#reply_detail_weibo_text").text(status.text);
+	
+	var html = "";
+	$(allComments).each(function(index, elem){
+		html += "<div class='"+(elem.commentId == comment_id ? "reply_detail_replies_item_self" : "reply_detail_replies_item_other")+"'>"
+		+"<span class='reply_detail_replies_item_fans'>"+elem.commentUser+"</span>"
+		+"<span class='reply_detail_replies_item_text'>"+elem.commentText+"</span>"
+		+"</div>";
+	});
+	$("#reply_detail").removeClass("hidden");
+	
+	$("#reply_detail_replies_content").goshanScrollUpdate(html);
+}
+
+function reply_all_replies_click(){
+	$(".reply_all_replies_match").click(function(e){
+		var status_id = $(this).parent().parent().children(".reply_all_replies_status_id").text();
+		var comment_id = $(this).parent().parent().children(".reply_all_replies_comment_id").text();
+		var content = $(this).parent().parent().children(".reply_all_replies_text").text();
+		$("#reply_edit_status_id").text(status_id);
+		$("#reply_edit_comment_id").text(comment_id);
+		$("#reply_search_input").val(content);
+		
+		e.preventDefault();
+	});
+	$(".reply_all_replies_ignore").click(function(e){
+		toggle_loading_tip();
+		var comment_id = $(this).parent().parent().children(".reply_all_replies_comment_id").text();
+		$.ajax({
+			method: "post", 
+			url: "/EBP1/replyAction_makeWeiboCommentRead.action", 
+			data: {
+				"comment_id": comment_id
+			}, 
+			success: function(json){
+				toggle_loading_tip();
+				
+				var res = json["flag"];
+				show_alert(res);
+				if (res == "make_read_success"){
+					$(".workbench_menu_selected").click();
+				}
+			}
+		});
+		
+		e.preventDefault();
+	});
+	$(".reply_all_replies_post").click(function(e){
+		toggle_loading_tip();
+		var comment_id = $(this).parent().parent().children(".reply_all_replies_comment_id").text();
+		$.ajax({
+			method: "post", 
+			url: "/EBP1/releaseAction_postToConnection.action", 
+			data: {
+				"comment_id": comment_id
+			}, 
+			success: function(json){
+				toggle_loading_tip();
+				
+				var res = json["flag"];
+				show_alert(res);
+				if (res == "make_read_success"){
+					$(".workbench_menu_selected").click();
+				}
+			}
+		});
+		
+		e.preventDefault();
+	});
+	$(".reply_all_replies_detail").click(function(e){
+		toggle_loading_tip();
+		var comment_id = $(this).parent().parent().children(".reply_all_replies_comment_id").text();
+		$.ajax({
+			method: "post", 
+			url: "/EBP1/replyAction_showWeiboCommentDetails.action", 
+			data: {
+				"comment_id": comment_id
+			}, 
+			success: function(json){
+				toggle_loading_tip();
+				
+				var res = json["flag"];
+				if (res == "show_detail_success"){
+					reply_show_detail(comment_id, json);
+				}
+				else {
+					show_alert(res);
+				}
+			}
+		});
+		
+		e.preventDefault();
+	});
+}
+
+function reply_show_recommand_result(result){
+	var html = "";
+	$(result).each(function(index, elem){
+		html += "<div class='reply_candidates_topic'>"
+			+"<div class='reply_candidates_title_line'>"
+			+"<a class='reply_candidates_title' href='https://w3-connections.ibm.com/forums/html/topic?id="+elem.uuid+"' target='_blank', value='"+elem.title+"'>"+(elem.title.length <= 20 ? elem.title : elem.title.substring(0, 20))+"</a>"
+			+"<a class='reply_candidates_edit' href='#'></a>"
+			+"</div>"
+			+"<div class='reply_candidates_content'>"+elem.content+"</div>"
+			+"</div>";
+	});
+	$("#reply_candidates_content").goshanScrollUpdate(html);
+}
+function reply_search_click(){
+	$("#reply_search_button").click(function(e){
+		toggle_loading_tip();
+		var question = $("#reply_search_input").val();
+		$.ajax({
+			method: "post", 
+			url: "/EBP1/replyAction_recommandReply.action", 
+			data: {
+				"question": question
+			}, 
+			success: function(json){
+				toggle_loading_tip();
+				
+				var res = json["flag"];
+				show_alert(res);
+				if (res == "recommand_success"){
+					reply_show_recommand_result(json.replies.candidates);
+				}
+			}
+		});
+		
+		e.preventDefault();
+	});
+}

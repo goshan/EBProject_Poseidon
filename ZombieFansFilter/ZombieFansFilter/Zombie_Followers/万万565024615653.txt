@@ -1,0 +1,1 @@
+{id="3523851420", screenName="万万565024615653", name="万万565024615653", province="100", city="1000", location="其他", description="", url="", gender="m", followersCount="17", friendsCount="162", statusesCount="0", favouritesCount="0", createdAt="Mon Jul 01 13:58:51 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="4", lang="zh-cn"}

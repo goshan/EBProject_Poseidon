@@ -1,0 +1,1 @@
+{id="1747539992", screenName="春天的小雨宝贝", name="春天的小雨宝贝", province="44", city="1", location="广东 广州", description="", url="", gender="f", followersCount="43", friendsCount="1103", statusesCount="531", favouritesCount="0", createdAt="Thu May 27 18:03:45 CST 2010", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="2", lang="zh-cn"}

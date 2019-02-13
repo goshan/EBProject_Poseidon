@@ -1,0 +1,3 @@
+ch
+OC Linux の Adobe Reader での日本語表示
+ 日本語用のフォントを以下から追加導入してください。 

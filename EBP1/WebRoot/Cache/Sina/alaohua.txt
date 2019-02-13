@@ -1,0 +1,1 @@
+{id="2606686131", screenName="alaohua", name="alaohua", province="23", city="10", location="ºÚÁú½­ Äµµ¤½­", description="", url="", gender="m", followersCount="33", friendsCount="74", statusesCount="19", favouritesCount="0", createdAt="Fri Jan 20 10:56:54 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1", lang="zh-cn"}

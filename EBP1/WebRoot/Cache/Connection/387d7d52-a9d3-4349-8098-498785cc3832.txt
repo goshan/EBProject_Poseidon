@@ -1,0 +1,3 @@
+ch
+【求助】如何快速查找员工相关的workflow request
+ 例如leave request 我们可以用T-CODE PTARQ 很方便的根据Personnel number 等来查找员工相关的leave request。并查看request log。 但是其他类型的WF如何快速的查找？T-CODE SWI1虽然能用，但是无法根据员工号，COMPANY CODE等来查询。 

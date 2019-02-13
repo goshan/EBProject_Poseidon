@@ -1,0 +1,111 @@
+package com.ibm.p1.service.impl;
+
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.quartz.Job;
+import org.quartz.JobExecutionContext;
+import org.quartz.JobExecutionException;
+
+import com.ibm.p1.dao.AcquireDao;
+import com.ibm.p1.entity.Parameter;
+import com.ibm.p1.entity.User;
+import com.ibm.p1.service.ManageService;
+import com.ibm.p1.service.UserService;
+import com.opensymphony.xwork2.ActionContext;
+import com.sun.syndication.feed.synd.SyndEntry;
+import com.sun.syndication.feed.synd.SyndFeed;
+import com.sun.syndication.feed.synd.SyndLink;
+import com.sun.syndication.io.SyndFeedInput;
+import com.sun.syndication.io.XmlReader;
+
+public class AcquireForumRepliesDyn implements Job{
+	private String connectionHostUrl="https://w3-connections.ibm.com";
+	private String topicUrl="/communities/service/atom/community/forum/topics";
+	private User currentUser = new User();
+	public User getCurrentUser() {
+		return currentUser;
+	}
+	public void setCurrentUser(User currentUser) {
+		this.currentUser = currentUser;
+	}
+	public void execute(JobExecutionContext context) throws JobExecutionException {
+		// TODO Auto-generated method stub
+		Parameter param=(Parameter)context.getJobDetail().getJobDataMap().get("param");
+		AcquireDao dao=(AcquireDao)context.getJobDetail().getJobDataMap().get("dao");
+		ManageService manageService=(ManageService)context.getJobDetail().getJobDataMap().get("manageService");
+		User currentUser=(User)context.getJobDetail().getJobDataMap().get("user");
+		if(!manageService.checkToolsConflict(manageService.AcquireConnectionReply)){
+			manageService.insertToolsRecord(manageService.AcquireConnectionReply, currentUser);
+			int page = 1;
+			int pageSize=300;
+			ArrayList<SyndEntry> res = new ArrayList<SyndEntry>();
+			try{
+				while (true){
+					String url = connectionHostUrl + topicUrl + "?communityUuid="+param.getCommunity_uuid()+"&ps=" + pageSize + "&page=" + page;
+					URLConnection feedUrl = new URL(url).openConnection();
+					feedUrl.setRequestProperty("User-Agent","Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; http://itindex.net)");
+					SyndFeedInput input = new SyndFeedInput();
+					SyndFeed feed = input.build(new XmlReader(feedUrl));
+					List<SyndEntry>list = feed.getEntries();
+					for (SyndEntry e : list){
+						res.add(e);
+						List<SyndLink> links=e.getLinks();
+						dao.saveTopics(e);
+						
+						String repliesUrl=null;
+						for(SyndLink sl:links){
+							if(sl.getRel().equals("replies")){
+								repliesUrl=sl.getHref();
+								break;
+							}
+						}
+						System.out.println("获取replies......");
+						this.getTopicReplies(dao, repliesUrl,e.getUri().substring(e.getUri().lastIndexOf(":")+1));
+						
+					}
+					if (list.size() < pageSize){
+						break;
+					}
+					page ++;	
+				}
+				manageService.fredToolsRecord(manageService.AcquireConnectionReply, currentUser);
+			} catch (Exception e) {
+				System.out.println("Error in Connection hacking (topics hacking -- community uuid: "+param.getCommunity_uuid()+") page: " + page);
+				e.printStackTrace();
+			}
+		}
+		
+		
+	}
+	
+	public void getTopicReplies(AcquireDao dao,String url,String topic_id){
+		int page = 1;
+		int pageSize=300;
+		ArrayList<SyndEntry> res = new ArrayList<SyndEntry>();
+		try{
+			while (true){
+				URLConnection feedUrl = new URL(url).openConnection();
+				feedUrl.setRequestProperty("User-Agent","Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; http://itindex.net)");
+				SyndFeedInput input = new SyndFeedInput();
+				SyndFeed feed = input.build(new XmlReader(feedUrl));
+				List<SyndEntry>list = feed.getEntries();
+				for (SyndEntry e : list){
+					res.add(e);
+					dao.saveReplies(e, topic_id);
+				}
+				if (list.size() < pageSize){
+					break;
+				}
+				page ++;	
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+}

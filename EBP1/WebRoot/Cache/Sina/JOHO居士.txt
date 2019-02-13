@@ -1,0 +1,1 @@
+{id="1876364161", screenName="JOHO居士", name="JOHO居士", province="31", city="1", location="上海 黄浦区", description="", url="", gender="m", followersCount="55", friendsCount="201", statusesCount="3", favouritesCount="2", createdAt="Mon Jun 25 13:44:24 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1", lang="zh-cn"}

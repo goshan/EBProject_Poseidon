@@ -1,0 +1,1 @@
+{id="1952762663", screenName="渥了个去鹏", name="渥了个去鹏", province="12", city="1000", location="天津", description="有点儿意思哈~~", url="", gender="m", followersCount="242", friendsCount="247", statusesCount="444", favouritesCount="2", createdAt="Sat Feb 05 22:34:32 CST 2011", following="true", verified="false", verifiedType="220", followMe="true", biFollowersCount="119", lang="zh-cn"}

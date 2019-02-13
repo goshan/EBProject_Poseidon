@@ -1,0 +1,3 @@
+ch
+查看端口对应的进程
+ 经常被客户问道这个端口被什么进程占用了，我们第一想到的是用lsof的这个工具（rpm），但是由于这个命令需要安装，通常谨慎的客户不会同意。介绍一个不用lsof就能找到对应进程的id的方法： # netstat -aAn|grep 199 f100060000f9db98 tcp4 0 0 *.199 *.* LISTEN # rmsock f100060000f9db98 tcpcb The socket 0xf9d808 is being held by proccess 87006 (snmpdv3ne). 后面我想就简单了， ps -ef|grep 87006 即可 希望对大家有帮助。 

@@ -1,0 +1,1 @@
+{id="3486567753", screenName="长篇大论申申儿该吃脑残片啦", name="长篇大论申申儿该吃脑残片啦", province="53", city="32", location="云南 丽江", description="", url="", gender="f", followersCount="65", friendsCount="255", statusesCount="202", favouritesCount="0", createdAt="Sun May 26 01:09:47 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

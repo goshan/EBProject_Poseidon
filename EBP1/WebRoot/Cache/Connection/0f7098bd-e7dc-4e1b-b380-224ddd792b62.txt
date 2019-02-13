@@ -1,0 +1,3 @@
+ch
+Worklight Bluewash版の情報
+ GA版で提供される予定の機能が含まれる資料を入手しましたので共有します。 

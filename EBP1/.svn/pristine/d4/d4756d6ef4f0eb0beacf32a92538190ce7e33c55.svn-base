@@ -1,0 +1,7 @@
+package com.ibm.p1.action;
+
+public class PublishQuestionsAction {
+	public String publishQuestions() {
+		return "success_publishQuestions";
+	}
+}

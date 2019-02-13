@@ -1,0 +1,1 @@
+{id="2502868472", screenName="H½¡H", name="H½¡H", province="43", city="1", location="ºþÄÏ ³¤É³", description="", url="", gender="m", followersCount="24", friendsCount="378", statusesCount="21", favouritesCount="1", createdAt="Sun Oct 30 09:02:20 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="4", lang="zh-cn"}

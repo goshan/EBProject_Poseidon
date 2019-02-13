@@ -1,0 +1,1 @@
+{id="3480359584", screenName="抖S-名中的竹", name="抖S-名中的竹", province="43", city="4", location="湖南 衡阳", description="", url="", gender="f", followersCount="38", friendsCount="311", statusesCount="167", favouritesCount="0", createdAt="Tue May 21 03:43:34 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="2505114532", screenName="莎拉了个波娃", name="莎拉了个波娃", province="42", city="1", location="湖北 武汉", description="", url="", gender="m", followersCount="44", friendsCount="326", statusesCount="367", favouritesCount="5", createdAt="Mon Oct 31 12:16:09 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="38", lang="zh-cn"}

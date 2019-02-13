@@ -1,0 +1,1 @@
+{id="1736966130", screenName="台山强", name="台山强", province="44", city="1", location="广东 广州", description="三无人员——无相貌、无家财、无权势", url="", gender="m", followersCount="100", friendsCount="125", statusesCount="1391", favouritesCount="22", createdAt="Sun May 02 13:40:44 CST 2010", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="57", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="2507755165", screenName="忆想甜开2013", name="忆想甜开2013", province="36", city="8", location="江西 吉安", description="梦的超越者", url="", gender="m", followersCount="26", friendsCount="83", statusesCount="13", favouritesCount="0", createdAt="Sat Dec 03 10:19:50 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="6", lang="zh-cn"}

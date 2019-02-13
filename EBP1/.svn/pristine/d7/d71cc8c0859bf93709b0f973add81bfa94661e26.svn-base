@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+	
+	<bean id="userServiceImpl" class="com.ibm.p1.service.impl.UserServiceImpl">
+		<property name="userDao">
+			<ref bean="userDaoImpl"/>
+		</property>
+	</bean>
+	<bean id="manageServiceImpl" class="com.ibm.p1.service.impl.ManageServiceImpl">
+		<property name="manageDao">
+			<ref bean="manageDaoImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="acquireServiceImpl" class="com.ibm.p1.service.impl.AcquireServiceImpl">
+		<property name="acquireDao">
+			<ref bean="acquireDaoImpl"/>
+		</property>
+		<property name="manageService">
+			<ref bean="manageServiceImpl" />
+		</property>
+		<property name="userService">
+			<ref bean="userServiceImpl" />
+		</property>
+	</bean>
+	<bean id="analysisServiceImpl" class="com.ibm.p1.service.impl.AnalysisServiceImpl">
+		 <property name="analysisDao">
+			<ref bean="analysisDaoImpl"/>
+		</property>
+		<property name="manageService">
+			<ref bean="manageServiceImpl" />
+		</property>
+	</bean>
+	<bean id="releaseServiceImpl" class="com.ibm.p1.service.impl.ReleaseServiceImpl">
+		 <property name="releaseDao">
+			<ref bean="releaseDaoImpl"/>
+		</property>
+	</bean>
+	<bean id="dataManageServiceImpl" class="com.ibm.p1.service.impl.DataManageServiceImpl">
+		<property name="dataManageDao">
+			<ref bean="dataManageDaoImpl"/>
+		</property>
+		<property name="acquireDao">
+			<ref bean="acquireDaoImpl"/>
+		</property>
+	</bean>
+	<bean id="communicationServiceImpl" class="com.ibm.p1.service.impl.CommunicationServiceImpl">
+		   <property name="communicationDao">
+			<ref bean="communicationDaoImpl"/>
+		</property>
+	</bean>
+	<bean id="searchServiceImpl" class="com.ibm.p1.service.impl.SearchServiceImpl">
+		   <property name="searchDao">
+			<ref bean="searchDaoImpl"/>
+		</property>
+	</bean>
+</beans>

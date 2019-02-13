@@ -1,0 +1,3 @@
+ch
+操作系统0518启动失败解决办法
+ 一个会用到的MAP，希望能够帮到你 1、网络故障 网络配置有问题，系统启动时候会在0518停顿时间比较长，但多等一会一般 能过去，需要重新检查配置一下网卡的配置，或是DNS配置。 在/etc/hosts中加入127.0.0.1 loopback localhost，另外检查本机ip后的 主机名是否正确。 2、inittab问题 一个很奇怪的问题，如果用vi编辑了inittab，删除了一行，很可能会出现0518问 题，所以如果需要编辑inittab，最好不要删除里面的东西，不用的服务加：注销 即可。 3、hd5损坏 如果系统还没有重启，还没有遇到0518，执行bosboot －ad /dev/hdisk0 报 错，那么很可能是hd5有问题了，那么删除原来hd5 rm /dev/hd5 rm /dev/rhd5 然后重建hd5 mknod /dev/hd5 b 10 1 mknod /dev/rhd5 c 10 1 bosboot -ad /dev/hdisk0 可以用lslv -m hd5检查hd5信息。 如果系统重启遇到0518，那么这个时候需要用光盘引导进到单用户模式，执行 上面操作。 4、usr 或其他文件系统有损坏 那么光盘启动到单用户模式，执行 fsck -y /dev/hd4 fsck -y /dev/hd2 fsck -y /dev/hd9var fsck -y /dev/hd3 /usr/sbin/logform -y /dev/hd8 reboot重启看系统是否能启动 5、另外建立hd5命令 mklv -y hd5 -t boot -a e rootvg 1 

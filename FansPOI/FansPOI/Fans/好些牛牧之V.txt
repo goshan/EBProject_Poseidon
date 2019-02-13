@@ -1,0 +1,1 @@
+{id="3488850755", screenName="好些牛牧之V", name="好些牛牧之V", province="64", city="1", location="宁夏 银川", description="", url="", gender="f", followersCount="31", friendsCount="256", statusesCount="160", favouritesCount="0", createdAt="Sat May 25 19:36:47 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

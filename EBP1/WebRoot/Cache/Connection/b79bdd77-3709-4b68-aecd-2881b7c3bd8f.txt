@@ -1,0 +1,3 @@
+ch
+HMC更换主板后修改型号系列号的方法
+ 通常HMC就是一台PC SERVER,HMC型号对应PC SERVER的型号大约就是3550 M2,3550 M3,3550M4,3250M2,3250M3,3250M4,这几种,M3以后的机型 都会有IMM管理网口,默认IP为 192.168.70.125,子网掩码:255.255.255.0.用户名为:USERID 密码:PASSW0RD 当HMC更换主板后,需要将型号,系列号改成旧主板的型号,系列号.可以通过笔记本直连IMM管理口,通过ASU命令分别修改主板型号,系列号,我已将ASU命令 写成一个批处理文件,以下方法可以同时的修改主板型号,系列号,轻松搞定: 1,通过笔记本电脑直连HMC 的IMM管理口,并PING通 2.在笔记本电脑上安装IBM Advanced Settings Utility (ASU)软件 3.将批处理文件放到ASU的安装目录,建议都方到C盘根目录. 4.执行批处理文件 如: C:\new.bat 型号 系列号 大约两三分钟完成. 如果IMM管理IP,密码,不是默认的,批处理文件中的IP,密码也需要改成实际的IP,密码. @asu set SYSTEM_PROD_DATA.SysInfoProdName %1 --host 实际IP --user USERID --password PASSW0RD @asu set SYSTEM_PROD_DATA.SysInfoSerialNum %2 --host 实际IP --user USERID --password PASSW0RD 

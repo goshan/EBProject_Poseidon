@@ -1,0 +1,1 @@
+{id="2292496032", screenName="谢国锋V", name="谢国锋V", province="31", city="15", location="上海 浦东新区", description="", url="", gender="m", followersCount="73", friendsCount="116", statusesCount="229", favouritesCount="48", createdAt="Sun Aug 07 12:43:18 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="62", lang="zh-cn"}

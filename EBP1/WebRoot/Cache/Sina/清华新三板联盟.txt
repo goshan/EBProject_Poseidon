@@ -1,0 +1,1 @@
+{id="3674214563", screenName="清华新三板联盟", name="清华新三板联盟", province="11", city="8", location="北京 海淀区", description="", url="", gender="m", followersCount="0", friendsCount="19", statusesCount="0", favouritesCount="0", createdAt="Mon Jul 29 13:26:13 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

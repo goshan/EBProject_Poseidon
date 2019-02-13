@@ -1,0 +1,1 @@
+{id="2300644780", screenName="安静的摩天轮", name="安静的摩天轮", province="100", city="1000", location="其他", description="一只火星人", url="", gender="m", followersCount="237", friendsCount="522", statusesCount="1090", favouritesCount="36", createdAt="Wed Aug 10 22:41:43 CST 2011", following="true", verified="false", verifiedType="-1", followMe="true", biFollowersCount="104", lang="zh-cn"}

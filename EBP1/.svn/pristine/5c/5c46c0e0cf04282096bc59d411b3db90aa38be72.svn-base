@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+ 	<constant name="struts.i18n.encoding" value="UTF-8"></constant>  
+    <constant name="struts-objectFactory" value="spring"></constant>  
+    <constant name="struts.ui.theme" value="simple" />
+   	<package name="acquire" extends="struts-default">
+   	
+	<action name="acquireAction_*" class="acquireAction" method="{1}">
+		<result name="200_success_json">/json.jsp</result>
+		<result name="401_error_json">/json.jsp</result>
+		<result name="403_error_json">/json.jsp</result>
+		<result name="500_error_json">/json.jsp</result>
+	</action>
+  	</package>
+  	
+  	<package name="acquire-json"  extends="json-default" >
+  		<action name="acquireAjaxAction_*" class="acquireAjaxAction" method="{1}" >
+  			<result name="200_success_json" type="json">
+				<param name="json">json</param>
+			</result>
+  			<result name="401_error_json" type="json">
+				<param name="json">json</param>
+			</result>
+			<result name="403_error_json" type="json">
+				<param name="json">json</param>
+			</result>
+			<result name="500_error_json" type="json">
+				<param name="json">json</param>
+			</result>
+			
+  		</action>
+  	</package>
+  
+</struts>

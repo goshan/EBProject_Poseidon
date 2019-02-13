@@ -1,0 +1,3 @@
+ch
+IGA-JP Process Improvement
+?Dear All:?您在项目中是否遇到过这样的问题：? -Follow China GDC OPAL的process(注1)，要做的文档太多？? -每个月都被各式各样的review（注2）或者report轮番折磨？? -难道不能统一，难道不能更简单一点？ ?如果您有对OPAL Process任何问题或者建议，欢迎您在这里发表与我们一起讨论。我们现在有这样的机会，那就是要让OPAL的process瘦身，更加贴合IGA-JP的项目管理。您的小小问题或者建议，哪怕只是一点点，都有可能会影响到我们IGA-JP以后将如何follow OPAL process。? ?注：2009年开始所有的有PM Role的项目都必须遵循如下的process和接受PQA review和RM review1.OPAL Process - 2. PQA Business Rules - ? ? RM Business Rules - ??另外，如果您想了解现在的China GDC OPAL process，以帮助您提高对于项目process的管理能力，我们安排了IGA-JP的OPAL process专场说明会（8/19 10:00-12:00），由Delivery Excellent Team的人来给我们讲解。参加link - ? 

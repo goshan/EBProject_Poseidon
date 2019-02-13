@@ -1,0 +1,1 @@
+{id="2098226290", screenName="小耗纸泡咖啡", name="小耗纸泡咖啡", province="41", city="1", location="河南 郑州", description="没心没肺的活着", url="", gender="f", followersCount="211", friendsCount="132", statusesCount="374", favouritesCount="105", createdAt="Tue Apr 12 15:38:26 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="51", lang="zh-cn"}

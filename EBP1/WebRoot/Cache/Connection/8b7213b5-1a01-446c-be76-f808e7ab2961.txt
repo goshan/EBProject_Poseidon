@@ -1,0 +1,3 @@
+ch
+some tips
+ core是没有linux版的，因此要在KVM虚机里装。 装notes时,在ISSI里要选8.5.3 english版： 不知道为什么即使我们在安装KVM windows XP时选择了简体中文，但我估计还是英文的基础包加了一个中文语言 

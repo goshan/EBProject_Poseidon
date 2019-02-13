@@ -1,0 +1,3 @@
+ch
+DOJO 技术推广与讨论
+ 伴随Web 2.0, Ajax和RIA的热潮，各种Ajax开发工具包如雨后春笋般蓬勃发展，Dojo正是这些工具包中的佼佼者。Dojo为富互联网应用程序(RIA)的开发提供了完整的端到端的解决方案，包括核心的JavaScript库，简单易用的小部件（Widget）系统和一个测试框架，此外，Dojo的开源开发社区还在不停地为它提供新的功能。 在IBM内部DOJO也是诸多IBM产品使用的技术，逐步会有更多的项目用DOJO来替代JQUERY，比如某银行已经要求所有的Web开发用DOJO替换JQUERY。为了更好的适应未来项目的需求，对于JAVA/Web开发的技术者而言掌握DOJO是非常重要的技能之一。也是在GDC进入技术前沿项目的敲门砖之一。 特此利用Sector Community来进行Dojo学习资源的推广。 IBM Developerworks Dojo学习资源： 以下链接是IBM内部很好的入门中文学习资源：https://www.ibm.com/developerworks/cn/web/wa-dojotoolkit/newto.html 并且从中可以链接到更多的学习参考资源，因此请各位一定将此链接放入收藏夹。 同时欢迎各位积极在此回帖交流Dojo学习经验，上传学习资料。 Sector也将在年后寻找资源尽量为大家安排一些相关的分享和培训，希望Java Web开发方向为主的员工在空余时间特别是Bench时间能够计划安排一些Dojo的学习，Dojo概念并不是很难，关键在于实践因此我们也会组织一些Practice的活动帮助各位达到应用实践的程度，请各位持续关注Community发出的邮件。 

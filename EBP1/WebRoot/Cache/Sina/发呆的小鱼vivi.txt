@@ -1,0 +1,1 @@
+{id="1975944793", screenName="发呆的小鱼vivi", name="发呆的小鱼vivi", province="32", city="1", location="江苏 南京", description="", url="", gender="f", followersCount="18", friendsCount="189", statusesCount="156", favouritesCount="7", createdAt="Fri Feb 18 14:01:00 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="4", lang="zh-cn"}

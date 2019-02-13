@@ -1,0 +1,1 @@
+{id="2448239787", screenName="_锦_时繁花", name="_锦_时繁花", province="44", city="1", location="广东 广州", description="", url="", gender="f", followersCount="77", friendsCount="80", statusesCount="45", favouritesCount="481", createdAt="Wed Feb 15 17:38:06 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="44", lang="zh-cn"}

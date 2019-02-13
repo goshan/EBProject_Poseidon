@@ -1,0 +1,8 @@
+function monitor_page(){
+	monitor_scroll();
+}
+
+function monitor_scroll(){
+	console.log($("#monitor_scroll"));
+	$("#monitor_scroll").goshanScroll();
+}

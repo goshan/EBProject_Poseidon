@@ -1,0 +1,1 @@
+{id="1925464003", screenName="大悦T", name="大悦T", province="100", city="1000", location="其他", description=" ", url="", gender="m", followersCount="32", friendsCount="241", statusesCount="5", favouritesCount="94", createdAt="Tue Jan 18 10:54:24 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="6", lang="zh-cn"}

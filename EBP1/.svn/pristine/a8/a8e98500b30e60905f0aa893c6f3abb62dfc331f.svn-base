@@ -1,0 +1,3 @@
+ch
+[Test Management] 如何判断开发过程中code的质量？ 
+ 在Agile的开发过程中，大家如何判断当前code的质量呢？ 是靠developer 定期评审 还是靠tester用数据或者感觉说话？ 现在我们的project，tester会定期观察RTC中defect open以及resolve的trend， defect的severity， 有时也会一起讨论最近感觉daily build的质量如何。 大家在日常项目中又是如何做的呢？ 

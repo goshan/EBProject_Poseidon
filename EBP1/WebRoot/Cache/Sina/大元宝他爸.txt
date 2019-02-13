@@ -1,0 +1,1 @@
+{id="2167967137", screenName="大元宝他爸", name="大元宝他爸", province="11", city="5", location="北京 朝阳区", description="", url="", gender="m", followersCount="124", friendsCount="259", statusesCount="2449", favouritesCount="160", createdAt="Wed Jun 08 09:18:29 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="7", lang="zh-cn"}

@@ -1,0 +1,40 @@
+@font-face {
+	font-family:"MavenPro";
+	src: url("/EBP1/font/Maven_Pro_Regular.ttf");
+}
+#monitor_panel{
+	padding: 18px 0 0 19px;
+}
+#monitor_head{
+	width: 1131px;
+	height: 39px;
+	background-color: #E74C3C;
+}
+#monitor_head_content{
+	height: 39px;
+	padding-left: 40px;
+	font-size: 28px;
+	color: #fff;
+	background-color: #E74C3C;
+}
+#monitor_scroll{
+	width: 1116px;
+	height: 463px;
+	background-color: #F7F2F2;
+	margin-left: 34px;
+	margin-top: -15px;
+}
+#monitor_head_3d{
+	width: 1060px;
+	height: 16px;
+	margin-left: 25px;
+	background-color: #F7F2F2;
+}
+#monitor_main_body{
+	width: 1060px;
+	height: 1795px;
+	/*height: 1885px;*/
+	margin-left: 25px;
+	background-color: #F7F2F2;
+}
+

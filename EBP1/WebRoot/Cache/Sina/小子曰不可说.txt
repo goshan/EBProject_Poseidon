@@ -1,0 +1,1 @@
+{id="1291486854", screenName="小子曰不可说", name="小子曰不可说", province="44", city="3", location="广东 深圳", description="", url="", gender="m", followersCount="21", friendsCount="575", statusesCount="342", favouritesCount="0", createdAt="Tue Apr 20 17:28:06 CST 2010", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

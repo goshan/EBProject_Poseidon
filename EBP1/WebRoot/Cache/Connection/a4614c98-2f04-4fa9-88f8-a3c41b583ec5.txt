@@ -1,0 +1,3 @@
+ch
+HCM核心模块创新概 SAP HR Renewal 1.0
+ HCM核心模块创新概 SAP HR Renewal 1.0 （出自SAP Labs） HR Renewal 产品介绍 HR Renewal 应用角色 ?人力资源专业人员 ?基于SAP UI5的经理自助 ?基于SAP UI5的员工自助 HR Renewal 功能介绍 ?首页 ?主数据应用 ?可视化组织结构 ?操作与分析 ?搜索 ?SAP Jam ?P&amp;F ?本地化 文档和链接（Documentation and links） 具体内容参见附件 

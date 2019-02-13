@@ -1,0 +1,1 @@
+{id="1929973210", screenName="吉星高高照2015A", name="吉星高高照2015A", province="11", city="8", location="北京 海淀区", description="", url="", gender="f", followersCount="43", friendsCount="108", statusesCount="269", favouritesCount="91", createdAt="Sun Jan 30 22:04:25 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="31", lang="zh-cn"}

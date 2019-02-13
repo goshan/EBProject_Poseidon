@@ -1,0 +1,1 @@
+{id="1943649252", screenName="ffsdsa", name="ffsdsa", province="100", city="1000", location="ÆäËû", description="", url="", gender="m", followersCount="35", friendsCount="246", statusesCount="1", favouritesCount="0", createdAt="Fri May 20 21:19:24 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="16", lang="zh-cn"}

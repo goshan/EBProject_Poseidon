@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+ 	<constant name="struts.i18n.encoding" value="UTF-8"></constant>  
+    <constant name="struts-objectFactory" value="spring"></constant>  
+    <constant name="struts.ui.theme" value="simple" />
+   	
+   	<package name="search" extends="struts-default">
+   		<action name="searchAction_*" class="searchAction" method="{1}">
+   			<result name="401_page">/error401.jsp</result>
+			<result name="403_page">/error403.jsp</result>
+			<result name="500_page">/error500.jsp</result>
+			<result name="success_search">/WEB-INF/view/searchResult.jsp</result>
+			<result name="401_error_json">/json.jsp</result>
+			<result name="403_error_json">/json.jsp</result>
+			<result name="500_error_json">/json.jsp</result>
+			<result name="200_success_json">/json.jsp</result>
+   		</action>
+   	</package>
+   	
+   	<package name="search-json" extends="json-default">
+	<action name="searchAjaxAction_*" class="searchAjaxAction" method="{1}">
+		<result name="401_error_json" type="stream">
+			<param name="contentType">text/html;charset=UTF-8</param>
+			<param name="inputName">json</param>
+		</result>
+		<result name="403_error_json" type="stream">
+			<param name="contentType">text/html;charset=UTF-8</param>
+			<param name="inputName">json</param>
+		</result>
+		<result name="500_error_json" type="stream">
+			<param name="contentType">text/html;charset=UTF-8</param>
+			<param name="inputName">json</param>
+		</result>
+		<result name="200_success_json" type="stream">
+			<param name="contentType">text/html;charset=UTF-8</param>
+			<param name="inputName">json</param>
+		</result>
+	</action>
+  	</package>
+  
+</struts>

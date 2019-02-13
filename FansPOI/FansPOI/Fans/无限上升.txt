@@ -1,0 +1,1 @@
+{id="2414459677", screenName="无限上升", name="无限上升", province="11", city="8", location="北京 海淀区", description="", url="", gender="m", followersCount="50", friendsCount="119", statusesCount="688", favouritesCount="19", createdAt="Sun Oct 16 13:25:35 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="12", lang="zh-cn"}

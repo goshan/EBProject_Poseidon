@@ -1,0 +1,182 @@
+
+function public_page(){
+	close_alert();
+}
+function toggle_cover(){
+	if ($("#panel_cover").hasClass("hidden")){
+		$("#panel_cover").removeClass("hidden");
+	}
+	else {
+		$("#panel_cover").addClass("hidden");
+	}
+}
+function toggle_loading_tip(){
+	toggle_cover();
+	if ($("#loading_tip").hasClass("hidden")){
+		$("#loading_tip").removeClass("hidden");
+	}
+	else {
+		$("#loading_tip").addClass("hidden");
+	}
+}
+function success_alert(){
+	var timeout = 1500;
+	var interval = 500;
+	var color = "#000";
+	if ($("#workbench_toolbar").length != 0){
+		color = $(".workbench_menu_selected").parent().children(".workbench_light").css("background-color");
+	}
+	
+	$("#success_bg").css("background-color", color);
+	$("#success_alert").css("opacity", "1");
+	$("#success_alert").removeClass("hidden");
+	
+	setTimeout(function(){
+		$("#success_alert").animate({
+			"opacity": "0"
+		}, interval);
+		setTimeout(function(){
+			$("#success_alert").addClass("hidden");
+		}, interval);
+	}, timeout);
+}
+function error_alert(msg){
+	if (!msg){
+		msg = "no message";
+	}
+	var color = "#000";
+	if ($("#workbench_toolbar").length != 0){
+		color = $(".workbench_menu_selected").parent().children(".workbench_light").css("background-color");
+	}
+	
+	$("#error_bg").css("background-color", color);
+	$("#alert_content").text(msg);
+	toggle_cover();
+	$("#error_alert").removeClass("hidden");
+}
+function close_alert(){
+	$("#close_alert").live("click", function(e){
+		$("#error_alert").addClass("hidden");
+		toggle_cover();
+		
+		e.preventDefault();
+	});
+}
+function show_alert(res){
+	if (res == "not_login"){
+		error_alert("Please login first");
+	}
+	else if (res == "user_not_exist"){
+		error_alert("Operated user not exist");
+	}
+	else if (res == "not_candidate"){
+		error_alert("Verified user not a candidate");
+	}
+	else if (res == "verify_success"){
+		success_alert();
+	}
+	else if (res == "not_admin"){
+		error_alert("Not amdin, No permission");
+	}
+	else if (res == "delete_self_error"){
+		error_alert("Can not delete yourself");
+	}
+	else if (res == "delete_success"){
+		success_alert();
+	}
+	else if (res == "permission_deny"){
+		error_alert("No permission to update");
+	}
+	else if (res == "need_oldpassword"){
+		error_alert("Original password needed");
+	}
+	else if (res == "oldpassword_wrong"){
+		error_alert("Original password wrong");
+	}
+	else if (res == "newpassword_not_match"){
+		error_alert("New password not match");
+	}
+	else if (res == "user_update_success"){
+		success_alert();
+	}
+	else if (res == "release_failed"){
+		error_alert("Release Weibo failed");
+	}
+	else if (res == "release_success"){
+		success_alert();
+	}
+	else if (res == "set_param_success"){
+		success_alert();
+	}
+	else if (res == "words_num_error"){
+		error_alert("Too many words");
+	}
+	else if (res == "make_read_success"){
+		success_alert();
+	}
+	else if (res == "comment_not_exist"){
+		error_alert("Comment not exist");
+	}
+	else if (res == "status_not_exist"){
+		error_alert("Status of this comment not exist");
+	}
+	else if (res == "empty_question"){
+		error_alert("Question could not be empty");
+	}
+	else if (res == "recommand_failed"){
+		error_alert("Recommand reply failed");
+	}
+	else if (res == "duplicate_running"){
+		error_alert("Another thread is running");
+	}
+	else if (res == "recommand_success"){
+		success_alert();
+	}
+	else if (res == "encode_error"){
+		error_alert("Question encoder not support");
+	}
+	else if (res == "reply_failed"){
+		error_alert("Reply weibo failed");
+	}
+	else if (res == "reply_success"){
+		success_alert();
+	}
+	else if (res == "unsupport_action"){
+		error_alert("Unsupport action");
+	}
+	else if (res == "unknow_mession"){
+		error_alert("Unknow mession");
+	}
+	else if (res == "analyse_failed"){
+		error_alert("Run tools failed");
+	}
+	else if (res == "tools_success"){
+		success_alert();
+	}
+	else if (res == "duplicate_running"){
+		error_alert("Another thread is running");
+	}
+	else if (res == "history_not_found"){
+		error_alert("Record not found");
+	}
+	else if (res == "search_success"){
+		success_alert();
+	}
+	else if (res == "post_failed"){
+		error_alert("Post to connection failed");
+	}
+	else if (res == "post_success"){
+		success_alert();
+	}
+	else if (res == "reply_not_found"){
+		error_alert("Reply not found");
+	}
+	else if (res == "topic_not_found"){
+		error_alert("Topic not found");
+	}
+	else {
+		error_alert("Unknow response:"+res);
+	}
+}
+
+

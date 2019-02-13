@@ -1,0 +1,3 @@
+ch
+Mainframe的学习环境的构筑方法
+ 自己做的一个简单的关于IBM Z-OS学习环境配置的 GUIDE。 里面包括 如何申请到IBM DEMO环境的UserID和安装，配置PCOM等等方法。希望能对大家有用。 祝大家愉快！ 

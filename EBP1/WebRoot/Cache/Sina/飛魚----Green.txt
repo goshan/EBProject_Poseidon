@@ -1,0 +1,1 @@
+{id="1860988364", screenName="飛魚----Green", name="飛魚----Green", province="44", city="20", location="广东 中山", description="", url="", gender="m", followersCount="44", friendsCount="54", statusesCount="67", favouritesCount="0", createdAt="Sat Oct 23 22:11:10 CST 2010", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="20", lang="zh-tw"}

@@ -1,0 +1,1 @@
+{id="3474220752", screenName="开江绿橄榄", name="开江绿橄榄", province="51", city="17", location="四川 达州", description="", url="", gender="f", followersCount="13", friendsCount="16", statusesCount="12", favouritesCount="1", createdAt="Fri May 17 13:11:14 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

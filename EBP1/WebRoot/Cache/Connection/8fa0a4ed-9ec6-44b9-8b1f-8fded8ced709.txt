@@ -1,0 +1,3 @@
+ch
+Power服务器上运行Windows
+ Power服务器有Lx86技术，这个技术可以在Power服务器上运行x86 Linux 既然能运行x86 Linux，应该可以运行KVM（Linux Kernel-based Virtual Machine） 既然能运行KVM，那么运行x86的Windows也应该可性。 谁有这方面经验？我一直有兴趣试试，可惜没时间，仅仅是理论上可行？BTW，Lx86已经withdraw了，可惜。 

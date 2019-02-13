@@ -1,0 +1,1 @@
+{id="2164409230", screenName="等待的某人", name="等待的某人", province="44", city="3", location="广东 深圳", description="", url="", gender="m", followersCount="92", friendsCount="293", statusesCount="3645", favouritesCount="0", createdAt="Tue Jul 05 20:56:56 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="26", lang="zh-cn"}

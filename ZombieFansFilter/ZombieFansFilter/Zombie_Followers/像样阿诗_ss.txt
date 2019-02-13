@@ -1,0 +1,1 @@
+{id="3491777794", screenName="像样阿诗_ss", name="像样阿诗_ss", province="82", city="8", location="澳门 路环", description="", url="", gender="m", followersCount="20", friendsCount="270", statusesCount="147", favouritesCount="0", createdAt="Tue May 28 00:35:28 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

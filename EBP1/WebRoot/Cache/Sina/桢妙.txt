@@ -1,0 +1,1 @@
+{id="1286126262", screenName="ËÂ√Ó", name="ËÂ√Ó", province="100", city="1000", location="∆‰À˚", description="¿≤~¿≤~¿≤!", url="", gender="f", followersCount="16", friendsCount="383", statusesCount="52", favouritesCount="0", createdAt="Wed Mar 23 01:16:11 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

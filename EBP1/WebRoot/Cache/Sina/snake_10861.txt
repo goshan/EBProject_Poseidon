@@ -1,0 +1,1 @@
+{id="3292581444", screenName="snake_10861", name="snake_10861", province="42", city="1", location="ºþ±± Îäºº", description="", url="", gender="m", followersCount="15", friendsCount="116", statusesCount="9", favouritesCount="1", createdAt="Fri Apr 05 21:42:28 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1", lang="zh-cn"}

@@ -1,0 +1,3 @@
+ch
+C3 BPM优化计划讨论
+ 大家可以将各自的想法发布到这里汇总和讨论。以下是我的一些简单想法： Code Refact Work Items: 升级JPA至2.0或者改用纯JDBC 与DM共享服务层 前台一些公共组件的抽取，如选人控件等 后台公共服务（查询接口、任务提醒）的重构、优化、统一、合并 BPM主页面的重构（代码较乱且目前的嵌入方式调试不便） 召回、退回功能的优化 Next Phase Optimization Work Items: 报表与Cognos的集成 Case Model的引入（将分发流程独立出来以方便重用并实现阅转办、多次分发等功能） 流程表单可配置 HTML5版本的Process Tracker 将规则放到iLog中管理 前端Form去掉IBM Form，改用纯Dojo 对移动平台的支持 

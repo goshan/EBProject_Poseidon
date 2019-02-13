@@ -1,0 +1,1 @@
+{id="2185358447", screenName="卡萨布兰卡咸鱼", name="卡萨布兰卡咸鱼", province="11", city="1", location="北京 东城区", description="最爱的萱萱鱼儿和小辉", url="", gender="m", followersCount="3", friendsCount="48", statusesCount="16", favouritesCount="0", createdAt="Thu Jul 18 13:29:02 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="3492108464", screenName="千方百计大山的鸭子", name="千方百计大山的鸭子", province="63", city="26", location="青海 果洛", description="", url="", gender="m", followersCount="38", friendsCount="260", statusesCount="193", favouritesCount="0", createdAt="Tue May 28 18:28:33 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

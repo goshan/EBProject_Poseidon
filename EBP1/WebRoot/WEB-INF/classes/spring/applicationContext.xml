@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<import resource="applicationContext_dao.xml" />
+	<import resource="applicationContext_service.xml" />
+	<import resource="applicationContext_action.xml" />
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver">
+		</property>
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/ebp1?characterEncoding=utf-8"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="root"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">com.ibm.p1.tools.BlobMySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</prop>
+				<prop key="hibernate.current_session_context_class">thread</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/ibm/p1/entity/User.hbm.xml</value>
+				<!--  <value>com/ibm/p1/entity/UserCandidate.hbm.xml</value> -->
+				<value>com/ibm/p1/entity/Parameter.hbm.xml</value>
+				<value>com/ibm/p1/entity/Fans.hbm.xml</value>
+				<value>com/ibm/p1/entity/Fans_keyWords.hbm.xml</value>
+				<value>com/ibm/p1/entity/Source.hbm.xml</value>
+				<value>com/ibm/p1/entity/Source_keyWords.hbm.xml</value>
+				<value>com/ibm/p1/entity/Connection.hbm.xml</value>
+				<value>com/ibm/p1/entity/Connection_keyWords.hbm.xml</value>
+				<value>com/ibm/p1/entity/HotWords.hbm.xml</value>
+				<value>com/ibm/p1/entity/ReleaseHistory.hbm.xml</value>
+				<value>com/ibm/p1/entity/MyStatus.hbm.xml</value>
+				<value>com/ibm/p1/entity/MyComment.hbm.xml</value>
+				<value>com/ibm/p1/entity/AdminInstitution.hbm.xml</value>
+				<value>com/ibm/p1/entity/CurrentToolsStatus.hbm.xml</value>
+				<value>com/ibm/p1/entity/ConnectionsReply.hbm.xml</value>
+				<value>com/ibm/p1/entity/ConnectionsTopic.hbm.xml</value>
+				<!--  <value>com/ibm/p1/entity/StatusMentions.hbm.xml</value>-->
+			</list>
+		</property>
+	</bean>
+	<!-- -->
+	<bean id="Template" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+</beans>

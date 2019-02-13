@@ -1,0 +1,3 @@
+ch
+Manager Cadence Worksheet Design - 切り口について
+ セールス単位、CoverageID単位、お客様単位で参照可能か？ .. 

@@ -1,0 +1,1 @@
+{id="3701530847", screenName="每段爱都绘有终点", name="每段爱都绘有终点", province="11", city="1", location="北京 东城区", description="", url="", gender="f", followersCount="13", friendsCount="42", statusesCount="5", favouritesCount="6", createdAt="Tue Aug 06 14:24:38 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="8", lang="zh-cn"}

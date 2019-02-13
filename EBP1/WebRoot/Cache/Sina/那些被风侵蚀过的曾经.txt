@@ -1,0 +1,1 @@
+{id="2841811984", screenName="那些被风侵蚀过的曾经", name="那些被风侵蚀过的曾经", province="44", city="8", location="广东 湛江", description="真自我", url="", gender="f", followersCount="43", friendsCount="180", statusesCount="97", favouritesCount="9", createdAt="Thu Jun 21 13:08:28 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="12", lang="zh-cn"}

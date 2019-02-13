@@ -1,0 +1,1 @@
+{id="3019523141", screenName="KatherineLp", name="KatherineLp", province="31", city="4", location="上海 徐汇区", description="小狗钱钱", url="", gender="f", followersCount="29", friendsCount="91", statusesCount="99", favouritesCount="1", createdAt="Fri Dec 28 16:27:29 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="18", lang="zh-cn"}

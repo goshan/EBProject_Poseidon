@@ -1,0 +1,1 @@
+{id="2139970364", screenName="Å·ê¿Ñî", name="Å·ê¿Ñî", province="11", city="8", location="±±¾© º£µíÇø", description="", url="", gender="m", followersCount="45", friendsCount="114", statusesCount="29", favouritesCount="0", createdAt="Sat May 07 22:10:26 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="9", lang="zh-cn"}

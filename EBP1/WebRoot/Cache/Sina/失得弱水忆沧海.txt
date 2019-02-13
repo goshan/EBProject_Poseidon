@@ -1,0 +1,1 @@
+{id="1898165900", screenName="失得弱水忆沧海", name="失得弱水忆沧海", province="11", city="8", location="北京 海淀区", description="", url="", gender="f", followersCount="194", friendsCount="137", statusesCount="302", favouritesCount="0", createdAt="Sun Dec 19 13:01:41 CST 2010", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="7", lang="zh-cn"}

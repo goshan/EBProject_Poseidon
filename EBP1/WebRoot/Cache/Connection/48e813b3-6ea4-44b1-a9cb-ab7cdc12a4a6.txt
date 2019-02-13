@@ -1,0 +1,3 @@
+ch
+[技术新闻] 运行于z/VM上的z/OS系统TESTMVS(DEMOpkg)
+ 也许大家还不知道，我们现在所用的TESTMVS(9.125.72.87)的大机环境是一个DEMOpkg，是运行在z/VM上的一个z/OS环境。在这个环境中包含了许多已经配置好的软件，如IMS,CICS,DB2,NetView等，非常的丰富。对于其上的软件列表，大家可以参见： 如果还想了解更多的DEMOpkg信息可以在通过防火墙后，访问下面的网址： 这个网站是建立在TESTMVS中的OMVS系统中，所以你必须首先有权限访问TESTMVS。 

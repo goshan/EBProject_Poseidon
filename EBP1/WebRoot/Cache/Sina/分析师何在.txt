@@ -1,0 +1,1 @@
+{id="3269030405", screenName="分析师何在", name="分析师何在", province="22", city="1", location="吉林 长春", description="股票，证劵，都会在。", url="", gender="m", followersCount="294", friendsCount="1003", statusesCount="12", favouritesCount="0", createdAt="Wed Mar 20 08:45:31 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="145", lang="zh-cn"}

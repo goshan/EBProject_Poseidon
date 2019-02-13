@@ -1,0 +1,1 @@
+{id="2311427605", screenName="cftang", name="cftang", province="31", city="1", location="ÉÏº£ »ÆÆÖÇø", description="", url="", gender="m", followersCount="10", friendsCount="57", statusesCount="34", favouritesCount="136", createdAt="Fri Aug 19 09:40:47 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="3", lang="zh-cn"}

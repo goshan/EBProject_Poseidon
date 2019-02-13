@@ -1,0 +1,344 @@
+package com.ibm.p1.service.impl;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.ibm.p1.dao.DataManageDao;
+import com.ibm.p1.entity.Connection;
+import com.ibm.p1.entity.ConnectionsTopic;
+import com.ibm.p1.entity.HotWords;
+import com.ibm.p1.entity.MyStatus;
+import com.ibm.p1.entity.SourceOfUser;
+import com.ibm.p1.entity.TotalKeyWords;
+import com.ibm.p1.entity.TripleMap;
+import com.ibm.p1.entity.User;
+
+import com.ibm.p1.service.DataManageService;
+
+public class DataManageServiceImpl implements DataManageService{
+
+	
+	private DataManageDao dataManageDao;
+
+	private List<TotalKeyWords> hotWordsList = new ArrayList<TotalKeyWords>();
+	public DataManageDao getDataManageDao() {
+		return dataManageDao;
+	}
+	public void setDataManageDao(DataManageDao dataManageDao) {
+		this.dataManageDao = dataManageDao;
+	}
+	public List<TotalKeyWords> getHotWordsList() {
+		return hotWordsList;
+	}
+	public void setHotWordsList(List<TotalKeyWords> hotWordsList) {
+		this.hotWordsList = hotWordsList;
+	}
+	//原始数据管理部分
+	public List<Connection> getConnections() {
+		return this.dataManageDao.getConnections();
+	}
+	public List<HotWords> getHotWords() {
+		return this.dataManageDao.getHotWords();
+	}
+	
+	///*图表chart部分开始
+	//connection 相关
+	public int getNumOfConnection() {
+		// TODO Auto-generated method stub
+		int num = dataManageDao.getNumOfConnection();
+		return num;
+	}
+
+	public Map<String, Integer> getTopCountNumOfConnectionKeyWords() {
+		// TODO Auto-generated method stub
+		
+		List numList = dataManageDao.getTopCountNumOfConnectionKeyWords();
+		Map<String, Integer> myMap=this.list2Map(numList);
+		System.out.println("myMap:"+myMap.size()+myMap.toString());
+		return myMap;
+	}
+	//粉丝相关
+	public int getNumOfZombieFans() {
+		// TODO Auto-generated method stub
+		return dataManageDao.getNumOfZombieFans();
+	}
+
+	public int getNumOfAllFans() {
+		// TODO Auto-generated method stub
+		return dataManageDao.getNumOfAllFans();
+	}
+
+	public int getNumOfNormalFans() {
+		// TODO Auto-generated method stub
+		return dataManageDao.getNumOfNormalFans();
+	}
+
+	public Map<String, Integer> getTopCountNumOfFansKeyWords() {
+		// TODO Auto-generated method stub
+		Map<String, Integer> myMap =  new HashMap<String, Integer>();
+		List<Object> numList = new ArrayList<Object>();
+		numList = dataManageDao.getTopCountNumOfFansKeyWords();
+		myMap = sortByInteger(numList);
+		System.out.println("myMap:"+myMap.size()+myMap.toString());
+		return myMap;
+	}
+	//热词相关
+	public List<TotalKeyWords> getTotalHotWords() {
+		// TODO Auto-generated method stub
+		List<Object> objList = dataManageDao.getTotalHotWords();
+		List<Object> sortedObjList = sortByWeight(objList);
+		//System.out.println("myList:"+sortedObjList.size()+sortedObjList.toString());
+		for(int i = 0 ;i<sortedObjList.size();i++){
+			Object[] object = (Object[]) sortedObjList.get(i);
+			List<Date> dateList = dataManageDao.getDatesByHotWords(object[0].toString());
+			TotalKeyWords totalKeyWords = new TotalKeyWords();
+			totalKeyWords.setKeyWord(object[0].toString());
+			totalKeyWords.setTotalAppear(Integer.parseInt(object[1].toString()));
+			totalKeyWords.setTotalWeight(Float.parseFloat(object[2].toString()));
+			totalKeyWords.setAppearDates(dateList);
+			hotWordsList.add(totalKeyWords);
+		}
+		//System.out.println("hotWordsList"+hotWordsList.toString());
+		return hotWordsList;
+	}
+	
+	//发布历史相关
+	public Map<String, Integer> getReleaseNumAndUser() {
+		// TODO Auto-generated method stub
+		
+		List<Object> objList=this.dataManageDao.getReleaseNumAndUser();
+		Map<String,Integer> map=this.list2Map(objList);
+		return map;
+	}
+
+	public Map<String, Integer> getReleaseNumAndDate() {
+		// TODO Auto-generated method stub
+		List<Object> objList=this.dataManageDao.getReleaseNumAndDate();
+		Map<String,Integer> map=this.list2Map(objList);
+		
+		return map;
+	}
+
+	public int getTotalNumOfRelease() {
+		// TODO Auto-generated method stub
+		
+		int num=this.dataManageDao.getTotalNumOfRelease();
+		
+		return num;
+	}
+
+	public int getTotalNumOfReleaseDraft() {
+		// TODO Auto-generated method stub
+		int num=this.dataManageDao.getTotalNumOfReleaseDraft();
+		return num;
+	}
+	
+	//素材池相关
+	public int getNumOfAllSources() {
+		// TODO Auto-generated method stub
+		
+		int num=this.dataManageDao.getNumOfAllSources();
+		
+		return num;
+	}
+
+	public Map<String, Integer> getSourceOfDay() {
+		// TODO Auto-generated method stub
+
+		List<Object> objList=this.dataManageDao.getSourceOfDay();
+		Map<String,Integer> map=this.list2Map(objList);
+		return map;
+	}
+
+	public List<SourceOfUser> getSourceOfUser() {
+		// TODO Auto-generated method stub
+		
+		List objList=this.dataManageDao.getSourceOfUser();
+		
+		return objList;
+	}
+
+	public Map<String, Float> getTopCountNumOfSourceKeyWords() {
+		// TODO Auto-generated method stub
+		List<Object> objList=this.dataManageDao.getTopCountNumOfSourceKeyWords();
+		Map<String,Float> map=this.list2MapF(objList);
+		return map;
+	}
+
+	public Map<Date, Integer> getStatusOfDay() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Map<String, Integer> getStatusOfWeiBoAccount() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Map<Date, Integer> getStatusCommentsOfDay() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Map<MyStatus, Integer> getNumOfReplyOfTopic() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Map<String, Integer> getTopInteractionUser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Map<Date, Integer> getIgnoredNumOfDay() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Map<Date, Integer> getNotIgnoredNumOfDay() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Map<List<String>, Date> getDoneByDate() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public TripleMap getNumOfDone() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Map<User, TripleMap> getNumOfDoneByUser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Map<Date, Integer> getNumOfTopicByDate() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public Map<ConnectionsTopic, Integer> getNumOfReplyOfConnectionsTopic() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public Map<Date, Integer> getNumOfReplyOfDate() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Map<String, Integer> getTopInteractionConnectionUser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public int getNumOfAdmin() {
+		// TODO Auto-generated method stub
+		return dataManageDao.getNumOfAdmin();
+	}
+
+	public int getNumOfUser() {
+		// TODO Auto-generated method stub
+		return dataManageDao.getNumOfUser();
+	}
+
+	public int getNumOfCandidate() {
+		// TODO Auto-generated method stub
+		return dataManageDao.getNumOfCandidate();
+	}
+	public Map<String,Integer> list2Map(List numList){
+		Map<String,Integer> map=new LinkedHashMap<String,Integer>();
+		
+		try{
+			for(int i=0;i<numList.size();i++){
+				Object[] obj=(Object[])numList.get(i);
+				map.put(obj[0].toString(), Integer.parseInt(obj[1].toString()));
+			}
+			
+		}catch(Exception ex){
+			ex.printStackTrace();
+			return null;
+		}
+		return map;
+	}
+	public Map<String,Float> list2MapF(List numList){
+		Map<String,Float> map=new LinkedHashMap<String,Float>();
+		
+		try{
+			for(int i=0;i<numList.size();i++){
+				Object[] obj=(Object[])numList.get(i);
+				map.put(obj[0].toString(), Float.parseFloat(obj[1].toString()));
+			}
+			
+		}catch(Exception ex){
+			ex.printStackTrace();
+			return null;
+		}
+		return map;
+	}
+	
+	public Map<String, Integer> sortByInteger(List<Object> numList){
+		Map<String, Integer> sortedMap =  new LinkedHashMap<String, Integer>();
+		int temp = 0;
+		int biggerTemp= 0;
+		for(int i= 0;i<numList.size();i = 0){
+			int index = 0 ;
+			Object[] obj1 = (Object[]) numList.get(i);
+			temp = Integer.parseInt(obj1[1].toString());	
+			for(int j= 1;j<numList.size();j++){
+				Object[] obj2 = (Object[]) numList.get(j);
+				biggerTemp = Integer.parseInt(obj2[1].toString());	
+					if(temp > biggerTemp){
+						index = i;
+					}else{
+						temp = biggerTemp;
+						index = j;
+						i = j;
+					}
+			}
+			Object[] finalObj =(Object[]) numList.get(index);
+			sortedMap.put(finalObj[0].toString(), Integer.parseInt(finalObj[1].toString()));
+			numList.remove(index);
+			
+		}
+		
+		return sortedMap;
+	}
+	public List<Object> sortByWeight(List<Object> numList){
+		List<Object> sortedObjList =  new ArrayList<Object>();
+		float temp = 0;
+		float biggerTemp= 0;
+		for(int i= 0;i<numList.size();i = 0){
+			int index = 0 ;
+			Object[] obj1 = (Object[]) numList.get(i);
+			temp = Float.parseFloat(obj1[2].toString());	
+			for(int j= 1;j<numList.size();j++){
+				Object[] obj2 = (Object[]) numList.get(j);
+				biggerTemp = Float.parseFloat(obj2[2].toString());	
+					if(temp > biggerTemp){
+						index = i;
+					}else{
+						temp = biggerTemp;
+						index = j;
+						i = j;
+					}
+			}
+			Object[] finalObj =(Object[]) numList.get(index);
+			sortedObjList.add(finalObj);
+			//sortedMap.put(finalObj[0].toString(), Integer.parseInt(finalObj[1].toString()));
+			numList.remove(index);
+			
+		}
+		
+		return sortedObjList;
+	}
+	//*/图表chart部分结束
+}

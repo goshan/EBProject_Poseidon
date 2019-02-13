@@ -1,0 +1,1 @@
+{id="2458779160", screenName="wydyfy", name="wydyfy", province="11", city="8", location="北京 海淀区", description="", url="", gender="m", followersCount="58", friendsCount="987", statusesCount="8", favouritesCount="599", createdAt="Thu May 03 01:01:07 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="22", lang="en"}

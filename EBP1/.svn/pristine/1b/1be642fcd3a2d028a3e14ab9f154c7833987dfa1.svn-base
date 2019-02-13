@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+ 	<constant name="struts.i18n.encoding" value="UTF-8"></constant>  
+    <constant name="struts-objectFactory" value="spring"></constant>  
+    <constant name="struts.ui.theme" value="simple" />
+   	
+   	<package name="user" extends="struts-default">
+   	
+	<action name="userAction_*" class="userAction" method="{1}">
+		<result name="401_page">/error401.jsp</result>
+		<result name="403_page">/error403.jsp</result>
+		<result name="200_success_json">/json.jsp</result>
+		<result name="401_error_json">/json.jsp</result>
+		<result name="403_error_json">/json.jsp</result>
+		<result name="500_error_json">/json.jsp</result>
+		<result name="logout_success">/login.jsp</result>
+		<result name="success_setting">/WEB-INF/view/myInfo.jsp</result>
+		<result name="success_showMembershipPage">/WEB-INF/view/membership.jsp</result>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<result name="user_not_exists_findPassword">/error.jsp</result>
+		<result name="find_password_success">/success.jsp</result>
+		<result name="find_password_failure">/User/getPassword.jsp</result>
+		
+		<result name="success_getCandidateInfo">/User/myCandidateInfo.jsp</result>
+		<result name="success_getUserFromId">/User/updateUser.jsp</result>
+		<result name="success_getUserCandidateFromId">/index.jsp</result>
+	</action>
+  	</package>
+  	
+  	<package name="user-json"  extends="json-default" >
+  		<action name="userAjaxAction_*" class="userAjaxAction" method="{1}" >
+  			<result name="200_success_json" type="json">
+				<param name="json">json</param>
+			</result>
+  			<result name="401_error_json" type="json">
+				<param name="json">json</param>
+			</result>
+			<result name="403_error_json" type="json">
+				<param name="json">json</param>
+			</result>
+			<result name="500_error_json" type="json">
+				<param name="json">json</param>
+			</result>
+			
+  		</action>
+  	</package>
+</struts>

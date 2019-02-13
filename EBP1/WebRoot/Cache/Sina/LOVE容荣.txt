@@ -1,0 +1,1 @@
+{id="3234398910", screenName="LOVE»›»Ÿ", name="LOVE»›»Ÿ", province="45", city="8", location="π„Œ˜ πÛ∏€", description="Àÿ± Œﬁ—‘", url="", gender="m", followersCount="33", friendsCount="365", statusesCount="82", favouritesCount="0", createdAt="Sat Mar 23 21:58:18 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

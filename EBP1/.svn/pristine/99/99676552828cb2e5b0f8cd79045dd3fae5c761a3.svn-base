@@ -1,0 +1,92 @@
+@font-face {
+	font-family:"MavenPro";
+	src: url("/EBP1/font/Maven_Pro_Regular.ttf");
+}
+#chart_panel{
+	padding: 18px 0 0 19px;
+}
+#chart_head{
+	width: 1131px;
+	height: 35px;
+	background-color: #F1C40F;
+}
+#chart_scroll{
+	width: 1116px;
+	height: 463px;
+	background-color: #F4F2EA;
+	margin-left: 34px;
+	margin-top: -15px;
+}
+#chart_head_3d{
+	width: 1060px;
+	height: 16px;
+	margin-left: 25px;
+	background-color: #F4F2EA;
+}
+#chart_main_body{
+	width: 1060px;
+	height: 1795px;
+	/*height: 1885px;*/
+	margin-left: 25px;
+	background-color: #F4F2EA;
+}
+
+#chart1{
+	background-color: #FFFFFF;
+}
+#chart2{
+	margin-top: 12px;
+	background-color: #FFFFFF;
+}
+#chart3{
+	margin-top: 12px;
+	background-color: #FFFFFF;
+}
+#chart4{
+	margin-top: 419px;
+	background-color: #FFFFFF;
+}
+#name_font{
+	font-size: 16px;
+	font-family: "MavenPro";
+	color:#B2B2B2;
+	margin-left: 37px;
+	height: 35px;
+	line-height: 35px;
+}
+#container1{
+	background: url("/EBP1/image/chartBackgroundBig.png") no-repeat 0 0;
+}
+#container2{
+	background: url("/EBP1/image/chartBackgroundBig.png") no-repeat 0 0;
+}
+#container3{
+	background: url("/EBP1/image/chartBackgroundBig.png") no-repeat 0 0;
+}
+#container4{
+	background: url("/EBP1/image/chartBackgroundBig.png") no-repeat 0 0;
+}
+
+#lineChartMonth{
+	margin-top: -429px;
+	margin-left: 880px;
+}
+
+#lineChartName{
+	font-size: 10px;
+	font-weight:600;
+	font-family: "MavenPro";
+	color:#4d759e;
+}
+#columnChartMonth{
+	margin-top:-429px;
+	margin-left:880px;
+}
+
+#columnChartName{
+	font-size: 10px;
+	font-weight:600;
+	font-family: "MavenPro";
+	color:#4d759e;
+
+}

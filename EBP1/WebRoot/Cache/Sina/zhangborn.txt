@@ -1,0 +1,1 @@
+{id="1630542690", screenName="zhangborn", name="zhangborn", province="11", city="8", location="北京 海淀区", description="", url="", gender="m", followersCount="17", friendsCount="115", statusesCount="17", favouritesCount="1", createdAt="Sat Oct 16 14:54:14 CST 2010", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="3", lang="zh-cn"}

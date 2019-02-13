@@ -1,0 +1,1 @@
+{id="2092714391", screenName="修心者forever", name="修心者forever", province="11", city="1", location="北京 东城区", description="", url="", gender="m", followersCount="113", friendsCount="200", statusesCount="138", favouritesCount="0", createdAt="Sun Aug 28 18:21:57 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="38", lang="zh-cn"}

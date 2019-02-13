@@ -1,0 +1,3 @@
+ch
+xpage 上弹出两个dialog的实现方法
+ 如何实现xpage 上弹出一个dialog，里面是可以选择框， ok 选择后， 能弹出第二个 dialog， 如何实现， 接连弹出两个对话框（可能用到dojo的实现）， 请给出例子example db 

@@ -1,0 +1,1 @@
+{id="2216794077", screenName="doubleyoungc", name="doubleyoungc", province="12", city="4", location="天津 南开区", description="", url="", gender="f", followersCount="50", friendsCount="69", statusesCount="22", favouritesCount="0", createdAt="Mon Jul 04 16:02:22 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="2243242712", screenName="Tju_小五", name="Tju_小五", province="12", city="4", location="天津 南开区", description="在路上、", url="", gender="m", followersCount="97", friendsCount="349", statusesCount="308", favouritesCount="30", createdAt="Wed Jul 13 08:41:28 CST 2011", following="true", verified="false", verifiedType="200", followMe="true", biFollowersCount="64", lang="zh-cn"}

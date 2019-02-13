@@ -1,0 +1,1 @@
+{id="3511761895", screenName="坦桑尼亚三秦网", name="坦桑尼亚三秦网", province="37", city="1", location="山东 济南", description="", url="", gender="f", followersCount="21", friendsCount="225", statusesCount="140", favouritesCount="0", createdAt="Tue Jun 04 15:25:52 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

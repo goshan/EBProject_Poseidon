@@ -1,0 +1,1 @@
+{id="3271958411", screenName="我是一个可怜的孩子一", name="我是一个可怜的孩子一", province="31", city="1", location="上海 黄浦区", description="", url="", gender="f", followersCount="45", friendsCount="66", statusesCount="20", favouritesCount="1", createdAt="Thu Mar 21 21:31:07 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="4", lang="zh-cn"}

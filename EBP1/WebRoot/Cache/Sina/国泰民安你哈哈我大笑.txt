@@ -1,0 +1,1 @@
+{id="3498633610", screenName="国泰民安你哈哈我大笑", name="国泰民安你哈哈我大笑", province="53", city="6", location="云南 昭通", description="", url="", gender="m", followersCount="19", friendsCount="274", statusesCount="174", favouritesCount="0", createdAt="Thu May 30 11:20:12 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

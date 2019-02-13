@@ -1,0 +1,1 @@
+{id="1401925854", screenName="许瑞利", name="许瑞利", province="11", city="1", location="北京 东城区", description="", url="", gender="m", followersCount="45", friendsCount="21", statusesCount="48", favouritesCount="1", createdAt="Sat Feb 11 16:49:24 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="8", lang="zh-cn"}

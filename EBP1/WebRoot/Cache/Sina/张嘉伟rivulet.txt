@@ -1,0 +1,1 @@
+{id="2154971503", screenName="张嘉伟rivulet", name="张嘉伟rivulet", province="400", city="1", location="海外 美国", description="", url="", gender="m", followersCount="52", friendsCount="179", statusesCount="10", favouritesCount="0", createdAt="Wed Jul 13 21:36:00 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="29", lang="zh-cn"}

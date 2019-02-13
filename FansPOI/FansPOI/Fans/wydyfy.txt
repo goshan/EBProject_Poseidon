@@ -1,0 +1,1 @@
+{id="2458779160", screenName="wydyfy", name="wydyfy", province="100", city="1000", location="ÆäËû", description="", url="", gender="m", followersCount="56", friendsCount="871", statusesCount="9", favouritesCount="442", createdAt="Thu May 03 01:01:07 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="20", lang="en"}

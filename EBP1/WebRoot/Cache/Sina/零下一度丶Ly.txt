@@ -1,0 +1,1 @@
+{id="2616242560", screenName="零下一度丶Ly", name="零下一度丶Ly", province="32", city="2", location="江苏 无锡", description="", url="", gender="m", followersCount="30", friendsCount="59", statusesCount="98", favouritesCount="3", createdAt="Sun Dec 18 10:17:35 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="8", lang="zh-cn"}

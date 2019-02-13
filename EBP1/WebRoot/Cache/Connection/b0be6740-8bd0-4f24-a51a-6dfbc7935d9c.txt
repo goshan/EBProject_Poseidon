@@ -1,0 +1,3 @@
+ch
+how to use SDDU at RH
+ SDDU好像不支持redhat,有办法吗？ 

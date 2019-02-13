@@ -1,0 +1,1 @@
+{id="2917160024", screenName="uyboy1314", name="uyboy1314", province="65", city="32", location="ÐÂ½® ºÍÌï", description="", url="", gender="m", followersCount="20", friendsCount="96", statusesCount="12", favouritesCount="0", createdAt="Fri Jul 26 01:07:30 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="13", lang="zh-cn"}

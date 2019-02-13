@@ -1,0 +1,1 @@
+{id="1867647587", screenName="林嫒雪1314", name="林嫒雪1314", province="14", city="8", location="山西 运城", description="", url="", gender="f", followersCount="39", friendsCount="128", statusesCount="23", favouritesCount="0", createdAt="Sat Aug 13 13:59:29 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="3", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="2256903650", screenName="闲处经秋_Julie", name="闲处经秋_Julie", province="32", city="1", location="江苏 南京", description="朱琳", url="", gender="f", followersCount="98", friendsCount="88", statusesCount="164", favouritesCount="2", createdAt="Wed Jul 20 09:40:15 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="34", lang="zh-cn"}

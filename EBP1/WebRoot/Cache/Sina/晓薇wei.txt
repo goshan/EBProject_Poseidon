@@ -1,0 +1,1 @@
+{id="2169262543", screenName="ÏþÞ±wei", name="ÏþÞ±wei", province="21", city="6", location="ÁÉÄþ µ¤¶«", description="", url="", gender="f", followersCount="35", friendsCount="52", statusesCount="5", favouritesCount="0", createdAt="Wed Jun 08 23:55:24 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="12", lang="zh-cn"}

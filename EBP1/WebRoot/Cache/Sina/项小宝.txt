@@ -1,0 +1,1 @@
+{id="1933057424", screenName="项小宝", name="项小宝", province="34", city="2", location="安徽 芜湖", description="", url="", gender="m", followersCount="215", friendsCount="949", statusesCount="531", favouritesCount="0", createdAt="Tue May 17 12:12:09 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="2", lang="zh-cn"}

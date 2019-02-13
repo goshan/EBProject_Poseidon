@@ -1,0 +1,1 @@
+{id="3238329380", screenName="Frank_me109", name="Frank_me109", province="11", city="8", location="北京 海淀区", description="", url="", gender="m", followersCount="58", friendsCount="225", statusesCount="538", favouritesCount="3", createdAt="Mon Mar 25 20:00:22 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="23", lang="en"}

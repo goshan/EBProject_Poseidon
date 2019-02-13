@@ -1,0 +1,1 @@
+{id="1743775682", screenName="蓝色玫瑰之恋", name="蓝色玫瑰之恋", province="12", city="1", location="天津 和平区", description="", url="", gender="f", followersCount="1311", friendsCount="1104", statusesCount="8049", favouritesCount="19", createdAt="Mon May 24 12:20:40 CST 2010", following="true", verified="false", verifiedType="220", followMe="true", biFollowersCount="935", lang="zh-cn"}

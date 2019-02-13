@@ -1,0 +1,1 @@
+{id="2713767731", screenName="LeoLiu365", name="LeoLiu365", province="31", city="15", location="上海 浦东新区", description="", url="", gender="m", followersCount="113", friendsCount="135", statusesCount="326", favouritesCount="47", createdAt="Thu Apr 19 23:32:47 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="56", lang="zh-cn"}

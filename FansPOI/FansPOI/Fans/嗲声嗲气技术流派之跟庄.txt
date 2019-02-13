@@ -1,0 +1,1 @@
+{id="3497772765", screenName="嗲声嗲气技术流派之跟庄", name="嗲声嗲气技术流派之跟庄", province="51", city="11", location="四川 乐山", description="", url="", gender="m", followersCount="19", friendsCount="262", statusesCount="170", favouritesCount="0", createdAt="Thu May 30 08:38:35 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="1", lang="zh-cn"}

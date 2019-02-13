@@ -1,0 +1,1 @@
+{id="2512465394", screenName="TaffyÉª", name="TaffyÉª", province="11", city="1000", location="±±¾©", description="", url="", gender="f", followersCount="94", friendsCount="229", statusesCount="202", favouritesCount="66", createdAt="Thu Nov 03 22:57:16 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="33", lang="zh-cn"}

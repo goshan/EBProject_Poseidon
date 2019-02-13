@@ -1,0 +1,3 @@
+ch
+zLinux Add FCP Disk
+ 在ELS zLinux上面如何添加FCP Disk，检查链路状态 

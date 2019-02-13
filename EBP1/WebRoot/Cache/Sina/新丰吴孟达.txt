@@ -1,0 +1,1 @@
+{id="2922928763", screenName="新丰吴孟达", name="新丰吴孟达", province="400", city="7", location="海外 澳大利亚", description="呵呵呵呵呵呵", url="", gender="m", followersCount="98", friendsCount="126", statusesCount="80", favouritesCount="13", createdAt="Sun Sep 30 23:06:40 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="33", lang="zh-tw"}

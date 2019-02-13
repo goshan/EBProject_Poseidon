@@ -1,0 +1,3 @@
+ch
+【Share Session】SAP Internal Orders on Apr. 23 by Lv Fang Fang
+ 内容简介： 这个培训是介绍SAP内部订单的作用、类别与用法. 课程大纲 1. 介绍内部订单的作用 2.内部订单的类型 3.后台配置与前台使用 日期： 2013年04月23日，(周二) 时间： 14:00-15:00, GMT+8 演讲人： Fang Fang FF Lv/China/IBM 1年 ABAP开发经验， 2年SAP FICO实施经验 技术集中在制造型企业的SAP成本计算与成本分析，获利能力分析。 语言： 普通话 演示材料： 虚拟教室 链接： 点击 下载演示文件 (Playback will be here after the session) 

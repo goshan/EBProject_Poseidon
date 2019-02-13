@@ -1,0 +1,3 @@
+ch
+3rd party FC Disk implement on HACMP
+ HACMP 配当中关于第三方存储的磁盘的配置。主要是关于磁盘锁的解锁方式。 

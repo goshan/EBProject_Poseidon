@@ -1,0 +1,1 @@
+{id="2814620873", screenName="貌似凹凸", name="貌似凹凸", province="36", city="7", location="江西 赣州", description="三观已毁努力成为富富富的老男人！", url="", gender="m", followersCount="128", friendsCount="676", statusesCount="147", favouritesCount="1", createdAt="Sat Jun 16 12:48:20 CST 2012", following="false", verified="false", verifiedType="200", followMe="true", biFollowersCount="63", lang="zh-cn"}

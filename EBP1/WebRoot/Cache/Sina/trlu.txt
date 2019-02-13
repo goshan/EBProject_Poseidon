@@ -1,0 +1,1 @@
+{id="1406698802", screenName="trlu", name="trlu", province="11", city="5", location="±±¾© ³¯ÑôÇø", description="", url="", gender="m", followersCount="38", friendsCount="61", statusesCount="37", favouritesCount="0", createdAt="Sun Aug 29 19:31:38 CST 2010", following="true", verified="false", verifiedType="-1", followMe="true", biFollowersCount="2", lang="zh-cn"}

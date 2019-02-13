@@ -1,0 +1,1 @@
+{id="2053025622", screenName="理想镜花水月", name="理想镜花水月", province="11", city="1000", location="北京", description="这不是个好人！", url="", gender="m", followersCount="153", friendsCount="277", statusesCount="670", favouritesCount="4", createdAt="Thu Mar 31 21:34:31 CST 2011", following="true", verified="false", verifiedType="-1", followMe="true", biFollowersCount="69", lang="zh-cn"}

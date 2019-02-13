@@ -1,0 +1,1 @@
+{id="2352241004", screenName="hyx51", name="hyx51", province="31", city="15", location="上海 浦东新区", description="", url="", gender="m", followersCount="38", friendsCount="362", statusesCount="3967", favouritesCount="157", createdAt="Sun Aug 28 17:23:44 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="11", lang="zh-cn"}

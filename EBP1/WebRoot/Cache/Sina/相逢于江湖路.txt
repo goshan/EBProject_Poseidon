@@ -1,0 +1,1 @@
+{id="2679271622", screenName="相逢于江湖路", name="相逢于江湖路", province="53", city="32", location="云南 丽江", description="相濡以沫 不如相忘于江湖", url="", gender="m", followersCount="60", friendsCount="185", statusesCount="66", favouritesCount="0", createdAt="Sun Jan 22 17:16:58 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="10", lang="zh-cn"}

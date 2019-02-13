@@ -1,0 +1,1 @@
+{id="2014014141", screenName="AndyKwak", name="AndyKwak", province="51", city="1", location="四川 成都", description="不打麻将，斗地主", url="", gender="m", followersCount="103", friendsCount="252", statusesCount="341", favouritesCount="23", createdAt="Tue Mar 08 16:12:58 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="64", lang="zh-cn"}

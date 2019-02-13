@@ -1,0 +1,1 @@
+{id="3027780015", screenName="小米一碗88", name="小米一碗88", province="100", city="1000", location="其他", description="", url="", gender="f", followersCount="16", friendsCount="39", statusesCount="58", favouritesCount="2", createdAt="Sat Oct 20 20:23:19 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="5", lang="zh-cn"}

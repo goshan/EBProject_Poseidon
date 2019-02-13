@@ -1,0 +1,1 @@
+{id="1909353987", screenName="Mysoup", name="Mysoup", province="23", city="6", location="黑龙江 大庆", description="我寂寞寂寞就好", url="", gender="m", followersCount="55", friendsCount="292", statusesCount="32", favouritesCount="0", createdAt="Sun Jan 02 04:34:08 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="47", lang="zh-cn"}

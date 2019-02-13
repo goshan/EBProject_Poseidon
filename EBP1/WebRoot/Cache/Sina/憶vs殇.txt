@@ -1,0 +1,1 @@
+{id="2420096760", screenName="‘›vséä", name="‘›vséä", province="43", city="1", location="ºþÄÏ ³¤É³", description="", url="", gender="m", followersCount="45", friendsCount="44", statusesCount="2", favouritesCount="0", createdAt="Sat Sep 24 05:54:38 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="3", lang="zh-cn"}

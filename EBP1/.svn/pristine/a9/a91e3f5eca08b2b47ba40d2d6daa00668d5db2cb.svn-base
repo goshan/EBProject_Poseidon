@@ -1,0 +1,167 @@
+package com.ibm.p1.action;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import net.sf.json.JSONObject;
+
+import org.apache.struts2.ServletActionContext;
+import org.quartz.JobDetail;
+import org.quartz.Scheduler;
+import org.quartz.SchedulerException;
+import org.quartz.SchedulerFactory;
+import org.quartz.SimpleTrigger;
+import org.quartz.impl.StdSchedulerFactory;
+
+import com.ibm.p1.entity.Parameter;
+import com.ibm.p1.service.AcquireService;
+import com.ibm.p1.service.AnalysisService;
+import com.ibm.p1.service.ManageService;
+import com.opensymphony.xwork2.ActionContext;
+import com.ibm.p1.tools.Utils;
+import com.opensymphony.xwork2.ActionContext;
+
+public class AcquireAction {
+	private Parameter parameter;
+	private ManageService manageService;
+	private List<Parameter> allParameters;
+	private AcquireService acquireService;
+	private AnalysisService analysisService;
+	
+	static private String allAction[] = {"open", "close", "run"};
+
+	public Parameter getParameter() {
+		return parameter;
+	}
+
+	public void setParameter(Parameter parameter) {
+		this.parameter = parameter;
+	}
+
+	public ManageService getManageService() {
+		return manageService;
+	}
+
+	public AnalysisService getAnalysisService() {
+		return analysisService;
+	}
+
+	public void setAnalysisService(AnalysisService analysisService) {
+		this.analysisService = analysisService;
+	}
+
+	public void setManageService(ManageService manageService) {
+		this.manageService = manageService;
+	}
+
+	public List<Parameter> getAllParameters() {
+		return allParameters;
+	}
+
+	public void setAllParameters(List<Parameter> allParameters) {
+		this.allParameters = allParameters;
+	}
+
+	public AcquireService getAcquireService() {
+		return acquireService;
+	}
+
+	public void setAcquireService(AcquireService acquireService) {
+		this.acquireService = acquireService;
+	}
+
+	public String executeMession() throws IOException {
+		ActionContext context = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest)context.get(ServletActionContext.HTTP_REQUEST);
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw  = response.getWriter();
+		JSONObject json = new JSONObject(); 
+		String flag = "";
+
+		if (!Utils.isLogin()){
+			flag = "not_login";
+			json.put("flag", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "401_error_json";
+		}
+		if (!Utils.currentUserType().equals("admin")){
+			flag = "not_admin";
+			json.put("flag", flag);
+			pw.write(json.toString());
+			pw.flush();
+			pw.close();
+			return "403_error_json";
+		}
+
+		String mession = request.getParameter("mession");
+		String action = request.getParameter("action");
+		if (mession.equals(manageService.AcquireAndAnalyse)){
+			if (action.equals(allAction[0])){
+				this.acquireService.getWeiboFansAndConnectionsDataToAnalyse(analysisService);
+			}
+			else if (action.equals(allAction[1])){
+				this.acquireService.pauseWeiboFansAndConnectionsDataToAnalyse();
+			}
+			else if (action.equals(allAction[2])){
+				this.acquireService.getDataAndAnalyseNow(analysisService);
+			}
+			else {
+				flag = "unsupport_action";
+			}
+		}
+		else if (mession.equals(manageService.AcquireWeiboReply)){
+			if (action.equals(allAction[0])){
+				this.acquireService.getWeiboDataDynamically();
+			}
+			else if (action.equals(allAction[1])){
+				this.acquireService.pauseWeiboData();
+			}
+			else if (action.equals(allAction[2])){
+				this.acquireService.getWeiboDataNow();
+			}
+			else {
+				flag = "unsupport_action";
+			}
+		}
+		else if (mession.equals(manageService.AcquireConnectionReply)){
+			if (action.equals(allAction[0])){
+				this.acquireService.getConnectionRepliesDynamically();
+			}
+			else if (action.equals(allAction[1])){
+				this.acquireService.pauseConnectionReplies();
+			}
+			else if (action.equals(allAction[2])){
+				this.acquireService.getConnsRepliesNow();
+			}
+			else {
+				flag = "unsupport_action";
+			}
+		}
+		else {
+			flag = "unknow_mession";
+		}
+		
+		if (flag.equals("")){
+			flag = "tools_success";
+		}
+		json.put("flag", flag);
+		pw.write(json.toString());
+		pw.flush();
+		pw.close();
+		if (flag.equals("tools_success")){
+			return "200_success_json";
+		}
+		return "500_error_json";
+	}
+
+}

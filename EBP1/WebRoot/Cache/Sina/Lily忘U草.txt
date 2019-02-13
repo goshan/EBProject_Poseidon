@@ -1,0 +1,1 @@
+{id="3550379512", screenName="Lily忘U草", name="Lily忘U草", province="11", city="8", location="北京 海淀区", description="期待风雨过后的一道彩虹", url="", gender="f", followersCount="42", friendsCount="125", statusesCount="12", favouritesCount="0", createdAt="Fri Jun 21 21:01:12 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="26", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="1008179645", screenName="街角呐庅冷", name="街角呐庅冷", province="43", city="1", location="湖南 长沙", description="把握当下，就是用心。。", url="", gender="m", followersCount="76", friendsCount="387", statusesCount="209", favouritesCount="6", createdAt="Fri Jan 25 09:16:33 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="45", lang="zh-cn"}

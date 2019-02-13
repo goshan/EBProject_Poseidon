@@ -1,0 +1,1 @@
+{id="1993296044", screenName="卡罗莱很文静", name="卡罗莱很文静", province="31", city="8", location="上海 闸北区", description="", url="", gender="f", followersCount="306", friendsCount="246", statusesCount="245", favouritesCount="6", createdAt="Fri Mar 11 14:16:18 CST 2011", following="false", verified="false", verifiedType="220", followMe="true", biFollowersCount="154", lang="zh-cn"}

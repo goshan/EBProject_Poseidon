@@ -1,0 +1,3 @@
+ch
+Technique topic of training session
+ Hi, David, 不知道技术社区后续的培训内容确定没有？我在与我们项目沟通后发现，我们项目对某些技术（比如：Cognos, DataStage, IBM InfoSphere Warehouse Server, Domino等等）还是有相当需求的，不过项目内也难找到合适的培训讲师。如果技术社区中正好有这方面的人才，正好一举两得。既可以活跃技术社区，保证培训的效果；同时还可以真正服务于项目。不知道可否形成这样有针对性的培训？如果可行，我们来详细讨论一下，谢谢！ 

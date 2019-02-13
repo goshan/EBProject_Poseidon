@@ -1,0 +1,1 @@
+{id="2140648385", screenName="J-蒋利军", name="J-蒋利军", province="42", city="1", location="湖北 武汉", description="", url="", gender="m", followersCount="52", friendsCount="66", statusesCount="143", favouritesCount="15", createdAt="Mon Dec 12 21:01:03 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="14", lang="zh-cn"}

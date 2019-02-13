@@ -1,0 +1,1 @@
+{id="1732447054", screenName="若若fish", name="若若fish", province="11", city="1000", location="北京", description="立身要高，处世须退。", url="", gender="f", followersCount="122", friendsCount="461", statusesCount="186", favouritesCount="429", createdAt="Sat Oct 02 23:47:10 CST 2010", following="true", verified="false", verifiedType="-1", followMe="true", biFollowersCount="73", lang="zh-cn"}

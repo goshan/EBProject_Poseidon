@@ -1,0 +1,1 @@
+{id="3492596611", screenName="诡计多端大亨立", name="诡计多端大亨立", province="12", city="13", location="天津 北辰区", description="", url="", gender="m", followersCount="49", friendsCount="298", statusesCount="169", favouritesCount="0", createdAt="Tue May 28 05:06:47 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

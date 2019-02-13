@@ -1,0 +1,1 @@
+{id="2410997050", screenName="gan扫地僧", name="gan扫地僧", province="11", city="5", location="北京 朝阳区", description="", url="", gender="m", followersCount="13", friendsCount="179", statusesCount="78", favouritesCount="2", createdAt="Tue Sep 20 10:07:21 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="8", lang="zh-cn"}

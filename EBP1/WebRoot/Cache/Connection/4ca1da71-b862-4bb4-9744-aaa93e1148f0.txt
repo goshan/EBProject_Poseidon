@@ -1,0 +1,3 @@
+ch
+Delete Payroll Results in PRD
+ 看到并和大家分享Notes内容： RPUDEL20可以批量删除Payroll Result，但是这个程序在Production系统中是不能使用的。但是这个也不是绝对，在SAP的建议下，你也可以在PRD中使用这个程序，只需要做一个小的改动就可以了。但是，即使你可以使用这个程序，SAP也建议你在之前先做好备份。不过SAP只提供备份的程序，不提供从备份还原的程序--这个，是要你自己搞定的。 537115 RPUDEL20: Modification for reactivation in production system 537138 Deactivating RPUDEL20 etc. in the production system 1436029 Enhancement to RPUDEL20: save entries before delete 

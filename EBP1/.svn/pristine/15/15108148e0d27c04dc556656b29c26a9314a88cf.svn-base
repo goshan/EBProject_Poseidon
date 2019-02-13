@@ -1,0 +1,3 @@
+ch
+Lesson One: little knowledges
+ IDE: eclipse, RSA or RAD Devices View: 这个界面的一个基本的用处就是显示你的模拟器是否被正常运行（根据机器配置不同，经常会启动失败） Logcat: 查看输出的debuger log File Explorer: 从模拟器导入或者导出文件，当我们开发手机local db （SQLite）时，在模拟器上我们在应用里创建的DB位置， PATH: data - data - com.xxx.xxx - app_database - file_0 - 0000000000000001.db Multiple devices: 我们可以创建多个模拟器-devices，以至于模拟多个手机设备交互。 

@@ -1,0 +1,1 @@
+{id="2881043610", screenName="老实真善良1", name="老实真善良1", province="37", city="3", location="山东 淄博", description="", url="", gender="m", followersCount="23", friendsCount="41", statusesCount="10", favouritesCount="0", createdAt="Thu Jul 26 12:33:48 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="2", lang="zh-cn"}

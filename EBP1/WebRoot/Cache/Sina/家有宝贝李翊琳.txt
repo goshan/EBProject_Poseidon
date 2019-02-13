@@ -1,0 +1,1 @@
+{id="3420924960", screenName="家有宝贝李翊琳", name="家有宝贝李翊琳", province="23", city="1", location="黑龙江 哈尔滨", description="", url="", gender="f", followersCount="34", friendsCount="216", statusesCount="180", favouritesCount="1", createdAt="Wed May 29 06:57:24 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="29", lang="zh-cn"}

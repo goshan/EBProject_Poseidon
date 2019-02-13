@@ -1,0 +1,1 @@
+{id="3082113501", screenName="行走为了遇见未知", name="行走为了遇见未知", province="11", city="1", location="北京 东城区", description="", url="", gender="f", followersCount="10", friendsCount="20", statusesCount="5", favouritesCount="0", createdAt="Tue Oct 30 12:53:38 CST 2012", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="7", lang="zh-cn"}

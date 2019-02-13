@@ -1,0 +1,1 @@
+{id="1494685234", screenName="王某某_杭州", name="王某某_杭州", province="33", city="1", location="浙江 杭州", description="", url="", gender="m", followersCount="41", friendsCount="194", statusesCount="169", favouritesCount="22", createdAt="Sun Feb 06 12:16:19 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="7", lang="zh-cn"}

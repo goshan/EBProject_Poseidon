@@ -1,0 +1,1 @@
+{id="3296321172", screenName="玉皇大帝赵达川", name="玉皇大帝赵达川", province="43", city="12", location="湖南 怀化", description="艰难的日子总会过去", url="", gender="m", followersCount="249", friendsCount="897", statusesCount="401", favouritesCount="0", createdAt="Sat Apr 06 18:03:20 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="2", lang="zh-cn"}

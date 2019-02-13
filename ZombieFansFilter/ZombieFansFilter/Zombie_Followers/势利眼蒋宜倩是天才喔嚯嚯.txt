@@ -1,0 +1,1 @@
+{id="3495938304", screenName="势利眼蒋宜倩是天才喔嚯嚯", name="势利眼蒋宜倩是天才喔嚯嚯", province="71", city="18", location="台湾 台南县", description="", url="", gender="m", followersCount="25", friendsCount="326", statusesCount="174", favouritesCount="0", createdAt="Wed May 29 15:27:16 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}

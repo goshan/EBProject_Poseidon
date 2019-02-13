@@ -1,0 +1,1 @@
+{id="3636672300", screenName="用户3636672300", name="用户3636672300", province="100", city="1000", location="其他", description="", url="", gender="f", followersCount="2", friendsCount="37", statusesCount="1", favouritesCount="0", createdAt="Sun Aug 11 19:04:09 CST 2013", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="2", lang="zh-cn"}

@@ -1,0 +1,1 @@
+{id="2502206530", screenName="靠谱的轲子", name="靠谱的轲子", province="51", city="1", location="四川 成都", description="", url="", gender="m", followersCount="18", friendsCount="870", statusesCount="131", favouritesCount="0", createdAt="Sat Oct 29 22:07:18 CST 2011", following="false", verified="false", verifiedType="-1", followMe="true", biFollowersCount="0", lang="zh-cn"}
